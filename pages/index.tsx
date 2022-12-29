@@ -12,7 +12,6 @@ const LineChart = dynamic(() => import("./LineChart"), {
 const Home = () => {
   const [darkMode, setDarkMode] = useState(false);
 
-
   return (
     <>
       <Head>
@@ -22,14 +21,8 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`${darkMode ? "dark" : ""}`}>
-        <main className="bg-slate-200 min-h-screen dark:bg-gray-800 dark:text-white antialiased transition-colors duration-200">
-          {/* <Image
-            src="/bg-img.webp"
-            alt="Background Image"
-            width={100}
-            height={100}
-            className="w-full h-auto object-cover object-center"
-          /> */}
+        <main className="bg-neutral-300 dark:bg-neutral-800 min-h-screen font-poppins antialiased transition-colors duration-200">
+
           <h1 className="text-3xl font-bold text-red-500 dark:text-white ">
             Hello world!
           </h1>
@@ -40,18 +33,15 @@ const Home = () => {
             />
           </button>
 
-          <button className=" bg-slate-500 p-2 rounded-md text-white font-medium dark:text-slate-800 dark:bg-sky-200">
+          <button className="bg-slate-500 p-2 rounded-md text-white font-medium dark:text-slate-800 dark:bg-sky-200">
             HELLO THERE
           </button>
 
-          <div className="h-[500px] w-[500px] ">
+          <div className="bg-neutral-100 dark:bg-neutral-700 h-[500px] w-[500px] ">
             <h1 className="text-gray-800 font-bold text-2xl dark:text-white">
               Revenue
             </h1>
-            <LineChart
-              data={LineChartData}
-              darkMode={darkMode}
-            />
+            <LineChart data={LineChartData} darkMode={darkMode} />
           </div>
         </main>
       </div>

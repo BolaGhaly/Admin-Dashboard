@@ -3,9 +3,27 @@ import { ResponsiveLine } from "@nivo/line";
 const LineChart = ({ data, darkMode }) => (
   <ResponsiveLine
     theme={{
+      textColor: `${darkMode ? "#d1d5db" : "#FF0000"}`,
       fontSize: 16,
-      textColor: `${darkMode ? "#d1d5db" : "#1f2937"}`,
       fontFamily: "poppins",
+      grid: {
+        line: {
+          stroke: `${darkMode ? "#d1d5db" : "#FF0000"}`,
+        },
+      },
+      tooltip: {
+        container: {
+          background: "#872626",
+          color: "#ff0000",
+          fontSize: 12,
+          borderRadius: 10,
+        },
+      },
+      crosshair: {
+        line: {
+          strokeWidth: 0,
+        },
+      },
     }}
     data={data}
     margin={{ top: 50, right: 50, bottom: 50, left: 80 }}
@@ -46,11 +64,11 @@ const LineChart = ({ data, darkMode }) => (
     useMesh={true}
     legends={[
       {
-        itemTextColor: `${darkMode ? "#d1d5db" : "#1f2937"}`,
+        itemTextColor: `${darkMode ? "#d1d5db" : "#FF0000"}`,
         anchor: "top-right",
         direction: "row",
         justify: false,
-        translateX: 2,
+        translateX: -30,
         translateY: -30,
         itemsSpacing: 60,
         itemDirection: "left-to-right",
@@ -60,6 +78,7 @@ const LineChart = ({ data, darkMode }) => (
         symbolShape: "circle",
       },
     ]}
+    motionConfig="slow"
   />
 );
 
