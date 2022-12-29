@@ -22,7 +22,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`${darkMode ? "dark" : ""}`}>
-        <main className="bg-slate-200 min-h-screen dark:bg-gray-800 dark:text-white antialiased">
+        <main className="bg-slate-200 min-h-screen dark:bg-gray-800 dark:text-white antialiased transition-colors duration-200">
           {/* <Image
             src="/bg-img.webp"
             alt="Background Image"
@@ -44,9 +44,14 @@ const Home = () => {
             HELLO THERE
           </button>
 
-          <div className="h-[500px] w-[500px] text-white">
-            <h1>Revenue</h1>
-            <LineChart data={LineChartData} />
+          <div className="h-[500px] w-[500px] ">
+            <h1 className="text-gray-800 font-bold text-2xl dark:text-white">
+              Revenue
+            </h1>
+            <LineChart
+              data={LineChartData}
+              darkMode={darkMode}
+            />
           </div>
         </main>
       </div>
