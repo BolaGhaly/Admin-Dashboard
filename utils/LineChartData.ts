@@ -1,7 +1,7 @@
 export const LineChartData = [
   {
     id: "Previous Week",
-    color: "hsl(0, 0%, 25%)",
+    color: "hsl(302, 100%, 39%)",
     data: [
       {
         x: "July 16",
@@ -35,7 +35,7 @@ export const LineChartData = [
   },
   {
     id: "This Week",
-    color: "hsl(136, 100%, 53%)",
+    color: "hsl(122, 100%, 39%)",
     data: [
       {
         x: "July 16",
