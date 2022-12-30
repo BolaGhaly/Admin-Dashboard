@@ -1,9 +1,9 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import { useState } from "react";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import dynamic from "next/dynamic";
-import Image from "next/image";
 import { LineChartData } from "../utils/LineChartData";
+import BackgroundImage from "./BackgroundImage";
 
 const LineChart = dynamic(() => import("./LineChart"), {
   ssr: false,
@@ -22,7 +22,7 @@ const Home = () => {
       </Head>
       <div className={`${darkMode ? "dark" : ""}`}>
         <main className="bg-neutral-300 dark:bg-neutral-800 min-h-screen font-poppins antialiased transition-colors duration-200">
-
+          <BackgroundImage />
           <h1 className="text-3xl font-bold text-red-500 dark:text-white ">
             Hello world!
           </h1>
