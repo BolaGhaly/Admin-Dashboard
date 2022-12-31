@@ -1,13 +1,6 @@
 import Head from "next/head";
-import dynamic from "next/dynamic";
 import { useState } from "react";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import { LineChartData } from "../utils/LineChartData";
-import BackgroundImage from "./BackgroundImage";
-
-const LineChart = dynamic(() => import("./LineChart"), {
-  ssr: false,
-});
 
 const Home = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -22,7 +15,6 @@ const Home = () => {
       </Head>
       <div className={`${darkMode ? "dark" : ""}`}>
         <main className="bg-neutral-300 dark:bg-neutral-800 min-h-screen font-poppins antialiased transition-colors duration-200">
-          <BackgroundImage />
           <h1 className="text-3xl font-bold text-red-500 dark:text-white ">
             Hello world!
           </h1>
@@ -37,11 +29,10 @@ const Home = () => {
             HELLO THERE
           </button>
 
-          <div className="bg-neutral-100 dark:bg-neutral-700 h-[500px] w-[500px] ">
+          <div className="bg-neutral-100 dark:bg-neutral-700 h-[500px] w-[320px] md:h-[500px] md:w-[500px]">
             <h1 className="text-gray-800 font-bold text-2xl dark:text-white">
               Revenue
             </h1>
-            <LineChart data={LineChartData} darkMode={darkMode} />
           </div>
         </main>
       </div>
