@@ -1,34 +1,18 @@
-import { BiArrowToRight, BiArrowToLeft } from "react-icons/bi";
-import { RiDashboardLine } from "react-icons/ri";
-import { CgProfile } from "react-icons/cg";
 import Link from "next/link";
 import useOnclickOutside from "react-cool-onclickoutside";
-import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
 import { toggledarkMode } from "../store/darkMode";
 import { openSideBarOff, openSideBarReverse } from "../store/sideBar";
+import Icon, { navData } from "../utils/sideNavBar";
 
 const Sidebar = () => {
   const darkMode = useSelector((state: RootState) => state.darkMode.value);
-  const openSideBar = useSelector((state: RootState) => state.openSideBar.value);
+  const openSideBar = useSelector(
+    (state: RootState) => state.openSideBar.value
+  );
   const dispatch = useDispatch();
   const ref = useOnclickOutside(() => dispatch(openSideBarOff()));
-
-  const navData = [
-    {
-      id: 0,
-      icon: <RiDashboardLine />,
-      text: "Dashboard",
-      link: "/",
-    },
-    {
-      id: 1,
-      icon: <CgProfile />,
-      text: "Profile",
-      link: "/profile",
-    },
-  ];
 
   return (
     <nav
@@ -41,11 +25,12 @@ const Sidebar = () => {
         className="cursor-pointer pl-5 border-none bg-transparent justify-self-end"
         onClick={() => dispatch(openSideBarReverse())}
       >
-        {openSideBar ? <BiArrowToLeft /> : <BiArrowToRight />}
+        {openSideBar ? <Icon name="leftArrow" /> : <Icon name="rightArrow" />}
       </button>
 
       <button className="px-5 ">
-        <BsFillMoonStarsFill
+        <Icon
+          name="darkMode"
           className="text-xl"
           onClick={() => dispatch(toggledarkMode())}
         />
@@ -57,7 +42,9 @@ const Sidebar = () => {
             className="flex items-center py-[10px] px-5"
             href={item.link}
           >
-            <div className="text-xl">{item.icon}</div>
+            <div className="text-xl">
+              <Icon name={`${item.icon}`} />
+            </div>
             <span className={`${openSideBar ? "" : "invisible"}`}>
               {item.text}
             </span>
