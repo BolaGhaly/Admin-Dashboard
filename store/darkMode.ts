@@ -8,22 +8,17 @@ const initialState: darkModeState = {
   value: false,
 };
 
-export const DarkModeSlice = createSlice({
+export const darkModeSlice = createSlice({
   name: "darkMode",
   initialState,
   reducers: {
-    off: (state) => {
-      state.value = false;
-    },
-    on: (state) => {
-      state.value = true;
-    },
-    reverseState: (state) => {
+    toggledarkMode: (state) => {
       state.value = !state.value;
     },
   },
 });
 
-export const { off, on, reverseState } = DarkModeSlice.actions;
+export const { toggledarkMode } =
+  darkModeSlice.actions;
 
-export default DarkModeSlice.reducer;
+export default darkModeSlice.reducer;
