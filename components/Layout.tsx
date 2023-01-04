@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
     <div className="font-poppins">
       <Sidebar />
       <main
-        className={`${sideBar ? "cursor-pointer " : ""} ${
+        className={`${sideBar ? "cursor-pointer " : ""}${
           darkMode ? "dark" : ""
         }`}
       >
