@@ -12,9 +12,7 @@ const Layout = ({ children }) => {
     <main className="font-poppins">
       <Sidebar />
       <div
-        className={`${openSideBar ? "cursor-pointer" : ""}${
-          darkMode ? "dark" : ""
-        }`}
+        className={`${openSideBar ? "cursor-pointer" : ""}`}
       >
         {children}
       </div>

@@ -17,9 +17,15 @@ const index = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div
-        className={`bg-neutral-50 dark:bg-neutral-800 p-4 ml-[60px] antialiased transition-colors duration-500`}
+        className={`${
+          darkMode ? "bg-neutral-800" : "bg-neutral-50"
+        }  p-4 ml-[60px] antialiased transition-colors duration-500`}
       >
-        <h1 className="text-3xl font-bold text-red-500 dark:text-white ">
+        <h1
+          className={`${
+            darkMode ? "text-white" : "text-red-500"
+          } text-3xl font-bold`}
+        >
           Hello world!
         </h1>
 
