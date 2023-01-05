@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
 
 const Layout = ({ children }) => {
-  const darkMode = useSelector((state: RootState) => state.darkMode.value);
   const openSideBar = useSelector(
     (state: RootState) => state.openSideBar.value
   );
@@ -11,11 +10,7 @@ const Layout = ({ children }) => {
   return (
     <main className="font-poppins">
       <Sidebar />
-      <div
-        className={`${openSideBar ? "cursor-pointer" : ""}`}
-      >
-        {children}
-      </div>
+      <div className={`${openSideBar ? "cursor-pointer" : ""}`}>{children}</div>
     </main>
   );
 };
