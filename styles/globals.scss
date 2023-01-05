@@ -3,13 +3,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer components {
-  .mw-minus-closedNav {
-    min-width: calc(100vw - 60px);
-  }
-
-  .mw-minus-openNav {
-    min-width: calc(100vw - 200px);
-  }
-}
