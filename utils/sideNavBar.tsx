@@ -1,12 +1,12 @@
-import { BiArrowToRight, BiArrowToLeft } from "react-icons/bi";
-import { RiDashboardLine } from "react-icons/ri";
+import { RiMenuFoldLine, RiMenuUnfoldLine } from "react-icons/ri";
+import { RiPieChart2Fill } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 
 const iconTypes = {
-  rightArrow: BiArrowToRight,
-  leftArrow: BiArrowToLeft,
-  dashboard: RiDashboardLine,
+  rightArrow: RiMenuUnfoldLine,
+  leftArrow: RiMenuFoldLine,
+  dashboard: RiPieChart2Fill,
   profile: CgProfile,
   darkMode: BsFillMoonStarsFill,
 };

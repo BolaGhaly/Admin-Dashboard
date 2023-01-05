@@ -21,36 +21,41 @@ const Sidebar = () => {
       } ${darkMode ? "bg-neutral-700" : "bg-neutral-200"}`}
       ref={ref}
     >
-      <button
-        className="cursor-pointer pl-5 border-none bg-transparent justify-self-end"
-        onClick={() => dispatch(openSideBarReverse())}
-      >
-        {openSideBar ? <Icon name="leftArrow" /> : <Icon name="rightArrow" />}
-      </button>
+      <div className={`flex flex-col ${openSideBar ? "" : "items-center"}`}>
+        <button
+          className="text-2xl"
+          onClick={() => dispatch(openSideBarReverse())}
+        >
+          {openSideBar ? <Icon name="leftArrow" /> : <Icon name="rightArrow" />}
+        </button>
 
-      <button className="px-5 ">
-        <Icon
-          name="darkMode"
-          className="text-xl"
-          onClick={() => dispatch(toggledarkMode())}
-        />
-      </button>
-      {navData.map((item) => {
-        return (
-          <Link
-            key={item.id}
-            className="flex items-center py-[10px] px-5"
-            href={item.link}
-          >
-            <div className="text-xl">
-              <Icon name={`${item.icon}`} />
-            </div>
-            <span className={`${openSideBar ? "" : "invisible"}`}>
-              {item.text}
-            </span>
-          </Link>
-        );
-      })}
+        <div className="flex flex-col">
+          <button>
+            <Icon
+              name="darkMode"
+              className={`text-2xl ${darkMode ? "text-white" : "text-black"}`}
+              onClick={() => dispatch(toggledarkMode())}
+            />
+            {openSideBar ? "Dark Mode" : ""}
+          </button>
+          {navData.map((item) => {
+            return (
+              <Link key={item.id} href={item.link}>
+                <button
+                  className={`text-2xl ${
+                    darkMode ? "text-white" : "text-black"
+                  }`}
+                >
+                  <Icon name={`${item.icon}`} />
+                </button>
+                <span className={`${openSideBar ? "" : "hidden"}`}>
+                  {item.text}
+                </span>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
     </nav>
   );
 };
