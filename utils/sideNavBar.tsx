@@ -1,14 +1,18 @@
 import { RiMenuFoldLine, RiMenuUnfoldLine } from "react-icons/ri";
-import { RiPieChart2Fill } from "react-icons/ri";
-import { CgProfile } from "react-icons/cg";
-import { BsFillMoonStarsFill } from "react-icons/bs";
+import { AiOutlinePieChart } from "react-icons/ai";
+import { MdOutlineManageAccounts } from "react-icons/md";
+import { BiTransfer } from "react-icons/bi";
+import { VscSignOut } from "react-icons/vsc";
+import { BiMoon } from "react-icons/bi";
 
 const iconTypes = {
   rightArrow: RiMenuUnfoldLine,
   leftArrow: RiMenuFoldLine,
-  dashboard: RiPieChart2Fill,
-  profile: CgProfile,
-  darkMode: BsFillMoonStarsFill,
+  darkMode: BiMoon,
+  dashboard: AiOutlinePieChart,
+  transactions: BiTransfer,
+  profileSettings: MdOutlineManageAccounts,
+  signOut: VscSignOut,
 };
 
 export const navData = [
@@ -20,9 +24,15 @@ export const navData = [
   },
   {
     id: 1,
-    icon: "profile",
-    text: "Profile",
-    link: "/profile",
+    icon: "transactions",
+    text: "Transactions",
+    link: "/transactions",
+  },
+  {
+    id: 2,
+    icon: "profileSettings",
+    text: "Settings",
+    link: "/settings",
   },
 ];
 

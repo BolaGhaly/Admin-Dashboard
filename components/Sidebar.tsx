@@ -17,30 +17,41 @@ const Sidebar = () => {
   return (
     <nav
       className={`fixed min-h-full top-0 left-0 border-r-2 border-neutral-400 ${
-        openSideBar ? "w-[180px]" : "w-[60px]"
+        openSideBar ? "w-[200px]" : "w-[60px]"
       } ${darkMode ? "bg-neutral-700" : "bg-neutral-200"}`}
       ref={ref}
     >
-      <div className={`flex flex-col ${openSideBar ? "" : "items-center"}`}>
+      <div
+        className={`flex flex-col ${
+          openSideBar ? "pl-[17px]" : "items-center"
+        }`}
+      >
         <button
-          className="text-2xl"
+          className={`text-2xl ${darkMode ? "text-white" : "text-black"}`}
           onClick={() => dispatch(openSideBarReverse())}
         >
           {openSideBar ? <Icon name="leftArrow" /> : <Icon name="rightArrow" />}
         </button>
 
         <div className="flex flex-col">
-          <button>
-            <Icon
-              name="darkMode"
-              className={`text-2xl ${darkMode ? "text-white" : "text-black"}`}
-              onClick={() => dispatch(toggledarkMode())}
-            />
-            {openSideBar ? "Dark Mode" : ""}
+          <button
+            className={`flex items-center ${
+              darkMode ? "text-white" : "text-black"
+            }`}
+            onClick={() => dispatch(toggledarkMode())}
+          >
+            <Icon name="darkMode" className="text-2xl" />
+            <span className={`pl-2 ${openSideBar ? "" : "hidden"}`}>
+              Dark Mode
+            </span>
           </button>
           {navData.map((item) => {
             return (
-              <Link key={item.id} href={item.link}>
+              <Link
+                key={item.id}
+                href={item.link}
+                className={`flex items-center`}
+              >
                 <button
                   className={`text-2xl ${
                     darkMode ? "text-white" : "text-black"
@@ -48,12 +59,26 @@ const Sidebar = () => {
                 >
                   <Icon name={`${item.icon}`} />
                 </button>
-                <span className={`${openSideBar ? "" : "hidden"}`}>
+                <span
+                  className={`pl-2 ${openSideBar ? "" : "hidden"} ${
+                    darkMode ? "text-white" : "text-black"
+                  }`}
+                >
                   {item.text}
                 </span>
               </Link>
             );
           })}
+          <button
+            className={`flex items-center ${
+              darkMode ? "text-white" : "text-black"
+            }`}
+          >
+            <Icon name="signOut" className="text-2xl" />
+            <span className={`pl-2 ${openSideBar ? "" : "hidden"}`}>
+              Sign Out
+            </span>
+          </button>
         </div>
       </div>
     </nav>
