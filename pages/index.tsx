@@ -18,15 +18,15 @@ const index = () => {
       </Head>
       <div
         className={`${
-          darkMode ? "bg-neutral-800" : "bg-neutral-50"
+          darkMode ? "bg-neutral-900" : "bg-neutral-50"
         }  p-4 ml-[60px] antialiased transition-colors duration-500`}
       >
         <h1
           className={`${
-            darkMode ? "text-white" : "text-red-500"
+            darkMode ? "text-blue-300" : "text-blue-900"
           } text-3xl font-bold`}
         >
-          Hello world!
+          Dashboard
         </h1>
 
         <p className={`${darkMode ? "text-white" : "text-black"}`}>

@@ -18,7 +18,7 @@ const Sidebar = () => {
     <nav
       className={`fixed min-h-full top-0 left-0 border-r-2 border-neutral-400 ${
         openSideBar ? "w-[200px]" : "w-[60px]"
-      } ${darkMode ? "bg-neutral-700" : "bg-neutral-200"}`}
+      } ${darkMode ? "bg-neutral-800" : "bg-neutral-200"}`}
       ref={ref}
     >
       <div
