@@ -9,7 +9,7 @@ const Dashboard = () => {
     <div>
       <h1
         className={`${
-          darkMode ? "text-blue-300" : "text-blue-600"
+          darkMode ? "text-slate-200" : "text-slate-600"
         } text-3xl font-bold`}
       >
         Dashboard
