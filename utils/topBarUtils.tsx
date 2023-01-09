@@ -1,13 +1,14 @@
-import { BiMenu, BiFullscreen, BiMoon, BiSun } from "react-icons/bi";
+import { BiFullscreen, BiMoon, BiSun } from "react-icons/bi";
 import {
   MdOutlineNotifications,
   MdOutlineSupport,
   MdOutlineManageAccounts,
 } from "react-icons/md";
 import { VscSignOut } from "react-icons/vsc";
+import { HiOutlineMenu } from "react-icons/hi";
 
 const iconTypes = {
-  menu: BiMenu,
+  menu: HiOutlineMenu,
   fullscreen: BiFullscreen,
   darkModeOff: BiMoon,
   darkModeOn: BiSun,

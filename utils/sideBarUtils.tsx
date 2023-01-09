@@ -1,10 +1,7 @@
-import { RiMenuFoldLine, RiMenuUnfoldLine } from "react-icons/ri";
 import { AiOutlineHome } from "react-icons/ai";
 import { BiTransfer } from "react-icons/bi";
 
 const iconTypes = {
-  rightArrow: RiMenuUnfoldLine,
-  leftArrow: RiMenuFoldLine,
   dashboard: AiOutlineHome,
   transactions: BiTransfer,
 };

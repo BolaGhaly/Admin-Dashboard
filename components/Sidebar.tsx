@@ -16,7 +16,7 @@ const Sidebar = () => {
   return (
     <nav
       className={`fixed min-h-full z-50 top-0 left-0 border-r-2 border-neutral-400 ${
-        openSideBar ? "w-[200px]" : "w-16"
+        openSideBar ? "w-52" : "w-16"
       } ${darkMode ? "bg-neutral-800" : "bg-neutral-200"}`}
       ref={sideBarRef}
     >
@@ -25,15 +25,7 @@ const Sidebar = () => {
           openSideBar ? "pl-[17px]" : "items-center"
         }`}
       >
-        <button
-          className={`text-2xl ${darkMode ? "text-white" : "text-black"}`}
-          onClick={() => dispatch(openSideBarReverse())}
-        >
-          {openSideBar ? <Icon name="leftArrow" /> : <Icon name="rightArrow" />}
-        </button>
-
         <div className="flex flex-col">
-
           {navData.map((item) => {
             return (
               <Link
