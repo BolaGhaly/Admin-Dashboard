@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
 
   return (
     <main
-      className={`font-poppins ${openSideBar ? "cursor-pointer" : ""}${
+      className={`font-poppins ${openSideBar ? "cursor-pointer" : ""} ${
         darkMode ? "text-white" : "text-black"
       }`}
     >
