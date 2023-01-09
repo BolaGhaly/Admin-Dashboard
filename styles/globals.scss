@@ -3,3 +3,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .mw-minus-sideBar {
+    min-width: calc(100% - 64px);
+  }
+
+  .mh-minus-topBar {
+    min-height: calc(100vh - 56px);
+  }
+}
