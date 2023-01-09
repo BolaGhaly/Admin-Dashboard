@@ -1,7 +1,16 @@
 import Head from "next/head";
+import { useEffect } from "react";
 import Dashboard from "../components/Dashboard";
+import { RootState } from "../store/store";
+import { useSelector } from "react-redux";
 
 const index = () => {
+  const darkMode = useSelector((state: RootState) => state.darkMode.value);
+
+  useEffect(() => {
+    document.body.className = darkMode ? "bg-neutral-900" : "bg-neutral-50";
+  }, [darkMode]);
+
   return (
     <>
       <Head>
