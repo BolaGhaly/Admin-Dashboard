@@ -11,14 +11,14 @@ const Layout = ({ children }) => {
 
   return (
     <main
-      className={`font-poppins ${openSideBar ? "cursor-pointer" : ""} ${
+      className={`font-poppins ${openSideBar ? "cursor-pointer" : ""}${
         darkMode ? "text-white" : "text-black"
       }`}
     >
       <Topbar />
       <Sidebar />
       <section
-        className={`ml-16 mt-14 p-4 mh-minus-topBar transition-colors duration-500 ${
+        className={`ml-16 mt-16 p-4 mh-minus-topBar transition-colors duration-500 ${
           darkMode ? "bg-neutral-900" : "bg-neutral-50"
         } `}
       >
