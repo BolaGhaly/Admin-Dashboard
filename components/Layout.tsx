@@ -1,6 +1,7 @@
 import Sidebar from "./Sidebar";
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
+import Topbar from "./Topbar";
 
 const Layout = ({ children }) => {
   const openSideBar = useSelector(
@@ -14,9 +15,10 @@ const Layout = ({ children }) => {
         darkMode ? "text-white" : "text-black"
       }`}
     >
+      <Topbar />
       <Sidebar />
       <section
-        className={`ml-[60px] p-4 min-h-screen transition-colors duration-500 ${
+        className={`ml-16 mt-14 p-4 min-h-screen transition-colors duration-500 ${
           darkMode ? "bg-neutral-900" : "bg-neutral-50"
         } `}
       >

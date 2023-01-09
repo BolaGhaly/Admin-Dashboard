@@ -2,9 +2,8 @@ import Link from "next/link";
 import useOnclickOutside from "react-cool-onclickoutside";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
-import { toggledarkMode } from "../store/darkMode";
 import { openSideBarOff, openSideBarReverse } from "../store/sideBar";
-import Icon, { navData } from "../utils/sideNavBar";
+import Icon, { navData } from "../utils/sideBarUtils";
 
 const Sidebar = () => {
   const darkMode = useSelector((state: RootState) => state.darkMode.value);
@@ -12,14 +11,14 @@ const Sidebar = () => {
     (state: RootState) => state.openSideBar.value
   );
   const dispatch = useDispatch();
-  const ref = useOnclickOutside(() => dispatch(openSideBarOff()));
+  const sideBarRef = useOnclickOutside(() => dispatch(openSideBarOff()));
 
   return (
     <nav
-      className={`fixed min-h-full top-0 left-0 border-r-2 border-neutral-400 ${
-        openSideBar ? "w-[200px]" : "w-[60px]"
+      className={`fixed min-h-full z-50 top-0 left-0 border-r-2 border-neutral-400 ${
+        openSideBar ? "w-[200px]" : "w-16"
       } ${darkMode ? "bg-neutral-800" : "bg-neutral-200"}`}
-      ref={ref}
+      ref={sideBarRef}
     >
       <div
         className={`flex flex-col ${
@@ -34,17 +33,7 @@ const Sidebar = () => {
         </button>
 
         <div className="flex flex-col">
-          <button
-            className={`flex items-center ${
-              darkMode ? "text-white" : "text-black"
-            }`}
-            onClick={() => dispatch(toggledarkMode())}
-          >
-            <Icon name="darkMode" className="text-2xl" />
-            <span className={`pl-2 ${openSideBar ? "" : "hidden"}`}>
-              Dark Mode
-            </span>
-          </button>
+
           {navData.map((item) => {
             return (
               <Link
@@ -69,16 +58,6 @@ const Sidebar = () => {
               </Link>
             );
           })}
-          <button
-            className={`flex items-center ${
-              darkMode ? "text-white" : "text-black"
-            }`}
-          >
-            <Icon name="signOut" className="text-2xl" />
-            <span className={`pl-2 ${openSideBar ? "" : "hidden"}`}>
-              Sign Out
-            </span>
-          </button>
         </div>
       </div>
     </nav>
