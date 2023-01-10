@@ -69,8 +69,8 @@ const Topbar = () => {
           <button
             className={`relative ${
               darkMode
-                ? "text-white before:bg-rose-400 before:ring-neutral-800"
-                : "text-black before:bg-rose-500 before:ring-neutral-200"
+                ? "text-white"
+                : "text-black"
             }`}
             title="Notifications"
           >
