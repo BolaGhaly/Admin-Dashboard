@@ -11,8 +11,10 @@ const Topbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 px-4 mw-minus-sideBar z-40 ml-16 border-b-2 border-neutral-400 ${
-        darkMode ? "bg-neutral-800" : "bg-neutral-200"
+      className={`fixed top-0 left-0 px-4 mw-minus-sideBar z-40 ml-16 ${
+        darkMode
+          ? "bg-neutral-800 shadow-[0_2px_10px_0px_rgba(255,255,255,0.4)]"
+          : "bg-neutral-200 shadow-[0_2px_10px_0px_rgba(0,0,0,0.4)]"
       }`}
     >
       <div className="flex min-h-[64px]">
@@ -28,7 +30,15 @@ const Topbar = () => {
             className={`${darkMode ? "text-white" : "text-black"}`}
             title="Notifications"
           >
-            <Icon name="notifications" className="text-2xl" />
+            <span
+              className={`before:absolute before:w-2 before:h-2 before:rounded-full before:top-5 before:right-64 before:ring-2 ${
+                darkMode
+                  ? "before:bg-rose-400 before:ring-neutral-800"
+                  : "before:bg-rose-500 before:ring-neutral-200"
+              } `}
+            >
+              <Icon name="notifications" className="text-2xl" />
+            </span>
           </button>
           <button
             className={`ml-2 ${darkMode ? "text-white" : "text-black"}`}
@@ -47,7 +57,10 @@ const Topbar = () => {
           >
             <Icon name="fullscreen" className="text-2xl" />
           </button>
-          <div className="flex items-center ml-2" title="User's Profile">
+          <div
+            className="flex items-center ml-2 cursor-pointer"
+            title="User's Profile"
+          >
             <Image
               className="rounded-full w-12 h-12"
               src="/img5.jpg"
