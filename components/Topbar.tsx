@@ -4,10 +4,50 @@ import { toggledarkMode } from "../store/darkMode";
 import Icon from "../utils/topBarUtils";
 import { openSideBarReverse } from "../store/sideBar";
 import Image from "next/image";
+import { useState } from "react";
 
 const Topbar = () => {
   const darkMode = useSelector((state: RootState) => state.darkMode.value);
   const dispatch = useDispatch();
+  const [isFullScreen, setIsFullScreen] = useState(false);
+
+  const handleFullScreen = () => {
+    const element = document.documentElement as HTMLElement & {
+      mozRequestFullScreen(): Promise<void>;
+      webkitRequestFullscreen(): Promise<void>;
+      msRequestFullscreen(): Promise<void>;
+    };
+
+    const htmlDoc = document as Document & {
+      mozCancelFullScreen(): Promise<void>;
+      webkitExitFullscreen(): Promise<void>;
+      msExitFullscreen(): Promise<void>;
+    };
+
+    if (document.fullscreenElement) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (htmlDoc.mozCancelFullScreen) {
+        htmlDoc.mozCancelFullScreen();
+      } else if (htmlDoc.webkitExitFullscreen) {
+        htmlDoc.webkitExitFullscreen();
+      } else if (htmlDoc.msExitFullscreen) {
+        htmlDoc.msExitFullscreen();
+      }
+    } else {
+      if (element.requestFullscreen) {
+        element.requestFullscreen();
+      } else if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+      } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+      } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+      }
+    }
+
+    setIsFullScreen(!isFullScreen);
+  };
 
   return (
     <nav
@@ -54,8 +94,13 @@ const Topbar = () => {
           <button
             className={`ml-2 ${darkMode ? "text-white" : "text-black"}`}
             title="Fullscreen"
+            onClick={handleFullScreen}
           >
-            <Icon name="fullscreen" className="text-2xl" />
+            {isFullScreen ? (
+              <Icon name="fullscreenOff" className="text-2xl" />
+            ) : (
+              <Icon name="fullscreenOn" className="text-2xl" />
+            )}
           </button>
           <div
             className="flex items-center ml-2 cursor-pointer"
