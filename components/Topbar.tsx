@@ -54,7 +54,7 @@ const Topbar = () => {
       className={`fixed top-0 left-0 px-4 mw-minus-sideBar z-40 ml-16 ${
         darkMode
           ? "bg-neutral-800 shadow-[0_2px_10px_0px_rgba(255,255,255,0.4)]"
-          : "bg-neutral-200 shadow-[0_2px_10px_0px_rgba(0,0,0,0.4)]"
+          : "bg-light-sc shadow-[0_2px_10px_0px_rgba(0,0,0,0.4)]"
       }`}
     >
       <div className="flex min-h-[64px]">
@@ -67,11 +67,7 @@ const Topbar = () => {
         </button>
         <div className="w-full flex justify-end">
           <button
-            className={`relative ${
-              darkMode
-                ? "text-white"
-                : "text-black"
-            }`}
+            className={`relative ${darkMode ? "text-white" : "text-black"}`}
             title="Notifications"
           >
             <Icon name="notifications" className="text-2xl" />
@@ -79,7 +75,7 @@ const Topbar = () => {
               className={`absolute w-2 h-2 rounded-full top-[22px] -right-0 ring-2 ${
                 darkMode
                   ? "bg-rose-400 ring-neutral-800"
-                  : "bg-rose-500 ring-neutral-200"
+                  : "bg-rose-500 ring-light-sc"
               }`}
             />
           </button>
@@ -116,17 +112,17 @@ const Topbar = () => {
               height={100}
               alt="Profile Image"
             />
-            <div className="pl-1 leading-none hidden md:flex md:flex-col">
-              <h1
-                className={`text-lg font-medium ${
-                  darkMode ? "text-white" : "text-slate-900"
+            <div className="pl-1 hidden md:flex md:flex-col">
+              <p
+                className={`text-lg ${
+                  darkMode ? "text-white" : "text-black"
                 }`}
               >
                 Bradley Cruz
-              </h1>
+              </p>
               <p
-                className={`leading-none ${
-                  darkMode ? "text-slate-200" : "text-slate-600"
+                className={`leading-none font-medium ${
+                  darkMode ? "text-slate-200" : "text-light-sc-text"
                 }`}
               >
                 CEO
