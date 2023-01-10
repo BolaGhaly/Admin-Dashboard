@@ -53,8 +53,8 @@ const Topbar = () => {
     <nav
       className={`fixed top-0 left-0 px-4 mw-minus-sideBar z-40 ml-16 ${
         darkMode
-          ? "bg-neutral-800 shadow-[0_2px_10px_0px_rgba(255,255,255,0.4)]"
-          : "bg-light-sc shadow-[0_2px_10px_0px_rgba(0,0,0,0.4)]"
+          ? "bg-dark-sc shadow-[0_2px_4px_0px_rgba(220,220,220,0.4)]"
+          : "bg-light-sc shadow-[0_2px_4px_0px_rgba(0,0,0,0.4)]"
       }`}
     >
       <div className="flex min-h-[64px]">
@@ -72,10 +72,8 @@ const Topbar = () => {
           >
             <Icon name="notifications" className="text-2xl" />
             <span
-              className={`absolute w-2 h-2 rounded-full top-[22px] -right-0 ring-2 ${
-                darkMode
-                  ? "bg-rose-400 ring-neutral-800"
-                  : "bg-rose-500 ring-light-sc"
+              className={`bg-red-500 absolute w-2 h-2 rounded-full top-[22px] -right-0 ring-2 ${
+                darkMode ? "ring-dark-sc" : "ring-light-sc"
               }`}
             />
           </button>
@@ -114,15 +112,13 @@ const Topbar = () => {
             />
             <div className="pl-1 hidden md:flex md:flex-col">
               <p
-                className={`text-lg ${
-                  darkMode ? "text-white" : "text-black"
-                }`}
+                className={`text-lg ${darkMode ? "text-white" : "text-black"}`}
               >
                 Bradley Cruz
               </p>
               <p
                 className={`leading-none font-medium ${
-                  darkMode ? "text-slate-200" : "text-light-sc-text"
+                  darkMode ? "text-dark-sc-text" : "text-light-sc-text"
                 }`}
               >
                 CEO

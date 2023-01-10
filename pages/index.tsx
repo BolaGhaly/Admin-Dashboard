@@ -8,7 +8,7 @@ const index = () => {
   const darkMode = useSelector((state: RootState) => state.darkMode.value);
 
   useEffect(() => {
-    document.body.className = darkMode ? "bg-neutral-900" : "bg-light-pr";
+    document.body.className = darkMode ? "bg-dark-pr" : "bg-light-pr";
   }, [darkMode]);
 
   return (
