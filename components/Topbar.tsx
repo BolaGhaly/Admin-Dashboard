@@ -67,18 +67,21 @@ const Topbar = () => {
         </button>
         <div className="w-full flex justify-end">
           <button
-            className={`${darkMode ? "text-white" : "text-black"}`}
+            className={`relative ${
+              darkMode
+                ? "text-white before:bg-rose-400 before:ring-neutral-800"
+                : "text-black before:bg-rose-500 before:ring-neutral-200"
+            }`}
             title="Notifications"
           >
+            <Icon name="notifications" className="text-2xl" />
             <span
-              className={`before:absolute before:w-2 before:h-2 before:rounded-full before:top-5 before:right-64 before:ring-2 ${
+              className={`absolute w-2 h-2 rounded-full top-[22px] -right-0 ring-2 ${
                 darkMode
-                  ? "before:bg-rose-400 before:ring-neutral-800"
-                  : "before:bg-rose-500 before:ring-neutral-200"
-              } `}
-            >
-              <Icon name="notifications" className="text-2xl" />
-            </span>
+                  ? "bg-rose-400 ring-neutral-800"
+                  : "bg-rose-500 ring-neutral-200"
+              }`}
+            />
           </button>
           <button
             className={`ml-2 ${darkMode ? "text-white" : "text-black"}`}
@@ -108,7 +111,7 @@ const Topbar = () => {
           >
             <Image
               className="rounded-full w-12 h-12"
-              src="/img5.jpg"
+              src="/profileImg.jpg"
               width={100}
               height={100}
               alt="Profile Image"
