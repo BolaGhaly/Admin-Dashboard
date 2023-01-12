@@ -1,8 +1,5 @@
 import { BiFullscreen, BiExitFullscreen, BiMoon, BiSun } from "react-icons/bi";
-import {
-  MdOutlineSupport,
-  MdOutlineManageAccounts,
-} from "react-icons/md";
+import { MdOutlineSupportAgent, MdOutlineManageAccounts } from "react-icons/md";
 import { VscSignOut } from "react-icons/vsc";
 import { HiOutlineMenu } from "react-icons/hi";
 import { RiNotification2Line } from "react-icons/ri";
@@ -15,7 +12,7 @@ const iconTypes = {
   darkModeOn: BiSun,
   notifications: RiNotification2Line,
   profileSettings: MdOutlineManageAccounts,
-  support: MdOutlineSupport,
+  support: MdOutlineSupportAgent,
   signOut: VscSignOut,
 };
 

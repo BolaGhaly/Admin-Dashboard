@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
+import { useState, Fragment } from "react";
 import { RootState } from "../store/store";
+import { openSideBarReverse } from "../store/sideBar";
 import { toggledarkMode } from "../store/darkMode";
 import Icon from "../utils/topBarUtils";
-import { openSideBarReverse } from "../store/sideBar";
 import Image from "next/image";
-import { useState } from "react";
+import { Menu, Transition } from "@headlessui/react";
 
 const Topbar = () => {
   const darkMode = useSelector((state: RootState) => state.darkMode.value);
@@ -99,7 +100,89 @@ const Topbar = () => {
               <Icon name="fullscreenOn" className="text-2xl" />
             )}
           </button>
-          <div
+          <Menu
+            as="div"
+            className="flex items-center ml-2 cursor-pointer relative"
+            title="User's Profile"
+          >
+            <Menu.Button className="flex">
+              <Image
+                className="rounded-full w-12 h-12"
+                src="/profileImg.jpg"
+                width={100}
+                height={100}
+                alt="Profile Image"
+                loading="eager"
+              />
+              <div className="pl-1 hidden md:flex md:flex-col md:items-start">
+                <p
+                  className={`text-lg ${
+                    darkMode ? "text-white" : "text-black"
+                  }`}
+                >
+                  Bradley Cruz
+                </p>
+                <p
+                  className={`leading-none font-medium ${
+                    darkMode ? "text-dark-sc-text" : "text-light-sc-text"
+                  }`}
+                >
+                  CEO
+                </p>
+              </div>
+            </Menu.Button>
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-100"
+              enterFrom="transform opacity-0 scale-95"
+              enterTo="transform opacity-100 scale-100"
+              leave="transition ease-in duration-75"
+              leaveFrom="transform opacity-100 scale-100"
+              leaveTo="transform opacity-0 scale-95"
+            >
+              <Menu.Items
+                className={`absolute right-0 top-[56px] mt-2 w-56 origin-top-right rounded-md  shadow-lg ring-black ring-1 ring-opacity-5 focus:outline-none ${
+                  darkMode ? "" : "bg-light-sc-ct"
+                }`}
+              >
+                <div className="px-1 py-1">
+                  <Menu.Item>
+                    <button className="hover:bg-light-pr-text hover:text-white text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm">
+                      <Icon
+                        name="profileSettings"
+                        className="mr-2 text-xl"
+                        aria-hidden="true"
+                      />
+                      <span>Settings</span>
+                    </button>
+                  </Menu.Item>
+                  <Menu.Item>
+                    <button className="hover:bg-violet-500 hover:text-white text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm">
+                      <Icon
+                        name="support"
+                        className="mr-2 text-xl"
+                        aria-hidden="true"
+                      />
+                      <span>Support</span>
+                    </button>
+                  </Menu.Item>
+                  <Menu.Item>
+                    <button className="hover:bg-violet-500 hover:text-white text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm">
+                      <Icon
+                        name="signOut"
+                        className="mr-2 text-xl"
+                        aria-hidden="true"
+                      />
+                      <span>Sign Out</span>
+                    </button>
+                  </Menu.Item>
+                </div>
+              </Menu.Items>
+            </Transition>
+          </Menu>
+        </div>
+
+        {/* <div
             className="flex items-center ml-2 cursor-pointer"
             title="User's Profile"
           >
@@ -124,8 +207,7 @@ const Topbar = () => {
                 CEO
               </p>
             </div>
-          </div>
-        </div>
+          </div> */}
       </div>
     </nav>
   );
