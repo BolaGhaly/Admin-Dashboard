@@ -1,10 +1,11 @@
 import { openSideBarReverse } from "../../store/sideBar";
 import { toggledarkMode } from "../../store/darkMode";
 import Icon from "../../utils/topBarUtils";
-import UserProfile from "./UserProfile";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
+import UserProfile from "./UserProfile";
+import NotificationsMenu from "./NotificationsMenu";
 
 const TopBarIcons = () => {
   const darkMode = useSelector((state: RootState) => state.darkMode.value);
@@ -59,17 +60,7 @@ const TopBarIcons = () => {
         <Icon name="menu" className="text-2xl" />
       </button>
       <div className="w-full flex justify-end">
-        <button
-          className={`relative ${darkMode ? "text-white" : "text-black"}`}
-          title="Notifications"
-        >
-          <Icon name="notifications" className="text-2xl" />
-          <span
-            className={`bg-[#FF3131] absolute w-2 h-2 rounded-full top-[22px] -right-0 ring-2 ${
-              darkMode ? "ring-neutral-900" : "ring-neutral-200"
-            }`}
-          />
-        </button>
+        <NotificationsMenu />
         <button
           className={`ml-2 ${darkMode ? "text-white" : "text-black"}`}
           onClick={() => dispatch(toggledarkMode())}
