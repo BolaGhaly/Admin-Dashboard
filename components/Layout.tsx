@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
       <Sidebar />
       <section
         className={`ml-16 mt-16 p-4 mh-minus-topBar ${
-          darkMode ? "bg-dark-pr" : "bg-light-pr"
+          darkMode ? "bg-zinc-900" : "bg-zinc-100"
         } `}
       >
         {children}

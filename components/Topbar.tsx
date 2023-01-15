@@ -54,8 +54,8 @@ const Topbar = () => {
     <nav
       className={`fixed top-0 left-0 pl-4 mw-minus-sideBar ml-16 ${
         darkMode
-          ? "bg-dark-sc shadow-[0_2px_4px_0px_rgba(220,220,220,0.4)]"
-          : "bg-light-sc shadow-[0_2px_4px_0px_rgba(0,0,0,0.4)]"
+          ? "bg-neutral-900 shadow-[0_2px_4px_0px_rgba(220,220,220,0.4)]"
+          : "bg-neutral-200 shadow-[0_2px_4px_0px_rgba(0,0,0,0.4)]"
       }`}
     >
       <div className="flex min-h-[64px]">
@@ -73,8 +73,8 @@ const Topbar = () => {
           >
             <Icon name="notifications" className="text-2xl" />
             <span
-              className={`bg-red-500 absolute w-2 h-2 rounded-full top-[22px] -right-0 ring-2 ${
-                darkMode ? "ring-dark-sc" : "ring-light-sc"
+              className={`bg-[#FF3131] absolute w-2 h-2 rounded-full top-[22px] -right-0 ring-2 ${
+                darkMode ? "ring-neutral-900" : "ring-neutral-200"
               }`}
             />
           </button>
@@ -103,7 +103,7 @@ const Topbar = () => {
           <Menu
             as="div"
             className={`flex items-center ml-2 cursor-pointer relative px-2 rounded-l-md ${
-              darkMode ? "bg-zinc-800" : "bg-zinc-300"
+              darkMode ? "bg-neutral-800" : "bg-neutral-300"
             }`}
             title="User's Profile"
           >
@@ -143,10 +143,10 @@ const Topbar = () => {
               leaveTo="transform opacity-0 scale-95"
             >
               <Menu.Items
-                className={`absolute right-0 top-[4.125rem] min-w-[13rem] origin-top-right rounded-l-md shadow-lg ring-black ring-1 ring-opacity-5 ${
+                className={`absolute right-0 top-[4.125rem] min-w-[13rem] origin-top-right rounded-bl-md ring-black ring-1 ring-opacity-5 ${
                   darkMode
-                    ? "bg-dark-sc-ct1 text-white"
-                    : "bg-light-sc-ct1 text-black"
+                    ? "bg-neutral-900 text-white shadow-[-1px_1px_4px_1px_rgba(220,220,220,0.4)]"
+                    : "bg-neutral-200 text-black shadow-[-1px_1px_4px_1px_rgba(0,0,0,0.4)]"
                 }`}
               >
                 <div className="p-2">
@@ -154,10 +154,10 @@ const Topbar = () => {
                     return (
                       <Menu.Item key={item.id}>
                         <button
-                          className={`w-full flex items-center rounded-md px-2 py-2 ${
+                          className={`w-full flex items-center rounded-lg px-2 py-2 ${
                             darkMode
-                              ? "text-slate-100 hover:bg-dark-hover1"
-                              : "hover:bg-light-hover1"
+                              ? "text-white hover:bg-neutral-800"
+                              : "text-black hover:bg-neutral-300"
                           }`}
                         >
                           <Icon
