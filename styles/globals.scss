@@ -12,4 +12,8 @@
   .mh-minus-topBar {
     min-height: calc(100vh - 64px);
   }
+
+  .sm-notifications-menu {
+    min-width: calc(100% - 80px);
+  }
 }

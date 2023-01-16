@@ -10,7 +10,7 @@ const NotificationsMenu = () => {
   return (
     <Menu
       as="div"
-      className={`relative ${darkMode ? "text-white" : "text-black"}`}
+      className={`static xs:relative ${darkMode ? "text-white" : "text-black"}`}
       title="Notifications"
     >
       <Menu.Button className={`flex items-center h-full relative`}>
@@ -31,14 +31,28 @@ const NotificationsMenu = () => {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items
-          className={`absolute right-0 top-[4.125rem] mw-minus-sideBar-vw origin-center rounded-bl-md ring-black ring-1 ring-opacity-5 ${
+          className={`fixed xs:absolute mx-2 xs:m-0 sm-notifications-menu right-0 top-16 origin-center rounded-b-md py-2 ${
             darkMode ? "bg-neutral-900 text-white" : "bg-neutral-200 text-black"
           }`}
         >
-          <div>
-            <h1>Notifications</h1>
-            <button>Mark all as read</button>
+          <div
+            className={`flex items-center justify-between border-b-[1px] ${
+              darkMode ? "border-white" : "border-black"
+            }`}
+          >
+            <h1 className="text-lg ml-3 font-medium my-1">Notifications</h1>
+            <Menu.Item>
+              <button className="mr-2 h-max">
+                <Icon
+                  name="closeMenu"
+                  className={`text-xl rounded-md ring-1 ring-light-sc-text ${
+                    darkMode ? "" : "text-light-sc-text"
+                  }`}
+                />
+              </button>
+            </Menu.Item>
           </div>
+          <div>testing</div>
         </Menu.Items>
       </Transition>
     </Menu>
