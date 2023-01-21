@@ -2,10 +2,14 @@
 @import "@Styles/palette.scss";
 
 :root[data-theme="light"] {
+  --bg: #{$light-bg};
+  --text: #{$light-text};
   --nav-bg: #{$light-navBar};
 }
 
 :root[data-theme="dark"] {
+  --bg: #{$dark-bg};
+  --text: #{$dark-text};
   --nav-bg: #{$dark-navBar};
 }
 
@@ -27,7 +31,8 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  color: black;
+  color: var(--text);
   padding: 0 !important;
   overflow: visible !important;
+  background-color: var(--bg);
 }
