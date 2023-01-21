@@ -9,15 +9,17 @@
   min-height: 4rem;
   border-bottom: 2px solid #a3a3a3;
   display: flex;
+  justify-content: space-between;
 
   button {
     color: var(--text);
     font-size: 1.5rem;
     background-color: var(--nav-bg);
+          cursor: pointer;
+
   }
 
   div {
-    width: 100%;
     display: flex;
     justify-content: end;
 
@@ -33,6 +35,24 @@
   margin-left: 0.5rem;
   cursor: pointer;
   position: relative;
-  border-radius: 0.5rem 0 0 0.5rem;
-  background-color: var(--user);
+  width: max-content;
+
+  button {
+    border-radius: 0.5rem 0 0 0.5rem;
+    background-color: var(--user);
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 0.5rem;
+    margin: 0 !important;
+
+    img {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+    }
+
+    div {
+    }
+  }
 }

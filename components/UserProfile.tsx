@@ -11,9 +11,8 @@ const UserProfile = () => {
 
   return (
     <Menu as="div" className={styles.user} title="User's Profile">
-      <Menu.Button className="flex items-center h-full px-2">
+      <Menu.Button>
         <Image
-          className="rounded-full w-12 h-12"
           src="/profileImg.jpg"
           width={100}
           height={100}
