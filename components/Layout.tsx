@@ -1,7 +1,7 @@
 import Sidebar from "./Sidebar";
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
-import Topbar from "./topBar/TopBar";
+import Topbar from "./TopBar";
 
 const Layout = ({ children }) => {
   const openSideBar = useSelector(

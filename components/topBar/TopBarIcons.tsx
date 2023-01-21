@@ -51,7 +51,7 @@ const TopBarIcons = () => {
   };
 
   return (
-    <div className="flex min-h-[64px]">
+    <div>
       <button
         className={`${darkMode ? "text-white" : "text-black"}`}
         onClick={() => dispatch(openSideBarReverse())}

@@ -1,0 +1,14 @@
+.topNavBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--nav-bg);
+  padding-left: 1rem;
+  margin-left: 4rem;
+  min-width: calc(100% - 64px);
+
+  div {
+    display: flex;
+    min-height: 4rem;
+  }
+}

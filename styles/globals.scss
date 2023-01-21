@@ -36,3 +36,24 @@ body {
   overflow: visible !important;
   background-color: var(--bg);
 }
+
+// Utility Classes
+.hidden {
+  display: none;
+}
+
+.pl-18 {
+  padding-left: 1.125rem;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.w-52 {
+  width: 13rem;
+}
