@@ -1,7 +1,7 @@
 const transactions = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold">Transactions</h1>
+      <h1>Transactions</h1>
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos sint
         labore maiores ut doloremque explicabo doloribus aliquam error, quae

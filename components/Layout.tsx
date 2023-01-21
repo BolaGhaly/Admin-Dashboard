@@ -1,7 +1,7 @@
 import Sidebar from "./Sidebar";
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
-import Topbar from "./topBar/Topbar";
+import Topbar from "./topBar/TopBar";
 
 const Layout = ({ children }) => {
   const openSideBar = useSelector(
@@ -10,20 +10,10 @@ const Layout = ({ children }) => {
   const darkMode = useSelector((state: RootState) => state.darkMode.value);
 
   return (
-    <main
-      className={`font-poppins ${openSideBar ? "cursor-pointer" : ""} ${
-        darkMode ? "text-white" : "text-black"
-      }`}
-    >
+    <main>
       <Topbar />
       <Sidebar />
-      <section
-        className={`ml-16 mt-16 p-4 mh-minus-topBar ${
-          darkMode ? "bg-zinc-900" : "bg-zinc-100"
-        } `}
-      >
-        {children}
-      </section>
+      <section>{children}</section>
     </main>
   );
 };

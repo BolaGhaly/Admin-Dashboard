@@ -1,19 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import "@Styles/palette.scss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root[data-theme="light"] {
+  --nav-bg: #{$light-navBar};
+}
 
-@layer components {
-  .mw-minus-sideBar {
-    min-width: calc(100% - 64px);
-  }
+:root[data-theme="dark"] {
+  --nav-bg: #{$dark-navBar};
+}
 
-  .mh-minus-topBar {
-    min-height: calc(100vh - 64px);
-  }
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
 
-  .sm-notifications-menu {
-    min-width: calc(100% - 80px);
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  padding: 0 !important;
+  overflow: visible !important;
 }

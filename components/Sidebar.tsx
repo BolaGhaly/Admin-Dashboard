@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
 import { openSideBarOff } from "../store/sideBar";
 import Icon, { navData } from "../utils/sideBarUtils";
+import styles from "../styles/modules/sideBar.module.scss";
 
 const Sidebar = () => {
   const darkMode = useSelector((state: RootState) => state.darkMode.value);
@@ -14,12 +15,7 @@ const Sidebar = () => {
   const sideBarRef = useOnclickOutside(() => dispatch(openSideBarOff()));
 
   return (
-    <nav
-      className={`fixed min-h-full top-0 left-0 border-r-2 border-neutral-400 ${
-        openSideBar ? "w-52" : "w-16"
-      } ${darkMode ? "bg-neutral-900" : "bg-neutral-200"}`}
-      ref={sideBarRef}
-    >
+    <nav className={styles.sideNavBar} ref={sideBarRef}>
       <div
         className={`flex flex-col ${
           openSideBar ? "pl-[17px]" : "items-center"

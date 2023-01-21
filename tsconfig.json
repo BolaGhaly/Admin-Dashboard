@@ -15,7 +15,10 @@
     "jsx": "preserve",
     "incremental": true,
     "noUnusedLocals": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "paths": {
+      "@Styles/*": ["./styles/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
