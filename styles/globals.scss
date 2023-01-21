@@ -5,12 +5,14 @@
   --bg: #{$light-bg};
   --text: #{$light-text};
   --nav-bg: #{$light-navBar};
+  --user: #{$light-user};
 }
 
 :root[data-theme="dark"] {
   --bg: #{$dark-bg};
   --text: #{$dark-text};
   --nav-bg: #{$dark-navBar};
+  --user: #{$dark-user};
 }
 
 *,

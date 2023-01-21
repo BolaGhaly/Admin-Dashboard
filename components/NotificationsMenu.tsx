@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import { RootState } from "../../store/store";
-import Icon from "../../utils/topBarUtils";
+import { RootState } from "../store/store";
+import Icon from "../utils/topBarUtils";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 
