@@ -19,17 +19,9 @@ const UserProfile = () => {
           alt="Profile Image"
           loading="eager"
         />
-        <div className="pl-1 hidden md:flex md:flex-col md:items-start">
-          <p className={`text-lg ${darkMode ? "text-white" : "text-black"}`}>
-            Bradley Cruz
-          </p>
-          <p
-            className={`leading-none font-medium ${
-              darkMode ? "text-dark-sc-text" : "text-light-sc-text"
-            }`}
-          >
-            CEO
-          </p>
+        <div>
+          <h1>Bradley Cruz</h1>
+          <h2>CEO</h2>
         </div>
       </Menu.Button>
       <Transition

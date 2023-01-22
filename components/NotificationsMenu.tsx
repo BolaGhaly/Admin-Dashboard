@@ -14,7 +14,7 @@ const NotificationsMenu = () => {
       title="Notifications"
     >
       <Menu.Button className={`flex items-center h-full relative`}>
-        <Icon name="notifications" className="text-2xl" />
+        <Icon name="notifications" />
         <span
           className={`bg-[#FF3131] absolute w-2 h-2 rounded-full top-[20px] -right-0 ring-2 ${
             darkMode ? "ring-neutral-900" : "ring-neutral-200"

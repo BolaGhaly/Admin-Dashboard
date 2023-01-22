@@ -4,6 +4,7 @@
 :root[data-theme="light"] {
   --bg: #{$light-bg};
   --text: #{$light-text};
+  --sc-text: #{$light-sc-text};
   --nav-bg: #{$light-navBar};
   --user: #{$light-user};
 }
@@ -11,6 +12,7 @@
 :root[data-theme="dark"] {
   --bg: #{$dark-bg};
   --text: #{$dark-text};
+  --sc-text: #{$dark-sc-text};
   --nav-bg: #{$dark-navBar};
   --user: #{$dark-user};
 }
