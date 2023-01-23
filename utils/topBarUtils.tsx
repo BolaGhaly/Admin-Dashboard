@@ -5,8 +5,11 @@ import {
   BiSun,
   BiSupport,
 } from "react-icons/bi";
-import { MdOutlineManageAccounts, MdClose } from "react-icons/md";
-import { IoLogOutOutline } from "react-icons/io5";
+import {
+  MdOutlineManageAccounts,
+  MdClose,
+  MdOutlineLogout,
+} from "react-icons/md";
 import { HiOutlineMenu } from "react-icons/hi";
 import { RiNotification2Line } from "react-icons/ri";
 
@@ -19,7 +22,7 @@ const iconTypes = {
   notifications: RiNotification2Line,
   profileSettings: MdOutlineManageAccounts,
   support: BiSupport,
-  signOut: IoLogOutOutline,
+  signOut: MdOutlineLogout,
   closeMenu: MdClose,
 };
 
@@ -28,16 +31,19 @@ export const profileData = [
     id: 0,
     icon: "profileSettings",
     text: "Settings",
+    title: "Settings",
   },
   {
     id: 1,
     icon: "support",
     text: "Support",
+    title: "Support",
   },
   {
     id: 2,
     icon: "signOut",
     text: "Sign Out",
+    title: "Sign Out",
   },
 ];
 

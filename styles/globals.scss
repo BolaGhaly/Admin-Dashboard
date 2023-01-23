@@ -7,6 +7,8 @@
   --sc-text: #{$light-sc-text};
   --nav-bg: #{$light-navBar};
   --user: #{$light-user};
+  --userMenu-hover: #{$light-userMenu-hover};
+  --userMenu-shadow: #{$light-userMenu-shadow};
 }
 
 :root[data-theme="dark"] {
@@ -15,6 +17,8 @@
   --sc-text: #{$dark-sc-text};
   --nav-bg: #{$dark-navBar};
   --user: #{$dark-user};
+  --userMenu-hover: #{$dark-userMenu-hover};
+  --userMenu-shadow: #{$dark-userMenu-shadow};
 }
 
 *,
