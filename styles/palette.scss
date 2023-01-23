@@ -1,16 +1,16 @@
 // light mode
-$light-bg: #f4f4f5;
-$light-text: #0e0e0e;
+$light-bg: #f5f5f5;
 $light-sc-text: #585858;
 $light-navBar: #e5e5e5;
+$light-text: #000000;
 $light-user: #d4d4d4;
 
 // dark mode
-$dark-bg: #27272a;
+$dark-bg: #1b2023;
 $dark-text: #f5f5f5;
-$dark-sc-text: #c5c5c5;
-$dark-navBar: #171717;
-$dark-user: #262626;
+$dark-sc-text: #b3b3b3;
+$dark-navBar: #1A1A1B;
+$dark-user: #272729;
 
 :export {
   light-bg: $light-bg;

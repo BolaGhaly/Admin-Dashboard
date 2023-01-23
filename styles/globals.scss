@@ -37,8 +37,13 @@ body {
   font-family: "Poppins", sans-serif;
   color: var(--text);
   padding: 0 !important;
-  overflow: visible !important;
   background-color: var(--bg);
+}
+
+section {
+  margin: 4rem 0 0 4rem;
+  padding: 1rem;
+  min-height: calc(100vh - 4rem);
 }
 
 // Utility Classes
