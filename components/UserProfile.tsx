@@ -2,13 +2,9 @@ import { Fragment } from "react";
 import Image from "next/image";
 import { Menu, Transition } from "@headlessui/react";
 import Icon, { profileData } from "../utils/topBarUtils";
-import { useSelector } from "react-redux";
-import { RootState } from "../store/store";
 import styles from "../styles/modules/topBar.module.scss";
 
 const UserProfile = () => {
-  const darkMode = useSelector((state: RootState) => state.darkMode.value);
-
   return (
     <Menu as="div" className={styles.user} title="User's Profile">
       <Menu.Button>
