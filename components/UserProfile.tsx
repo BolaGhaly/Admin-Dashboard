@@ -34,11 +34,7 @@ const UserProfile = () => {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items
-          className={`absolute right-0 top-16 min-w-[13rem] origin-top-right rounded-bl-md ${
-            darkMode
-              ? "bg-neutral-900 text-white shadow-[-2px_2px_2px_rgba(220,220,220,0.3)]"
-              : "bg-neutral-200 text-black shadow-[-2px_2px_2px_rgba(0,0,0,0.3)]"
-          }`}
+          className={styles.userMenu}
         >
           <div className="p-2 cursor-default">
             {profileData.map((item) => {

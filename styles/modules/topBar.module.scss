@@ -44,7 +44,7 @@
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 0 0.375rem;
+    padding: 0.375rem;
     margin: 0 !important;
 
     img {
@@ -54,7 +54,7 @@
     }
 
     div {
-      padding: 0.688rem 0 0.688rem 0.5rem;
+      padding-left: 0.5rem;
       display: none;
       line-height: 1;
 
@@ -78,3 +78,19 @@
     }
   }
 }
+
+.userMenu {
+  position: absolute;
+  right: 0;
+  top: 4rem;
+  min-width: 13rem;
+  transform-origin: top right;
+  border-bottom-left-radius: 0.375rem;
+  background-color: var(--nav-bg);
+}
+
+/*
+darkMode ? 
+" text-white shadow-[-2px_2px_2px_rgba(220,220,220,0.3)]"
+: " text-black shadow-[-2px_2px_2px_rgba(0,0,0,0.3)]"     
+*/
