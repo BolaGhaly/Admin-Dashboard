@@ -3,23 +3,16 @@ import { RootState } from "../store/store";
 import Icon from "../utils/topBarUtils";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
+import styles from "../styles/modules/topBar.module.scss";
 
 const NotificationsMenu = () => {
   const darkMode = useSelector((state: RootState) => state.darkMode.value);
 
   return (
-    <Menu
-      as="div"
-      className={`static xs:relative ${darkMode ? "text-white" : "text-black"}`}
-      title="Notifications"
-    >
-      <Menu.Button className={`flex items-center h-full relative`}>
+    <Menu as="div" title="Notifications" className={styles.notificationsMenu}>
+      <Menu.Button>
         <Icon name="notifications" />
-        <span
-          className={`bg-[#FF3131] absolute w-2 h-2 rounded-full top-[20px] -right-0 ring-2 ${
-            darkMode ? "ring-neutral-900" : "ring-neutral-200"
-          }`}
-        />
+        <span />
       </Menu.Button>
       <Transition
         as={Fragment}
@@ -30,11 +23,7 @@ const NotificationsMenu = () => {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items
-          className={`fixed xs:absolute mx-2 xs:m-0 sm-notifications-menu right-0 top-16 origin-center rounded-b-md py-2 ${
-            darkMode ? "bg-neutral-900 text-white" : "bg-neutral-200 text-black"
-          }`}
-        >
+        <Menu.Items className={styles.notificationsMenuItems}>
           <div
             className={`flex items-center justify-between border-b-[1px] border-dashed ${
               darkMode ? "border-white" : "border-black"
