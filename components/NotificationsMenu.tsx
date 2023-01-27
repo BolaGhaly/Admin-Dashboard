@@ -24,26 +24,18 @@ const NotificationsMenu = () => {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items className={styles.notificationsMenuItems}>
-          <div
-            className={`flex items-center justify-between border-b-[1px] border-dashed ${
-              darkMode ? "border-white" : "border-black"
-            }`}
-          >
-            <h1 className="text-lg ml-3 font-bold my-1">Notifications</h1>
+          <div>
+            <h1>Notifications</h1>
             <Menu.Item>
-              <button className="mr-2 h-max">
-                <Icon
-                  name="closeMenu"
-                  className={`text-xl rounded-md ring-1  ${
-                    darkMode
-                      ? "text-neutral-300 ring-neutral-300"
-                      : "text-light-sc-text ring-light-sc-text"
-                  }`}
-                />
-              </button>
+              <button>Clear All</button>
             </Menu.Item>
           </div>
-          <div>testing</div>
+          <div>
+            <h2>Today</h2>
+          </div>
+          <div>
+            <h2>Yesterday</h2>
+          </div>
         </Menu.Items>
       </Transition>
     </Menu>
