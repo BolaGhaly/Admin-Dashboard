@@ -1,13 +1,9 @@
-import { useSelector } from "react-redux";
-import { RootState } from "../store/store";
 import Icon from "../utils/topBarUtils";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import styles from "../styles/modules/topBar.module.scss";
 
 const NotificationsMenu = () => {
-  const darkMode = useSelector((state: RootState) => state.darkMode.value);
-
   return (
     <Menu as="div" title="Notifications" className={styles.notificationsMenu}>
       <Menu.Button>
@@ -32,6 +28,9 @@ const NotificationsMenu = () => {
           </div>
           <div>
             <h2>Today</h2>
+            <Menu.Item as="button">
+              <Icon name="newUser" />
+            </Menu.Item>
           </div>
           <div>
             <h2>Yesterday</h2>

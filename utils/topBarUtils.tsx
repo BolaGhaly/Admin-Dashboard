@@ -11,7 +11,7 @@ import {
   MdOutlineLogout,
 } from "react-icons/md";
 import { HiOutlineMenu } from "react-icons/hi";
-import { RiNotification2Line } from "react-icons/ri";
+import { RiNotification2Line, RiUserAddLine } from "react-icons/ri";
 
 const iconTypes = {
   menu: HiOutlineMenu,
@@ -24,6 +24,7 @@ const iconTypes = {
   support: BiSupport,
   signOut: MdOutlineLogout,
   closeMenu: MdClose,
+  newUser: RiUserAddLine,
 };
 
 export const profileData = [
