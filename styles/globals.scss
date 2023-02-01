@@ -45,14 +45,22 @@ body {
 }
 
 section {
-  margin: 4rem 0 0 4rem;
   padding: 1rem;
   min-height: calc(100vh - 4rem);
+  margin-top: 4rem;
+
+  @media (min-width: 320px) {
+    margin: 4rem 0 0 4rem;
+  }
 }
 
 // Utility Classes
 .hidden {
   display: none;
+}
+
+.shown {
+  display: block !important;
 }
 
 .pl-18 {

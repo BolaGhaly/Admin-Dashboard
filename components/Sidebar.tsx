@@ -15,14 +15,11 @@ const Sidebar = () => {
   const sideBarRef = useOnclickOutside(() => dispatch(openSideBarOff()));
 
   return (
-    <nav className={`${styles.sideNavBar} ${
-        openSideBar ? "w-52" : "w-16"
-      }`} ref={sideBarRef}>
-      <div
-        className={`${
-          openSideBar ? "pl-18" : "items-center"
-        }`}
-      >
+    <nav
+      className={`${styles.sideNavBar} ${openSideBar ? "w-52 shown" : "w-16"}`}
+      ref={sideBarRef}
+    >
+      <div className={`${openSideBar ? "pl-18" : "items-center"}`}>
         <div className="flex flex-col">
           {navData.map((item) => {
             return (

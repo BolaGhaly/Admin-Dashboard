@@ -4,8 +4,7 @@
   left: 0;
   background-color: var(--nav-bg);
   padding-left: 1rem;
-  margin-left: 4rem;
-  min-width: calc(100% - 64px);
+  min-width: 100%;
   border-bottom: 2px solid #a3a3a3;
   display: flex;
   justify-content: space-between;
@@ -27,6 +26,11 @@
     button {
       margin-left: 0.5rem;
     }
+  }
+
+  @media (min-width: 320px) {
+    margin-left: 4rem;
+    min-width: calc(100% - 64px);
   }
 }
 
@@ -155,11 +159,7 @@
     h1 {
       font-size: 1.125rem;
       font-weight: 500;
-      margin-right: 1.5rem;
-
-      @media (min-width: 315px) {
-        margin-right: 3.5rem;
-      }
+      margin-right: 3.5rem;
     }
 
     button {

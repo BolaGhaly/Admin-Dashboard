@@ -5,9 +5,14 @@
   background-color: var(--nav-bg);
   min-height: 100%;
   border-right: 2px solid #a3a3a3;
+  display: none;
 
   div {
     display: flex;
     flex-direction: column;
+  }
+
+  @media (min-width: 320px) {
+    display: block;
   }
 }
