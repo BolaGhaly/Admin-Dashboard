@@ -140,7 +140,6 @@
 }
 
 .notificationsMenuItems {
-  //mx-2 xs:m-0
   position: fixed;
   right: 0rem;
   top: 4rem;
@@ -163,10 +162,9 @@
     }
 
     button {
-      color: var(--sc-text);
+      color: var(--clearAll-text);
       margin: 0;
       font-size: 0.875rem;
-      text-decoration: underline;
     }
   }
 
