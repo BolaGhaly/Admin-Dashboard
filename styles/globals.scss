@@ -10,6 +10,7 @@
   --userMenu-hover: #{$light-userMenu-hover};
   --userMenu-shadow: #{$light-userMenu-shadow};
   --clearAll-text: #{$light-clearAll-text};
+  --notifications-line: #{$light-notifications-line};
 }
 
 :root[data-theme="dark"] {
@@ -21,6 +22,7 @@
   --userMenu-hover: #{$dark-userMenu-hover};
   --userMenu-shadow: #{$dark-userMenu-shadow};
   --clearAll-text: #{$dark-clearAll-text};
+  --notifications-line: #{$dark-notifications-line};
 }
 
 *,
