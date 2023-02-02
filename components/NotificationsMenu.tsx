@@ -28,7 +28,14 @@ const NotificationsMenu = () => {
           </div>
           <div>
             <h2>Today</h2>
-            <Menu.Item as="button">
+            <Menu.Item as="div">
+              <Icon name="newUser" />
+              <div>
+                <h1>lorem</h1>
+                <h2>testing h2</h2>
+              </div>
+            </Menu.Item>
+            <Menu.Item as="div">
               <Icon name="newUser" />
             </Menu.Item>
           </div>
