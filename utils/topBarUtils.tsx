@@ -1,6 +1,4 @@
 import {
-  BiFullscreen,
-  BiExitFullscreen,
   BiMoon,
   BiSun,
   BiSupport,
@@ -16,8 +14,6 @@ import { FiUserPlus } from "react-icons/fi";
 
 const iconTypes = {
   menu: HiOutlineMenu,
-  fullscreenOn: BiFullscreen,
-  fullscreenOff: BiExitFullscreen,
   darkModeOff: BiMoon,
   darkModeOn: BiSun,
   notifications: RiNotification2Line,
