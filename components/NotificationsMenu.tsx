@@ -34,7 +34,7 @@ const NotificationsMenu = () => {
               </button>
               <div>
                 <h1>Admin</h1>
-                <h2>New user registered!</h2>
+                <h2>New user registered! registered! registered! registered!</h2>
                 <small>10m ago</small>
               </div>
             </Menu.Item>
