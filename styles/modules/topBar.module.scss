@@ -153,18 +153,20 @@
 
   div:nth-child(1) {
     border-bottom: 1px dashed var(--notifications-line);
-    padding: 0.625rem;
+    padding: 0.75rem;
+    width: 100%;
+    justify-content: space-between;
 
     h1 {
       font-size: 1.125rem;
       font-weight: 500;
-      margin-right: 3.5rem;
     }
 
     button {
       color: var(--clearAll-text);
       margin: 0;
       font-size: 0.875rem;
+      justify-content: flex-end;
     }
   }
 
@@ -178,7 +180,7 @@
   div:nth-child(2),
   div:nth-child(3) {
     border: 0;
-    padding: 0.5rem 1.25rem;
+    padding: 0.75rem 0.75rem 0.75rem 1.5rem;
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
@@ -193,18 +195,18 @@
       border-radius: 0.25rem;
       flex-direction: row;
       align-items: center;
-      width: 100%;
+      width: 13.25rem;
 
       button {
         margin: 0;
-        background-color: tan;
+        background-color: #525ee6;
         padding: 0.5rem;
         border-radius: 50%;
-      }
 
-      svg {
-        font-size: 1rem;
-        color: var(--text);
+        svg {
+          font-size: 1.125rem;
+          color: whitesmoke;
+        }
       }
 
       div {
@@ -213,26 +215,45 @@
         border: 0;
         flex-direction: column;
         align-items: flex-start;
-        line-height: 1;
-        width: max-content;
+        width: 100%;
 
         h1 {
           font-weight: 500;
           font-size: 0.875rem;
+          width: 100%;
+          display: inline-flex;
+          justify-content: space-between;
+          align-items: center;
+          line-height: 1;
+          column-gap: 0.5rem;
 
           small {
             color: var(--sc-text);
-            margin-left: 1rem;
+            justify-content: flex-end;
             font-weight: 400;
             font-size: 0.75rem;
+            text-align: center;
           }
         }
 
         h2 {
           font-weight: 400;
           font-size: 0.875rem;
-          margin: 0.25rem 0 0 0;
+          margin: 0.125rem 0 0 0;
+          max-width: 9.5rem;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          line-height: normal;
+
+          @media (min-width: 350px) {
+            max-width: 11.25rem;
+          }
         }
+      }
+
+      @media (min-width: 350px) {
+        width: 15rem;
       }
     }
 
