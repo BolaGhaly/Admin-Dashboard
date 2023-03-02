@@ -11,6 +11,7 @@
   --userMenu-shadow: #{$light-userMenu-shadow};
   --clearAll-text: #{$light-clearAll-text};
   --notifications-line: #{$light-notifications-line};
+  --notification-timestamp: #{$light-notification-timestamp};
 }
 
 :root[data-theme="dark"] {
@@ -23,6 +24,7 @@
   --userMenu-shadow: #{$dark-userMenu-shadow};
   --clearAll-text: #{$dark-clearAll-text};
   --notifications-line: #{$dark-notifications-line};
+  --notification-timestamp: #{$dark-notification-timestamp};
 }
 
 *,

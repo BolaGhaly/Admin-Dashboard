@@ -33,10 +33,9 @@ const NotificationsMenu = () => {
                 <Icon name="newUser" />
               </button>
               <div>
-                <h1>
-                  Admin<small>10 mins ago</small>
-                </h1>
+                <h1>Admin</h1>
                 <h2>New user registered!</h2>
+                <small>10m ago</small>
               </div>
             </Menu.Item>
             <Menu.Item as="div">
