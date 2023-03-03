@@ -34,12 +34,19 @@ const NotificationsMenu = () => {
               </button>
               <div>
                 <h1>Admin</h1>
-                <h2>New user registered! registered! registered! registered!</h2>
+                <h2>New user registered!</h2>
                 <small>10m ago</small>
               </div>
             </Menu.Item>
             <Menu.Item as="div">
-              <Icon name="newUser" />
+              <button>
+                <Icon name="newUser" />
+              </button>
+              <div>
+                <h1>Admin</h1>
+                <h2>New user registered!</h2>
+                <small>10m ago</small>
+              </div>
             </Menu.Item>
           </div>
           <div>
