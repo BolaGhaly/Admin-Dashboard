@@ -1,4 +1,4 @@
-import { BiMoon, BiSun, BiSupport, BiUserPlus } from "react-icons/bi";
+import { BiMoon, BiSun, BiSupport } from "react-icons/bi";
 import {
   MdOutlineManageAccounts,
   MdClose,
@@ -16,7 +16,6 @@ const iconTypes = {
   support: BiSupport,
   signOut: MdOutlineLogout,
   closeMenu: MdClose,
-  newUser: BiUserPlus,
 };
 
 export const profileData = [
