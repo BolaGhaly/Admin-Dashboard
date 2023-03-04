@@ -15,10 +15,7 @@ const UserProfile = () => {
           alt="Profile Image"
           loading="eager"
         />
-        <div>
-          <h1>Bradley Cruz</h1>
-          <h2>CEO</h2>
-        </div>
+        <h1>Brian Griffin</h1>
       </Menu.Button>
       <Transition
         as={Fragment}
