@@ -29,13 +29,16 @@ const NotificationsMenu = () => {
           </div>
           <div>
             <Menu.Item as="div">
-              <Image
-                src="/notification2.jpg"
-                width={100}
-                height={100}
-                alt="Profile Image"
-                loading="eager"
-              />
+              <div className={styles.notificationImgContainer}>
+                <Image
+                  src="/notification2.jpg"
+                  width={100}
+                  height={100}
+                  alt="Profile Image"
+                  loading="eager"
+                />
+                <span className={styles.notificationImgCircle} />
+              </div>
               <div>
                 <h1>
                   <b>Emma Jones</b> assigned you to{" "}

@@ -176,10 +176,27 @@
       align-items: center;
       align-items: flex-start;
 
-      img {
-        width: 2.75rem;
-        height: 2.75rem;
-        border-radius: 0.5rem;
+      .notificationImgContainer {
+        margin: 0;
+        width: max-content;
+        position: relative;
+
+        img {
+          width: 2.75rem;
+          height: 2.75rem;
+          border-radius: 0.5rem;
+        }
+
+        .notificationImgCircle {
+          position: absolute;
+          background-color: #1fc966;
+          width: 0.5rem;
+          height: 0.5rem;
+          border-radius: 50%;
+          right: -0.125rem;
+          bottom: 0;
+          box-shadow: 0 0 0 2px var(--nav-bg);
+        }
       }
 
       div {
