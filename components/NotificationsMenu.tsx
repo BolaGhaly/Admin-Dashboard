@@ -2,13 +2,14 @@ import Icon from "../utils/topBarUtils";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import styles from "../styles/modules/topBar.module.scss";
+import Image from "next/image";
 
 const NotificationsMenu = () => {
   return (
     <Menu as="div" title="Notifications" className={styles.notificationsMenu}>
       <Menu.Button>
         <Icon name="notifications" />
-        <span />
+        <span className={styles.notificationCircle} />
       </Menu.Button>
       <Transition
         as={Fragment}
@@ -27,30 +28,22 @@ const NotificationsMenu = () => {
             </Menu.Item>
           </div>
           <div>
-            <h2>Today</h2>
             <Menu.Item as="div">
-              <button>
-                <Icon name="newUser" />
-              </button>
+              <Image
+                src="/notification2.jpg"
+                width={100}
+                height={100}
+                alt="Profile Image"
+                loading="eager"
+              />
               <div>
-                <h1>Admin</h1>
-                <h2>New user registered!</h2>
-                <small>10m ago</small>
+                <h1>
+                  <b>Emma Jones</b> assigned you to{" "}
+                  <b>Setting up SEO for the main page</b>
+                </h1>
+                <small>10m ago &#x2022; Engineering</small>
               </div>
             </Menu.Item>
-            <Menu.Item as="div">
-              <button>
-                <Icon name="newUser" />
-              </button>
-              <div>
-                <h1>Admin</h1>
-                <h2>New user registered!</h2>
-                <small>10m ago</small>
-              </div>
-            </Menu.Item>
-          </div>
-          <div>
-            <h2>Yesterday</h2>
           </div>
         </Menu.Items>
       </Transition>
