@@ -236,11 +236,13 @@
     width: calc(100vw - 74px);
     max-width: 18.25rem;
     border-bottom-left-radius: 0.375rem;
+    box-shadow: -2px 0 2px var(--boxShadow), 0 2px 2px var(--boxShadow);
   }
 
   @media (min-width: 565px) {
     position: absolute;
     top: 2.813rem;
     border-bottom-right-radius: 0.375rem;
+    box-shadow: -2px 0 2px var(--boxShadow), 0 2px 2px var(--boxShadow), 2px 0 2px var(--boxShadow);
   }
 }
