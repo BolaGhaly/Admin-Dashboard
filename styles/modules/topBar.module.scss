@@ -82,7 +82,7 @@
   padding: 0.5rem;
   cursor: default;
   flex-direction: column;
-  box-shadow: var(--userMenu-shadow);
+  box-shadow: -2px 2px 2px var(--boxShadow);
 
   button {
     background-color: var(--nav-bg);
