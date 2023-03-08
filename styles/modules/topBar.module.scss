@@ -1,3 +1,11 @@
+@mixin notificationUserStatus {
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--nav-bg);
+}
+
 .topNavBar {
   position: fixed;
   top: 0;
@@ -115,14 +123,10 @@
   position: relative;
 
   .notificationCircle {
-    position: absolute;
-    background-color: #ff4040;
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
+    @include notificationUserStatus;
+    background-color: #ff4c4c;
     right: 0;
     top: 0.125rem;
-    box-shadow: 0 0 0 2px var(--nav-bg);
   }
 }
 
@@ -165,9 +169,8 @@
 
     div {
       padding: 0;
-      margin: 0;
+      margin: 0 0 1.25rem 0;
       cursor: pointer;
-      margin-bottom: 1rem;
       padding: 0.5rem;
       border: 1px solid var(--notifications-line);
       border-radius: 0.25rem;
@@ -186,15 +189,24 @@
           border-radius: 0.5rem;
         }
 
-        .notificationImgCircle {
-          position: absolute;
-          background-color: #1fc966;
-          width: 0.5rem;
-          height: 0.5rem;
-          border-radius: 50%;
+        .notificationActiveUser,
+        .notificationInactiveUser,
+        .notificationAwayUser {
+          @include notificationUserStatus;
           right: -0.125rem;
           bottom: 0;
-          box-shadow: 0 0 0 2px var(--nav-bg);
+        }
+
+        .notificationActiveUser {
+          background-color: #1fc966;
+        }
+
+        .notificationInactiveUser {
+          background-color: #ff4c4c;
+        }
+
+        .notificationAwayUser {
+          background-color: #ffa010;
         }
       }
 
@@ -205,13 +217,13 @@
         flex-direction: column;
         align-items: flex-start;
 
-        h1,
+        p,
         small {
           width: 100%;
         }
 
-        h1 {
-          font-weight: 400;
+        p {
+          font-weight: 300;
           font-size: 0.875rem;
 
           b {
@@ -243,6 +255,7 @@
     position: absolute;
     top: 2.813rem;
     border-bottom-right-radius: 0.375rem;
-    box-shadow: -2px 0 2px var(--boxShadow), 0 2px 2px var(--boxShadow), 2px 0 2px var(--boxShadow);
+    box-shadow: -2px 0 2px var(--boxShadow), 0 2px 2px var(--boxShadow),
+      2px 0 2px var(--boxShadow);
   }
 }

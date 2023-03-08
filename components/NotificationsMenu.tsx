@@ -35,16 +35,35 @@ const NotificationsMenu = () => {
                   width={100}
                   height={100}
                   alt="User's Profile Image"
-                  loading="eager"
                 />
-                <span className={styles.notificationImgCircle} title="Available"/>
+                <span
+                  className={styles.notificationActiveUser}
+                  title="Available"
+                />
               </div>
               <div>
-                <h1>
+                <p>
                   <b>Emma Jones</b> assigned you to{" "}
                   <b>Setting up SEO for the main page</b>
-                </h1>
+                </p>
                 <small>10m ago &#x2022; Engineering</small>
+              </div>
+            </Menu.Item>
+            <Menu.Item as="div" title="Notification">
+              <div className={styles.notificationImgContainer}>
+                <Image
+                  src="/notificationUserImg2.jpeg"
+                  width={100}
+                  height={100}
+                  alt="User's Profile Image"
+                />
+                <span className={styles.notificationAwayUser} title="Away" />
+              </div>
+              <div>
+                <p>
+                  <b>Alex Cooper</b> requests access to <b>Design</b>
+                </p>
+                <small>2h ago &#x2022; Design</small>
               </div>
             </Menu.Item>
           </div>
