@@ -44,7 +44,7 @@ const NotificationsMenu = () => {
               <div>
                 <p>
                   <b>Emma Jones</b> assigned you to{" "}
-                  <b>Setting up SEO for the main page</b>
+                  <b>Implement User Endpoints</b>
                 </p>
                 <small>10m ago &#x2022; Engineering</small>
               </div>
@@ -64,6 +64,10 @@ const NotificationsMenu = () => {
                   <b>Alex Cooper</b> requests access to <b>Design</b>
                 </p>
                 <small>2h ago &#x2022; Design</small>
+                <div className={styles.notificationBtnsContainer}>
+                  <button>Accept</button>
+                  <button>Decline</button>
+                </div>
               </div>
             </Menu.Item>
           </div>
