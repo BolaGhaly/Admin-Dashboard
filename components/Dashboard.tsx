@@ -1,9 +1,9 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "../store/store";
+// import { useSelector } from "react-redux";
+// import { RootState } from "../store/store";
 
 const Dashboard = () => {
-  const darkMode = useSelector((state: RootState) => state.darkMode.value);
+  // const darkMode = useSelector((state: RootState) => state.darkMode.value);
 
   return (
     <div>
