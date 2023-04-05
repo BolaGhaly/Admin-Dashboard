@@ -12,6 +12,7 @@
   --notifications-line: #{$light-notifications-line};
   --notification-timestamp: #{$light-notification-timestamp};
   --boxShadow: #{$light-boxShadow};
+  --notification-mentioned-box: #{$light-notification-mentioned-box};
 }
 
 :root[data-theme="dark"] {
@@ -25,6 +26,7 @@
   --notifications-line: #{$dark-notifications-line};
   --notification-timestamp: #{$dark-notification-timestamp};
   --boxShadow: #{$dark-boxShadow};
+  --notification-mentioned-box: #{$dark-notification-mentioned-box};
 }
 
 *,

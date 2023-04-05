@@ -89,6 +89,9 @@ const NotificationsMenu = () => {
                   <b>Add search to home page</b>
                 </p>
                 <small>1d ago &#x2022; Engineering</small>
+                <div className={styles.userTag}>
+                  <span>&#64;Brian</span> Version 1.2 is ready to test!
+                </div>
               </div>
             </Menu.Item>
           </div>
