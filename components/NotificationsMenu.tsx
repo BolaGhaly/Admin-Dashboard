@@ -37,14 +37,14 @@ const NotificationsMenu = () => {
                   alt="User's Profile Image"
                 />
                 <span
-                  className={styles.notificationActiveUser}
-                  title="Available"
+                  className={styles.notificationOnlineUser}
+                  title="Online"
                 />
               </div>
               <div>
                 <p>
                   <b>Emma Jones</b> assigned you to{" "}
-                  <b>Implement User Endpoints</b>
+                  <b>Implement user endpoints</b>
                 </p>
                 <small>10m ago &#x2022; Engineering</small>
               </div>
@@ -68,6 +68,27 @@ const NotificationsMenu = () => {
                   <button>Accept</button>
                   <button>Decline</button>
                 </div>
+              </div>
+            </Menu.Item>
+            <Menu.Item as="div" title="Notification">
+              <div className={styles.notificationImgContainer}>
+                <Image
+                  src="/notificationUserImg3.jpeg"
+                  width={100}
+                  height={100}
+                  alt="User's Profile Image"
+                />
+                <span
+                  className={styles.notificationOfflineUser}
+                  title="Offline"
+                />
+              </div>
+              <div>
+                <p>
+                  <b>Bradley Cruz</b> mentioned you in{" "}
+                  <b>Add search to home page</b>
+                </p>
+                <small>1d ago &#x2022; Engineering</small>
               </div>
             </Menu.Item>
           </div>
