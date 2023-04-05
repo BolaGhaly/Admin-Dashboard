@@ -3,7 +3,7 @@ import { RootState } from "../store/store";
 import { useSelector } from "react-redux";
 import Sidebar from "./Sidebar";
 import Topbar from "./TopBar";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   const darkMode = useSelector((state: RootState) => state.darkMode.value);
