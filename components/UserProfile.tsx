@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Menu, Transition } from "@headlessui/react";
 import Icon, { profileData } from "../utils/topBarUtils";
 import styles from "../styles/modules/topBar.module.scss";
+import UserStatus from "./UserStatus";
 
 const UserProfile = () => {
   return (
@@ -30,6 +31,7 @@ const UserProfile = () => {
           <Menu.Item>
             <h1>Welcome back, Brian!</h1>
           </Menu.Item>
+          <UserStatus />
           {profileData.map((item) => {
             return (
               <Menu.Item key={item.id}>

@@ -1,20 +1,20 @@
 import { BiMoon, BiSun, BiSupport } from "react-icons/bi";
-import {
-  MdOutlineManageAccounts,
-  MdClose,
-  MdOutlineLogout,
-} from "react-icons/md";
+import { MdClose } from "react-icons/md";
 import { HiOutlineMenu } from "react-icons/hi";
-import { RiNotification2Line } from "react-icons/ri";
+import {
+  RiNotification2Line,
+  RiLogoutBoxRLine,
+  RiUserSettingsLine,
+} from "react-icons/ri";
 
 const iconTypes = {
   menu: HiOutlineMenu,
   darkModeOff: BiMoon,
   darkModeOn: BiSun,
   notifications: RiNotification2Line,
-  profileSettings: MdOutlineManageAccounts,
+  profileSettings: RiUserSettingsLine,
   support: BiSupport,
-  signOut: MdOutlineLogout,
+  signOut: RiLogoutBoxRLine,
   closeMenu: MdClose,
 };
 
