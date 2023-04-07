@@ -1,5 +1,5 @@
 import { BiMoon, BiSun, BiSupport } from "react-icons/bi";
-import { MdClose } from "react-icons/md";
+import { MdClose, MdKeyboardArrowDown } from "react-icons/md";
 import { HiOutlineMenu } from "react-icons/hi";
 import {
   RiNotification2Line,
@@ -16,6 +16,7 @@ const iconTypes = {
   support: BiSupport,
   signOut: RiLogoutBoxRLine,
   closeMenu: MdClose,
+  arrowDown: MdKeyboardArrowDown,
 };
 
 export const profileData = [

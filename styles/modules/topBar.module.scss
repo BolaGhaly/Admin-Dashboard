@@ -6,6 +6,13 @@
   box-shadow: 0 0 0 2px var(--nav-bg);
 }
 
+@mixin userStatusCircle {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  margin: 0 0.313rem;
+}
+
 .topNavBar {
   position: fixed;
   top: 0;
@@ -82,7 +89,7 @@
 .userMenu {
   position: absolute;
   right: 0;
-  top: 4.063rem;
+  top: 4rem;
   min-width: 13rem;
   transform-origin: top right;
   border-bottom-left-radius: 0.375rem;
@@ -113,7 +120,6 @@
     border-radius: 0.5rem;
     width: 100%;
     align-items: center;
-    //background-color: red;
     text-transform: capitalize;
 
     svg {
@@ -141,64 +147,65 @@
       font-size: 1rem;
       margin-top: 0 !important;
 
-      .userStatusOnline {
-        width: 0.75rem;
-        height: 0.75rem;
-        background-color: #1abd5e;
-        border-radius: 50%;
-        margin: 0 0.313rem;
-      }
-
       p {
-        margin: 0 0.5rem 0 0.375rem;
+        margin: 0 0.375rem;
         line-height: normal;
         letter-spacing: normal;
         font-weight: 400;
       }
 
-      .arrowDown {
-        width: 12px;
-        display: flex;
-        position: relative;
-        transition: 0.4s ease;
-        transform: rotate(45deg);
+      .userStatusArrow {
+        transition: transform 178ms linear;
 
-        &:before,
-        &:after {
-          position: absolute;
-          content: "";
-          width: 12px;
-          height: 2px;
-          background-color: var(--text);
-          transition: 0.4s ease;
-        }
-
-        &:before {
-          transform: rotate(0deg);
-          bottom: -2px;
-          left: 1px;
-        }
-
-        &:after {
-          transform: rotate(90deg);
-          bottom: 3px;
-          left: 6px;
-        }
-      }
-
-      &.active {
-        .arrowDown {
-          transform: rotate(45deg) translate(-5px, -5px);
-          &:before {
-            transform: translate(10px, 0);
-          }
-          &:after {
-            transform: rotate(90deg) translate(10px, 0);
-          }
+        &.active {
+          transform: rotate(-180deg);
         }
       }
     }
   }
+}
+
+.userStatusMenu {
+  padding: 0.5rem;
+  background-color: var(--bg) !important;
+
+  ul {
+    padding: 0;
+    width: 100%;
+
+    li {
+      padding: 0.5rem 1rem 0.5rem 0.5rem;
+      font-family: "Poppins", sans-serif;
+      border-radius: 0.5rem;
+
+      &:hover {
+        background-color: var(--userMenu-hover);
+      }
+
+      p {
+        margin: 0 0.375rem;
+        color: var(--text);
+      }
+    }
+  }
+}
+
+.userStatusOnline,
+.userStatusAway,
+.userStatusOffline {
+  @include userStatusCircle;
+}
+
+.userStatusOnline {
+  background-color: #1abd5e;
+}
+
+.userStatusAway {
+  background-color: #ffa010;
+}
+
+.userStatusOffline {
+  background-color: #ff4c4c;
 }
 
 .notificationsMenu {

@@ -6,6 +6,7 @@ import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
 import styles from "../styles/modules/topBar.module.scss";
 import { Paper } from "@mui/material";
+import Icon from "../utils/topBarUtils";
 
 const UserStatus = () => {
   const anchorRef = useRef(null);
@@ -28,11 +29,15 @@ const UserStatus = () => {
         aria-expanded={userStatusOpen ? "true" : undefined}
         aria-haspopup="true"
         onClick={handleToggle}
-        className={`${userStatusOpen ? `${styles.active}` : ""}`}
       >
         <span className={styles.userStatusOnline} />
         <p>Online</p>
-        <span className={styles.arrowDown} />
+        <Icon
+          name="arrowDown"
+          className={`${styles.userStatusArrow} ${
+            userStatusOpen ? `${styles.active}` : ""
+          }`}
+        />
       </button>
       <Popper
         open={userStatusOpen}
@@ -48,16 +53,25 @@ const UserStatus = () => {
               transformOrigin: "left top",
             }}
           >
-            <Paper>
+            <Paper className={styles.userStatusMenu}>
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList
                   autoFocusItem={userStatusOpen}
                   id="composition-menu"
                   aria-labelledby="composition-button"
                 >
-                  <MenuItem onClick={handleClose}>Profile</MenuItem>
-                  <MenuItem onClick={handleClose}>My account</MenuItem>
-                  <MenuItem onClick={handleClose}>Logout</MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <span className={styles.userStatusOnline} />
+                    <p>Online</p>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <span className={styles.userStatusAway} />
+                    <p>Away</p>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <span className={styles.userStatusOffline} />
+                    <p>Offline</p>
+                  </MenuItem>
                 </MenuList>
               </ClickAwayListener>
             </Paper>
