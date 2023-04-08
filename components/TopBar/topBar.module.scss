@@ -13,6 +13,16 @@
   margin: 0 0.313rem;
 }
 
+@mixin userImageStatus {
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--user);
+  right: 0.125rem;
+  bottom: 0.125rem;
+}
+
 .topNavBar {
   position: fixed;
   top: 0;
@@ -66,10 +76,20 @@
     padding: 0.5rem;
     margin: 0 !important;
 
-    img {
-      width: 3rem;
-      height: 3rem;
-      border-radius: 50%;
+    div {
+      position: relative;
+
+      img {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+      }
+
+      .userImageOnline,
+      .userImageAway,
+      .userImageOffline {
+        @include userImageStatus;
+      }
     }
 
     h1 {
@@ -198,17 +218,20 @@
 }
 
 .userStatusOnline,
-.notificationUserOnline {
+.notificationUserOnline,
+.userImageOnline {
   background-color: #1abd5e;
 }
 
 .userStatusAway,
-.notificationUserAway {
+.notificationUserAway,
+.userImageAway {
   background-color: #ffa010;
 }
 
 .userStatusOffline,
-.notificationUserOffline {
+.notificationUserOffline,
+.userImageOffline {
   background-color: #ff4c4c;
 }
 

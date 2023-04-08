@@ -7,10 +7,15 @@ import MenuList from "@mui/material/MenuList";
 import styles from "./topBar.module.scss";
 import { Paper } from "@mui/material";
 import Icon from "../../utils/topBarUtils";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../store/store";
+import { online, offline, away } from "../../store/userStatus";
 
 const UserStatus = () => {
   const anchorRef = useRef(null);
   const [userStatusOpen, setUserStatusOpen] = useState(false);
+  const userStatus = useSelector((state: RootState) => state.userStatus.value);
+  const dispatch = useDispatch();
 
   const handleToggle = () => {
     setUserStatusOpen(!userStatusOpen);
@@ -30,8 +35,24 @@ const UserStatus = () => {
         aria-haspopup="true"
         onClick={handleToggle}
       >
-        <span className={styles.userStatusOnline} />
-        <p>Online</p>
+        {userStatus === "online" ? (
+          <>
+            <span className={styles.userStatusOnline} />
+            <p>Online</p>
+          </>
+        ) : userStatus === "away" ? (
+          <>
+            <span className={styles.userStatusAway} />
+            <p>Away</p>
+          </>
+        ) : userStatus === "offline" ? (
+          <>
+            <span className={styles.userStatusOffline} />
+            <p>Offline</p>
+          </>
+        ) : (
+          ""
+        )}
         <Icon
           name="arrowDown"
           className={`${styles.userStatusArrow} ${
@@ -54,21 +75,36 @@ const UserStatus = () => {
             }}
           >
             <Paper className={styles.userStatusMenu}>
-              <ClickAwayListener onClickAway={handleClose}>
+              <ClickAwayListener onClickAway={() => handleClose()}>
                 <MenuList
                   autoFocusItem={userStatusOpen}
                   id="composition-menu"
                   aria-labelledby="composition-button"
                 >
-                  <MenuItem onClick={handleClose}>
+                  <MenuItem
+                    onClick={() => {
+                      dispatch(online());
+                      handleClose();
+                    }}
+                  >
                     <span className={styles.userStatusOnline} />
                     <p>Online</p>
                   </MenuItem>
-                  <MenuItem onClick={handleClose}>
+                  <MenuItem
+                    onClick={() => {
+                      dispatch(away());
+                      handleClose();
+                    }}
+                  >
                     <span className={styles.userStatusAway} />
                     <p>Away</p>
                   </MenuItem>
-                  <MenuItem onClick={handleClose}>
+                  <MenuItem
+                    onClick={() => {
+                      dispatch(offline());
+                      handleClose();
+                    }}
+                  >
                     <span className={styles.userStatusOffline} />
                     <p>Offline</p>
                   </MenuItem>

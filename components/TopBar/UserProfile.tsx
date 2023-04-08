@@ -4,18 +4,33 @@ import { Menu, Transition } from "@headlessui/react";
 import Icon, { profileData } from "../../utils/topBarUtils";
 import styles from "./topBar.module.scss";
 import UserStatus from "./UserStatus";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/store";
 
 const UserProfile = () => {
+  const userStatus = useSelector((state: RootState) => state.userStatus.value);
+
   return (
     <Menu as="div" className={styles.user} title="User's Profile">
       <Menu.Button>
-        <Image
-          src="/profileImg.jpg"
-          width={100}
-          height={100}
-          alt="Profile Image"
-          loading="eager"
-        />
+        <div>
+          <Image
+            src="/profileImg.jpg"
+            width={100}
+            height={100}
+            alt="Profile Image"
+            loading="eager"
+          />
+          {userStatus === "online" ? (
+            <span className={styles.userImageOnline} />
+          ) : userStatus === "away" ? (
+            <span className={styles.userImageAway} />
+          ) : userStatus === "offline" ? (
+            <span className={styles.userImageOffline} />
+          ) : (
+            ""
+          )}
+        </div>
         <h1>Brian Griffin</h1>
       </Menu.Button>
       <Transition
