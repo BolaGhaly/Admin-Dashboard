@@ -4,9 +4,9 @@ import Grow from "@mui/material/Grow";
 import Popper from "@mui/material/Popper";
 import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
-import styles from "../styles/modules/topBar.module.scss";
+import styles from "./topBar.module.scss";
 import { Paper } from "@mui/material";
-import Icon from "../utils/topBarUtils";
+import Icon from "../../utils/topBarUtils";
 
 const UserStatus = () => {
   const anchorRef = useRef(null);

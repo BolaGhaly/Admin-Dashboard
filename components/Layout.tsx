@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { RootState } from "../store/store";
 import { useSelector } from "react-redux";
 import Sidebar from "./Sidebar";
-import Topbar from "./TopBar";
+import Topbar from "./TopBar/TopBar";
 // import Footer from "./Footer";
 
 const Layout = ({ children }) => {

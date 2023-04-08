@@ -1,8 +1,8 @@
 import { Fragment } from "react";
 import Image from "next/image";
 import { Menu, Transition } from "@headlessui/react";
-import Icon, { profileData } from "../utils/topBarUtils";
-import styles from "../styles/modules/topBar.module.scss";
+import Icon, { profileData } from "../../utils/topBarUtils";
+import styles from "./topBar.module.scss";
 import UserStatus from "./UserStatus";
 
 const UserProfile = () => {

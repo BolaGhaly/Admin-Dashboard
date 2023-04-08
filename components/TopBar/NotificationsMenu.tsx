@@ -1,7 +1,7 @@
-import Icon from "../utils/topBarUtils";
+import Icon from "../../utils/topBarUtils";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
-import styles from "../styles/modules/topBar.module.scss";
+import styles from "./topBar.module.scss";
 import Image from "next/image";
 
 const NotificationsMenu = () => {
