@@ -37,7 +37,7 @@ const NotificationsMenu = () => {
                   alt="User's Profile Image"
                 />
                 <span
-                  className={styles.notificationOnlineUser}
+                  className={styles.notificationUserOnline}
                   title="Online"
                 />
               </div>
@@ -57,7 +57,7 @@ const NotificationsMenu = () => {
                   height={100}
                   alt="User's Profile Image"
                 />
-                <span className={styles.notificationAwayUser} title="Away" />
+                <span className={styles.notificationUserAway} title="Away" />
               </div>
               <div>
                 <p>
@@ -79,7 +79,7 @@ const NotificationsMenu = () => {
                   alt="User's Profile Image"
                 />
                 <span
-                  className={styles.notificationOfflineUser}
+                  className={styles.notificationUserOffline}
                   title="Offline"
                 />
               </div>
