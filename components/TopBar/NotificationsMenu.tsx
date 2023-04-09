@@ -38,7 +38,6 @@ const NotificationsMenu = () => {
                   width={100}
                   height={100}
                   alt="Bradley's Profile Image"
-                  loading="lazy"
                   unoptimized
                 />
                 <span
@@ -61,7 +60,6 @@ const NotificationsMenu = () => {
                   width={100}
                   height={100}
                   alt="Jessica's Profile Image"
-                  loading="lazy"
                   unoptimized
                 />
                 <span className={styles.notificationUserAway} title="Away" />
@@ -84,7 +82,6 @@ const NotificationsMenu = () => {
                   width={100}
                   height={100}
                   alt="Alex's Profile Image"
-                  loading="lazy"
                   unoptimized
                 />
                 <span
