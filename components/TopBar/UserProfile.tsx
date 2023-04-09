@@ -6,7 +6,7 @@ import styles from "./topBar.module.scss";
 import UserStatus from "./UserStatus";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
-import userProfileImage from "/assets/userProfile/profileImg.jpg";
+import userProfileImage from "/assets/userProfile/profileImg.webp";
 
 const UserProfile = () => {
   const userStatus = useSelector((state: RootState) => state.userStatus.value);
@@ -19,8 +19,9 @@ const UserProfile = () => {
             src={userProfileImage}
             width={100}
             height={100}
-            alt="Brian's Profile Image"
+            alt="Ryan's Profile Image"
             priority={true}
+            unoptimized={true}
           />
           {userStatus === "online" ? (
             <span className={styles.userImageOnline} />
@@ -32,7 +33,7 @@ const UserProfile = () => {
             ""
           )}
         </div>
-        <h1>Brian Griffin</h1>
+        <h1>Ryan Keller</h1>
       </Menu.Button>
       <Transition
         as={Fragment}
