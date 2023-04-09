@@ -10,7 +10,7 @@ import notificationUser3Image from "/assets/notificationUsers/notificationUserIm
 const NotificationsMenu = () => {
   return (
     <Menu as="div" title="Notifications" className={styles.notificationsMenu}>
-      <Menu.Button>
+      <Menu.Button title="Notifications">
         <Icon name="notifications" />
         <span className={styles.notificationCircle} />
       </Menu.Button>
@@ -38,7 +38,7 @@ const NotificationsMenu = () => {
                   width={100}
                   height={100}
                   alt="Bradley's Profile Image"
-                  priority
+                  loading="lazy"
                   unoptimized
                 />
                 <span
@@ -61,7 +61,7 @@ const NotificationsMenu = () => {
                   width={100}
                   height={100}
                   alt="Jessica's Profile Image"
-                  priority
+                  loading="lazy"
                   unoptimized
                 />
                 <span className={styles.notificationUserAway} title="Away" />
@@ -84,7 +84,7 @@ const NotificationsMenu = () => {
                   width={100}
                   height={100}
                   alt="Alex's Profile Image"
-                  priority
+                  loading="lazy"
                   unoptimized
                 />
                 <span
