@@ -38,6 +38,7 @@ const NotificationsMenu = () => {
                   width={100}
                   height={100}
                   alt="Emma's Profile Image"
+                  loading="eager"
                 />
                 <span
                   className={styles.notificationUserOnline}
@@ -59,6 +60,7 @@ const NotificationsMenu = () => {
                   width={100}
                   height={100}
                   alt="Alex's Profile Image"
+                  loading="eager"
                 />
                 <span className={styles.notificationUserAway} title="Away" />
               </div>
@@ -80,6 +82,7 @@ const NotificationsMenu = () => {
                   width={100}
                   height={100}
                   alt="Bradley's Profile Image"
+                  loading="eager"
                 />
                 <span
                   className={styles.notificationUserOffline}
