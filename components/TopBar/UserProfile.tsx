@@ -20,7 +20,7 @@ const UserProfile = () => {
             width={100}
             height={100}
             alt="Brian's Profile Image"
-            loading="eager"
+            priority={true}
           />
           {userStatus === "online" ? (
             <span className={styles.userImageOnline} />
