@@ -20,8 +20,8 @@ const UserProfile = () => {
             width={100}
             height={100}
             alt="Ryan's Profile Image"
-            priority={true}
-            unoptimized={true}
+            priority
+            unoptimized
           />
           {userStatus === "online" ? (
             <span className={styles.userImageOnline} />
@@ -46,7 +46,7 @@ const UserProfile = () => {
       >
         <Menu.Items className={styles.userMenu} title="">
           <Menu.Item>
-            <h1>Welcome back, Brian!</h1>
+            <h1>Welcome back, Ryan!</h1>
           </Menu.Item>
           <UserStatus />
           {profileData.map((item) => {

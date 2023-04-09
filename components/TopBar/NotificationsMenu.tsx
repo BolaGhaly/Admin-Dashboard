@@ -3,9 +3,9 @@ import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import styles from "./topBar.module.scss";
 import Image from "next/image";
-import notificationUser1Image from "/assets/notificationUsers/notificationUserImg1.jpg";
-import notificationUser2Image from "/assets/notificationUsers/notificationUserImg2.jpg";
-import notificationUser3Image from "/assets/notificationUsers/notificationUserImg3.jpg";
+import notificationUser1Image from "/assets/notificationUsers/notificationUserImg1.webp";
+import notificationUser2Image from "/assets/notificationUsers/notificationUserImg2.webp";
+import notificationUser3Image from "/assets/notificationUsers/notificationUserImg3.webp";
 
 const NotificationsMenu = () => {
   return (
@@ -37,8 +37,9 @@ const NotificationsMenu = () => {
                   src={notificationUser1Image}
                   width={100}
                   height={100}
-                  alt="Emma's Profile Image"
-                  priority={true}
+                  alt="Bradley's Profile Image"
+                  priority
+                  unoptimized
                 />
                 <span
                   className={styles.notificationUserOnline}
@@ -47,7 +48,7 @@ const NotificationsMenu = () => {
               </div>
               <div>
                 <p>
-                  <b>Emma Jones</b> assigned you to{" "}
+                  <b>Bradley Cruz</b> assigned you to{" "}
                   <b>Implement user endpoints</b>
                 </p>
                 <small>10m ago &#x2022; Engineering</small>
@@ -59,14 +60,15 @@ const NotificationsMenu = () => {
                   src={notificationUser2Image}
                   width={100}
                   height={100}
-                  alt="Alex's Profile Image"
-                  priority={true}
+                  alt="Jessica's Profile Image"
+                  priority
+                  unoptimized
                 />
                 <span className={styles.notificationUserAway} title="Away" />
               </div>
               <div>
                 <p>
-                  <b>Alex Cooper</b> requests access to <b>Design</b>
+                  <b>Jessica Brown</b> requests access to <b>Design</b>
                 </p>
                 <small>2h ago &#x2022; Design</small>
                 <div className={styles.notificationBtnsContainer}>
@@ -81,8 +83,9 @@ const NotificationsMenu = () => {
                   src={notificationUser3Image}
                   width={100}
                   height={100}
-                  alt="Bradley's Profile Image"
-                  priority={true}
+                  alt="Alex's Profile Image"
+                  priority
+                  unoptimized
                 />
                 <span
                   className={styles.notificationUserOffline}
@@ -91,12 +94,12 @@ const NotificationsMenu = () => {
               </div>
               <div>
                 <p>
-                  <b>Bradley Cruz</b> mentioned you in{" "}
+                  <b>Alex Cooper</b> mentioned you in{" "}
                   <b>Add search to home page</b>
                 </p>
                 <small>1d ago &#x2022; Engineering</small>
                 <div className={styles.userTag}>
-                  <span>&#64;Brian</span> Version 1.2 is ready to test!
+                  <span>&#64;Ryan</span> Version 1.2 is ready to test!
                 </div>
               </div>
             </Menu.Item>

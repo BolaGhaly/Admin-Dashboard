@@ -311,7 +311,7 @@
         .notificationUserOffline {
           @include notificationUserStatus;
           right: -0.125rem;
-          bottom: 0;
+          bottom: -0.125rem;
         }
       }
 
