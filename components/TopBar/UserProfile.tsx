@@ -45,9 +45,7 @@ const UserProfile = () => {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items className={styles.userMenu} title="">
-          <Menu.Item>
-            <h1>Welcome back, Ryan!</h1>
-          </Menu.Item>
+          <h2>Welcome back, Ryan!</h2>
           <UserStatus />
           {profileData.map((item) => {
             return (
