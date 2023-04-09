@@ -3,6 +3,9 @@ import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import styles from "./topBar.module.scss";
 import Image from "next/image";
+import notificationUser1Image from "/assets/notificationUsers/notificationUserImg1.jpg";
+import notificationUser2Image from "/assets/notificationUsers/notificationUserImg2.jpg";
+import notificationUser3Image from "/assets/notificationUsers/notificationUserImg3.jpg";
 
 const NotificationsMenu = () => {
   return (
@@ -31,10 +34,10 @@ const NotificationsMenu = () => {
             <Menu.Item as="div" title="Notification">
               <div className={styles.notificationImgContainer}>
                 <Image
-                  src="/notificationUserImg1.jpeg"
+                  src={notificationUser1Image}
                   width={100}
                   height={100}
-                  alt="User's Profile Image"
+                  alt="Emma's Profile Image"
                 />
                 <span
                   className={styles.notificationUserOnline}
@@ -52,10 +55,10 @@ const NotificationsMenu = () => {
             <Menu.Item as="div" title="Notification">
               <div className={styles.notificationImgContainer}>
                 <Image
-                  src="/notificationUserImg2.jpeg"
+                  src={notificationUser2Image}
                   width={100}
                   height={100}
-                  alt="User's Profile Image"
+                  alt="Alex's Profile Image"
                 />
                 <span className={styles.notificationUserAway} title="Away" />
               </div>
@@ -73,10 +76,10 @@ const NotificationsMenu = () => {
             <Menu.Item as="div" title="Notification">
               <div className={styles.notificationImgContainer}>
                 <Image
-                  src="/notificationUserImg3.jpeg"
+                  src={notificationUser3Image}
                   width={100}
                   height={100}
-                  alt="User's Profile Image"
+                  alt="Bradley's Profile Image"
                 />
                 <span
                   className={styles.notificationUserOffline}

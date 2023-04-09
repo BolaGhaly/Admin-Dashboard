@@ -6,6 +6,7 @@ import styles from "./topBar.module.scss";
 import UserStatus from "./UserStatus";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
+import userProfileImage from "/assets/userProfile/profileImg.jpg";
 
 const UserProfile = () => {
   const userStatus = useSelector((state: RootState) => state.userStatus.value);
@@ -15,10 +16,10 @@ const UserProfile = () => {
       <Menu.Button>
         <div>
           <Image
-            src="/profileImg.jpg"
+            src={userProfileImage}
             width={100}
             height={100}
-            alt="Profile Image"
+            alt="Brian's Profile Image"
             loading="eager"
           />
           {userStatus === "online" ? (
