@@ -174,7 +174,7 @@
         }
 
         .userStatusArrow {
-          transition: transform 178ms linear;
+          transition: transform 170ms linear;
 
           &.active {
             transform: rotate(-180deg);
@@ -186,6 +186,9 @@
 }
 
 .userStatusMenu {
+  transform: none;
+  transform-origin: top-left;
+  transition: opacity 170ms linear, transform 170ms linear !important;
   border-radius: 0.375rem;
   padding: 0.5rem;
   background-color: var(--bg);
