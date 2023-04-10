@@ -5,7 +5,6 @@ import Popper from "@mui/material/Popper";
 import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
 import styles from "./topBar.module.scss";
-import { Paper } from "@mui/material";
 import Icon from "../../utils/topBarUtils";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
@@ -74,7 +73,7 @@ const UserStatus = () => {
               transformOrigin: "left top",
             }}
           >
-            <Paper className={styles.userStatusMenu}>
+            <div className={styles.userStatusMenu}>
               <ClickAwayListener onClickAway={() => handleClose()}>
                 <MenuList
                   autoFocusItem={userStatusOpen}
@@ -110,7 +109,7 @@ const UserStatus = () => {
                   </MenuItem>
                 </MenuList>
               </ClickAwayListener>
-            </Paper>
+            </div>
           </Grow>
         )}
       </Popper>

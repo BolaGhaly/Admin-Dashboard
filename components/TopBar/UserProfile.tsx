@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import Image from "next/image";
-import { Menu, Transition } from "@headlessui/react";
+import { Menu } from "@headlessui/react";
 import Icon, { profileData } from "../../utils/topBarUtils";
 import styles from "./topBar.module.scss";
 import UserStatus from "./UserStatus";
@@ -35,30 +35,20 @@ const UserProfile = () => {
         </div>
         <h1>Ryan Keller</h1>
       </Menu.Button>
-      <Transition
-        as={Fragment}
-        enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
-      >
-        <Menu.Items className={styles.userMenu} title="">
-          <h2>Welcome back, Ryan!</h2>
-          <UserStatus />
-          {profileData.map((item) => {
-            return (
-              <Menu.Item key={item.id}>
-                <button title={item.title}>
-                  <Icon name={item.icon} aria-hidden="true" />
-                  <p>{item.text}</p>
-                </button>
-              </Menu.Item>
-            );
-          })}
-        </Menu.Items>
-      </Transition>
+      <Menu.Items className={styles.userMenu} title="">
+        <h2>Welcome back, Ryan!</h2>
+        <UserStatus />
+        {profileData.map((item) => {
+          return (
+            <Menu.Item key={item.id}>
+              <button title={item.title}>
+                <Icon name={item.icon} aria-hidden="true" />
+                <p>{item.text}</p>
+              </button>
+            </Menu.Item>
+          );
+        })}
+      </Menu.Items>
     </Menu>
   );
 };

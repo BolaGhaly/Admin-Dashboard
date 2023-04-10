@@ -186,8 +186,9 @@
 }
 
 .userStatusMenu {
+  border-radius: 0.375rem;
   padding: 0.5rem;
-  background-color: var(--bg) !important;
+  background-color: var(--bg);
 
   ul {
     padding: 0;
@@ -230,7 +231,8 @@
 
 .userStatusOffline,
 .notificationUserOffline,
-.userImageOffline {
+.userImageOffline,
+.notificationCircle {
   background-color: #ff4c4c;
 }
 
@@ -239,7 +241,6 @@
 
   .notificationCircle {
     @include notificationUserStatus;
-    background-color: #ff4c4c;
     right: 0;
     top: 0.125rem;
   }
