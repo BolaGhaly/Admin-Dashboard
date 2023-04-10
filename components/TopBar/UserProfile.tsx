@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import Image from "next/image";
 import { Menu } from "@headlessui/react";
 import Icon, { profileData } from "../../utils/topBarUtils";
@@ -29,13 +28,11 @@ const UserProfile = () => {
             <span className={styles.userImageAway} />
           ) : userStatus === "offline" ? (
             <span className={styles.userImageOffline} />
-          ) : (
-            ""
-          )}
+          ) : null}
         </div>
         <h1>Ryan Keller</h1>
       </Menu.Button>
-      <Menu.Items className={styles.userMenu} title="">
+      <Menu.Items className={styles.userMenu}>
         <h2>Welcome back, Ryan!</h2>
         <UserStatus />
         {profileData.map((item) => {

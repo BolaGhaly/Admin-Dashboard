@@ -49,13 +49,11 @@ const UserStatus = () => {
             <span className={styles.userStatusOffline} />
             <p>Offline</p>
           </>
-        ) : (
-          ""
-        )}
+        ) : null}
         <Icon
           name="arrowDown"
           className={`${styles.userStatusArrow} ${
-            userStatusOpen ? `${styles.active}` : ""
+            userStatusOpen ? `${styles.active}` : null
           }`}
         />
       </button>

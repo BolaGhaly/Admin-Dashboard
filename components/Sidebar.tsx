@@ -36,7 +36,7 @@ const Sidebar = () => {
                   <Icon name={`${item.icon}`} />
                 </button>
                 <span
-                  className={`pl-2 ${openSideBar ? "" : "hidden"} ${
+                  className={`pl-2 ${openSideBar ? null : "hidden"} ${
                     darkMode ? "text-white" : "text-black"
                   }`}
                 >
