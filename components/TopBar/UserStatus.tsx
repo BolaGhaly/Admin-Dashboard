@@ -40,14 +40,22 @@ const UserStatus = () => {
     },
   };
 
-  const userStatusArrow:Variants = {
+  const userStatusArrow: Variants = {
     up: {
-
+      transition: {
+        ease: "easeOut",
+        duration: 0.2,
+      },
+      transform: "rotate(-180deg)",
     },
     down: {
-
-    }
-  }
+      transition: {
+        ease: "easeOut",
+        duration: 0.2,
+      },
+      transform: "rotate(0deg)",
+    },
+  };
 
   const handleToggle = () => {
     setUserStatusOpen(!userStatusOpen);
@@ -72,7 +80,6 @@ const UserStatus = () => {
             ? "Offline"
             : ""
         }
-        style={{ position: "relative"}}
       >
         {userStatus === "online" ? (
           <>
@@ -90,16 +97,17 @@ const UserStatus = () => {
             <p>Offline</p>
           </>
         ) : null}
-        <Icon
-          name="arrowDown"
-          className={`${styles.userStatusArrow} ${
-            userStatusOpen ? `${styles.arrowActive}` : null
-          }`}
-        />
+        <motion.div
+          initial={false}
+          variants={userStatusArrow}
+          animate={userStatusOpen ? "up" : "down"}
+        >
+          <Icon name="arrowDown" />
+        </motion.div>
       </button>
       <motion.div
-        variants={userStatusMenu}
         initial={false}
+        variants={userStatusMenu}
         animate={userStatusOpen ? "open" : "closed"}
         className={styles.userStatusMenu}
       >
