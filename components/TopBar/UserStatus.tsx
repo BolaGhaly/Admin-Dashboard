@@ -23,8 +23,6 @@ const UserStatus = () => {
         ease: "easeOut",
         duration: 0.2,
       },
-      originX: -5,
-      originY: -5,
       translateX: 0,
       translateY: 0,
     },
@@ -41,6 +39,15 @@ const UserStatus = () => {
       },
     },
   };
+
+  const userStatusArrow:Variants = {
+    up: {
+
+    },
+    down: {
+
+    }
+  }
 
   const handleToggle = () => {
     setUserStatusOpen(!userStatusOpen);
@@ -65,6 +72,7 @@ const UserStatus = () => {
             ? "Offline"
             : ""
         }
+        style={{ position: "relative"}}
       >
         {userStatus === "online" ? (
           <>
