@@ -1,27 +1,78 @@
 import Icon from "../../utils/topBarUtils";
-import { Menu } from "@headlessui/react";
 import styles from "./topBar.module.scss";
 import Image from "next/image";
 import notificationUser1Image from "/assets/notificationUsers/notificationUserImg1.webp";
 import notificationUser2Image from "/assets/notificationUsers/notificationUserImg2.webp";
 import notificationUser3Image from "/assets/notificationUsers/notificationUserImg3.webp";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../store/store";
+import {
+  closeNotificationsMenu,
+  toggleNotificationsMenu,
+} from "../../store/userNotificationsMenu";
+import useOnclickOutside from "react-cool-onclickoutside";
+import { motion, Variants } from "framer-motion";
 
 const NotificationsMenu = () => {
+  const userNotificationsMenu = useSelector(
+    (state: RootState) => state.userNotificationsMenu.value
+  );
+  const dispatch = useDispatch();
+  const userNotificationsMenuRef = useOnclickOutside(() => {
+    dispatch(closeNotificationsMenu());
+  });
+
+  const userNotificationsMenuVariants: Variants = {
+    open: {
+      opacity: 1,
+      display: "flex",
+      transition: {
+        duration: 0.2,
+        ease: "easeOut",
+      },
+    },
+    closed: {
+      opacity: 0,
+      transition: {
+        duration: 0.2,
+        ease: "easeOut",
+      },
+      transitionEnd: {
+        display: "none",
+      },
+    },
+  };
+
   return (
-    <Menu as="div" title="Notifications" className={styles.notificationsMenu}>
-      <Menu.Button title="Notifications">
+    <div
+      title="Notifications"
+      className={styles.notificationsMenu}
+      ref={userNotificationsMenuRef}
+    >
+      <button
+        title="Notifications"
+        onClick={() => dispatch(toggleNotificationsMenu())}
+      >
         <Icon name="notifications" />
         <span className={styles.notificationCircle} />
-      </Menu.Button>
-      <Menu.Items className={styles.notificationsMenuItems}>
+      </button>
+      <motion.div
+        className={styles.notificationsMenuItems}
+        initial={false}
+        variants={userNotificationsMenuVariants}
+        animate={userNotificationsMenu ? "open" : "closed"}
+      >
         <div>
           <h1>Notifications</h1>
-          <Menu.Item>
-            <button>Clear All</button>
-          </Menu.Item>
+          <button onClick={() => dispatch(closeNotificationsMenu())}>
+            Clear All
+          </button>
         </div>
         <div>
-          <Menu.Item as="div" title="Notification">
+          <div
+            title="Notification"
+            onClick={() => dispatch(closeNotificationsMenu())}
+          >
             <div className={styles.notificationImgContainer}>
               <Image
                 src={notificationUser1Image}
@@ -39,8 +90,11 @@ const NotificationsMenu = () => {
               </p>
               <small>10m ago &#x2022; Engineering</small>
             </div>
-          </Menu.Item>
-          <Menu.Item as="div" title="Notification">
+          </div>
+          <div
+            title="Notification"
+            onClick={() => dispatch(closeNotificationsMenu())}
+          >
             <div className={styles.notificationImgContainer}>
               <Image
                 src={notificationUser2Image}
@@ -61,8 +115,11 @@ const NotificationsMenu = () => {
                 <button>Decline</button>
               </div>
             </div>
-          </Menu.Item>
-          <Menu.Item as="div" title="Notification">
+          </div>
+          <div
+            title="Notification"
+            onClick={() => dispatch(closeNotificationsMenu())}
+          >
             <div className={styles.notificationImgContainer}>
               <Image
                 src={notificationUser3Image}
@@ -86,10 +143,10 @@ const NotificationsMenu = () => {
                 <span>&#64;Ryan</span> Version 1.2 is ready to test!
               </div>
             </div>
-          </Menu.Item>
+          </div>
         </div>
-      </Menu.Items>
-    </Menu>
+      </motion.div>
+    </div>
   );
 };
 
