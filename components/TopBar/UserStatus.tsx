@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "./topBar.module.scss";
 import Icon from "../../utils/topBarUtils";
 import { useDispatch, useSelector } from "react-redux";
