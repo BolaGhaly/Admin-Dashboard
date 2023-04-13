@@ -3,13 +3,15 @@ import darkModeSlice from "./darkMode";
 import openSideBarSlice from "./sideBar";
 import userProfileStatusSlice from "./userProfileStatus";
 import userProfileMenuSlice from "./userProfileMenu";
+import userProfileStatusMenuSlice from "./userProfileStatusMenu";
 
 export const store = configureStore({
   reducer: {
     darkMode: darkModeSlice,
     openSideBar: openSideBarSlice,
-    userProfileStatus: userProfileStatusSlice,
     userProfileMenu: userProfileMenuSlice,
+    userProfileStatus: userProfileStatusSlice,
+    userProfileStatusMenu: userProfileStatusMenuSlice,
   },
 });
 
