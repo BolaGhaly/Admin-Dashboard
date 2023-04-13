@@ -1,13 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 import darkModeSlice from "./darkMode";
 import openSideBarSlice from "./sideBar";
-import userStatusSlice from "./userStatus";
+import userProfileStatusSlice from "./userProfileStatus";
+import userProfileMenuSlice from "./userProfileMenu";
 
 export const store = configureStore({
   reducer: {
     darkMode: darkModeSlice,
     openSideBar: openSideBarSlice,
-    userStatus: userStatusSlice,
+    userProfileStatus: userProfileStatusSlice,
+    userProfileMenu: userProfileMenuSlice,
   },
 });
 

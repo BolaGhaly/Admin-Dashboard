@@ -1,15 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export interface userStatusState {
+export interface userProfileStatusState {
   value: string;
 }
 
-const initialState: userStatusState = {
+const initialState: userProfileStatusState = {
   value: "online",
 };
 
-export const userStatusSlice = createSlice({
-  name: "userStatus",
+export const userProfileStatusSlice = createSlice({
+  name: "userProfileStatus",
   initialState,
   reducers: {
     online: (state) => {
@@ -24,6 +24,6 @@ export const userStatusSlice = createSlice({
   },
 });
 
-export const { online, away, offline } = userStatusSlice.actions;
+export const { online, away, offline } = userProfileStatusSlice.actions;
 
-export default userStatusSlice.reducer;
+export default userProfileStatusSlice.reducer;
