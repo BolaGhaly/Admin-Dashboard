@@ -3,13 +3,15 @@ import styles from "./topBar.module.scss";
 import Icon from "../../utils/topBarUtils";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
-import { online, offline, away } from "../../store/userStatus";
+import { online, offline, away } from "../../store/userProfileStatus";
 import useOnclickOutside from "react-cool-onclickoutside";
 import { motion, Variants } from "framer-motion";
 
 const UserStatus = () => {
   const [userStatusOpen, setUserStatusOpen] = useState(false);
-  const userStatus = useSelector((state: RootState) => state.userStatus.value);
+  const userStatus = useSelector(
+    (state: RootState) => state.userProfileStatus.value
+  );
   const dispatch = useDispatch();
   const userStatusMenuRef = useOnclickOutside(() => {
     handleClose();
