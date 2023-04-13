@@ -1,18 +1,59 @@
 import Image from "next/image";
-import { Menu } from "@headlessui/react";
 import Icon, { profileData } from "../../utils/topBarUtils";
 import styles from "./topBar.module.scss";
 import UserStatus from "./UserStatus";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../store/store";
 import userProfileImage from "/assets/userProfile/profileImg.webp";
+import { motion, Variants } from "framer-motion";
+import useOnclickOutside from "react-cool-onclickoutside";
+import {
+  closeProfileMenu,
+  toggleProfileMenu,
+} from "../../store/userProfileMenu";
 
 const UserProfile = () => {
-  const userStatus = useSelector((state: RootState) => state.userStatus.value);
+  const userStatus = useSelector(
+    (state: RootState) => state.userProfileStatus.value
+  );
+  const userProfileMenu = useSelector(
+    (state: RootState) => state.userProfileMenu.value
+  );
+  const dispatch = useDispatch();
+  const userProfileMenuRef = useOnclickOutside(() => {
+    dispatch(closeProfileMenu());
+  });
+
+  const userProfileMenuVariants: Variants = {
+    open: {
+      opacity: 1,
+      display: "flex",
+      transition: {
+        duration: 0.2,
+        ease: "easeOut",
+      },
+      transform: "translateX(0)",
+    },
+    closed: {
+      opacity: 0,
+      transition: {
+        duration: 0.2,
+        ease: "easeOut",
+      },
+      transform: "translateX(50px)",
+      transitionEnd: {
+        display: "none",
+      },
+    },
+  };
 
   return (
-    <Menu as="div" className={styles.user} title="User's Profile">
-      <Menu.Button>
+    <div
+      className={styles.user}
+      title="User's Profile"
+      ref={userProfileMenuRef}
+    >
+      <button onClick={() => dispatch(toggleProfileMenu())}>
         <div>
           <Image
             src={userProfileImage}
@@ -31,22 +72,29 @@ const UserProfile = () => {
           ) : null}
         </div>
         <h1>Ryan Keller</h1>
-      </Menu.Button>
-      <Menu.Items className={styles.userMenu}>
+      </button>
+      <motion.div
+        className={styles.userMenu}
+        initial={false}
+        variants={userProfileMenuVariants}
+        animate={userProfileMenu ? "open" : "closed"}
+      >
         <h2>Welcome back, Ryan!</h2>
         <UserStatus />
         {profileData.map((item) => {
           return (
-            <Menu.Item key={item.id}>
-              <button title={item.title}>
-                <Icon name={item.icon} aria-hidden="true" />
-                <p>{item.text}</p>
-              </button>
-            </Menu.Item>
+            <button
+              title={item.title}
+              key={item.id}
+              onClick={() => dispatch(closeProfileMenu())}
+            >
+              <Icon name={item.icon} aria-hidden="true" />
+              <p>{item.text}</p>
+            </button>
           );
         })}
-      </Menu.Items>
-    </Menu>
+      </motion.div>
+    </div>
   );
 };
 
