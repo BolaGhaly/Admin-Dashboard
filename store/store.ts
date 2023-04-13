@@ -4,14 +4,16 @@ import openSideBarSlice from "./sideBar";
 import userProfileStatusSlice from "./userProfileStatus";
 import userProfileMenuSlice from "./userProfileMenu";
 import userProfileStatusMenuSlice from "./userProfileStatusMenu";
+import userNotificationsMenuSlice from "./userNotificationsMenu";
 
 export const store = configureStore({
   reducer: {
-    darkMode: darkModeSlice,
     openSideBar: openSideBarSlice,
+    darkMode: darkModeSlice,
+    userNotificationsMenu: userNotificationsMenuSlice,
     userProfileMenu: userProfileMenuSlice,
-    userProfileStatus: userProfileStatusSlice,
     userProfileStatusMenu: userProfileStatusMenuSlice,
+    userProfileStatus: userProfileStatusSlice,
   },
 });
 
