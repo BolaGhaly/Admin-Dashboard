@@ -6,13 +6,14 @@ import { RootState } from "../../store/store";
 import UserProfile from "./UserProfile";
 import NotificationsMenu from "./NotificationsMenu";
 import styles from "./topBar.module.scss";
+import { poppinsFont } from "../../fonts";
 
 const Topbar = () => {
   const darkMode = useSelector((state: RootState) => state.darkMode.value);
   const dispatch = useDispatch();
 
   return (
-    <nav className={styles.topNavBar}>
+    <nav className={styles.topNavBar} style={poppinsFont.style}>
       <button onClick={() => dispatch(openSideBarReverse())} title="Menu">
         <Icon name="menu" />
       </button>

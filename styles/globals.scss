@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 @import "@Styles/palette.scss";
 
 :root[data-theme="light"] {
@@ -46,7 +45,6 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
   color: var(--text);
   padding: 0 !important;
   background-color: var(--bg);

@@ -9,6 +9,7 @@ import {
   toggleProfileStatusMenu,
   closeProfileStatusMenu,
 } from "../../store/userProfileStatusMenu";
+import { poppinsFont } from "../../fonts";
 
 const UserStatus = () => {
   const userStatus = useSelector(
@@ -90,6 +91,7 @@ const UserStatus = () => {
             ? "Offline"
             : ""
         }
+        style={poppinsFont.style}
       >
         {userStatus === "online" ? (
           <>

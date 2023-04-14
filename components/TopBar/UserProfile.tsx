@@ -11,6 +11,7 @@ import {
   closeProfileMenu,
   toggleProfileMenu,
 } from "../../store/userProfileMenu";
+import { poppinsFont } from "../../fonts";
 
 const UserProfile = () => {
   const userStatus = useSelector(
@@ -71,7 +72,7 @@ const UserProfile = () => {
             <span className={styles.userImageOffline} />
           ) : null}
         </div>
-        <h1>Ryan Keller</h1>
+        <h1 style={poppinsFont.style}>Ryan Keller</h1>
       </button>
       <motion.div
         className={styles.userMenu}
@@ -89,7 +90,7 @@ const UserProfile = () => {
               onClick={() => dispatch(closeProfileMenu())}
             >
               <Icon name={item.icon} aria-hidden="true" />
-              <p>{item.text}</p>
+              <p style={poppinsFont.style}>{item.text}</p>
             </button>
           );
         })}
