@@ -7,6 +7,7 @@ import UserProfile from "./UserProfile";
 import NotificationsMenu from "./NotificationsMenu";
 import styles from "./topBar.module.scss";
 import { poppinsFont } from "../../fonts";
+import LanguagesMenu from "./LanguagesMenu";
 
 const Topbar = () => {
   const darkMode = useSelector((state: RootState) => state.darkMode.value);
@@ -18,6 +19,7 @@ const Topbar = () => {
         <Icon name="menu" />
       </button>
       <div>
+        <LanguagesMenu />
         <NotificationsMenu />
         <button onClick={() => dispatch(toggledarkMode())} title="Theme Mode">
           {darkMode ? <Icon name="darkModeOn" /> : <Icon name="darkModeOff" />}

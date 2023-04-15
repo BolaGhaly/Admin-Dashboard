@@ -237,6 +237,11 @@
 
 .notificationsMenu {
   position: relative;
+  margin-left: 0.5rem;
+
+  button {
+    margin-left: 0 !important;
+  }
 
   .notificationCircle {
     @include notificationUserStatus;
@@ -394,6 +399,16 @@
 
     span {
       color: var(--clearAll-text);
+    }
+  }
+}
+
+.languagesMenu {
+  button {
+    margin-left: 0 !important;
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
 }

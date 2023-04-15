@@ -6,6 +6,7 @@ import {
   RiLogoutBoxRLine,
   RiUserSettingsLine,
 } from "react-icons/ri";
+import USA_flag from "/assets/flags/USA_flag.svg";
 
 const iconTypes = {
   menu: HiOutlineMenu,
@@ -17,6 +18,7 @@ const iconTypes = {
   signOut: RiLogoutBoxRLine,
   closeMenu: MdClose,
   arrowDown: MdKeyboardArrowDown,
+  usaFlag: USA_flag,
 };
 
 export const profileData = [
