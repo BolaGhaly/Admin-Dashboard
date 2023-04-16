@@ -41,7 +41,7 @@ const UserProfile = () => {
         duration: 0.2,
         ease: "easeOut",
       },
-      transform: "translateX(50px)",
+      transform: "translateX(20px)",
       transitionEnd: {
         display: "none",
       },
