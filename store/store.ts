@@ -5,6 +5,7 @@ import userProfileStatusSlice from "./userProfileStatus";
 import userProfileMenuSlice from "./userProfileMenu";
 import userProfileStatusMenuSlice from "./userProfileStatusMenu";
 import userNotificationsMenuSlice from "./userNotificationsMenu";
+import userLanguagesMenuSlice from "./userLanguagesMenu";
 
 export const store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ export const store = configureStore({
     userProfileMenu: userProfileMenuSlice,
     userProfileStatusMenu: userProfileStatusMenuSlice,
     userProfileStatus: userProfileStatusSlice,
+    userLanguagesMenu: userLanguagesMenuSlice,
   },
 });
 

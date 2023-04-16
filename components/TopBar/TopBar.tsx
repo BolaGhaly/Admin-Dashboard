@@ -21,7 +21,7 @@ const Topbar = () => {
       <div>
         <LanguagesMenu />
         <NotificationsMenu />
-        <button onClick={() => dispatch(toggledarkMode())} title="Theme Mode">
+        <button onClick={() => dispatch(toggledarkMode())} title="Theme Mode" className={styles.darkModeBtn}>
           {darkMode ? <Icon name="darkModeOn" /> : <Icon name="darkModeOff" />}
         </button>
         <UserProfile />

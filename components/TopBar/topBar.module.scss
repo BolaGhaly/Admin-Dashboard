@@ -51,6 +51,10 @@
     button {
       margin-left: 0.5rem;
     }
+
+    .darkModeBtn {
+      margin-left: 0.75rem;
+    }
   }
 
   @media (min-width: 320px) {
@@ -62,7 +66,7 @@
 .user {
   display: flex;
   align-items: center;
-  margin-left: 0.5rem;
+  margin-left: 0.75rem;
   cursor: pointer;
   position: relative;
   width: max-content;
@@ -109,7 +113,7 @@
     right: 0;
     top: 4rem;
     border-top: 1px solid #a3a3a3;
-    min-width: 13rem;
+    min-width: 12rem;
     border-bottom-left-radius: 0.375rem;
     background-color: var(--nav-bg);
     padding: 0.5rem;
@@ -237,7 +241,7 @@
 
 .notificationsMenu {
   position: relative;
-  margin-left: 0.5rem;
+  margin-left: 0.75rem;
 
   button {
     margin-left: 0 !important;
@@ -404,11 +408,55 @@
 }
 
 .languagesMenu {
-  button {
+  position: relative;
+
+  > button {
     margin-left: 0 !important;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 1px var(--notification-timestamp));
+
     svg {
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  > div {
+    position: absolute;
+    top: 2.75rem;
+    right: 0;
+    border-top: 1px solid #a3a3a3;
+    border-radius: 0 0 0.375rem 0.375rem;
+    //background-color: red;
+    background-color: var(--nav-bg);
+    padding: 0.5rem;
+    flex-direction: column;
+    min-width: 10rem;
+
+    button {
+      font-size: 1rem;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      //background-color: tan;
+
+      margin: 0.375rem 0 0 0;
+      width: 100%;
+
+      &:hover {
+        background-color: var(--userMenu-hover);
+      }
+
+      svg {
+        filter: drop-shadow(0 0 1px var(--notification-timestamp));
+      }
+
+      p {
+        padding-left: 0.375rem;
+      }
+
+      &:first-of-type {
+        margin-top: 0;
+      }
     }
   }
 }

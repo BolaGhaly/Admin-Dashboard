@@ -7,6 +7,10 @@ import {
   RiUserSettingsLine,
 } from "react-icons/ri";
 import USA_flag from "/assets/flags/USA_flag.svg";
+import Spain_flag from "/assets/flags/Spain_flag.svg";
+import Italy_flag from "/assets/flags/Italy_flag.svg";
+import Germany_flag from "/assets/flags/Germany_flag.svg";
+import Russia_flag from "/assets/flags/Russia_flag.svg";
 
 const iconTypes = {
   menu: HiOutlineMenu,
@@ -19,6 +23,10 @@ const iconTypes = {
   closeMenu: MdClose,
   arrowDown: MdKeyboardArrowDown,
   usaFlag: USA_flag,
+  spainFlag: Spain_flag,
+  italyFlag: Italy_flag,
+  germanyFlag: Germany_flag,
+  russiaFlag: Russia_flag,
 };
 
 export const profileData = [

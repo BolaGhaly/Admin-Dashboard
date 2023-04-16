@@ -1,12 +1,28 @@
-//import useOnclickOutside from "react-cool-onclickoutside";
-import { motion, Variants } from "framer-motion";
 import styles from "./topBar.module.scss";
-//import { useState } from "react";
+import { motion, Variants } from "framer-motion";
 import Icon from "../../utils/topBarUtils";
-//import usaFlag from "/assets/flags/USA_flag.svg";
-//import Image from "next/image";
+import { poppinsFont } from "../../fonts";
+import useOnclickOutside from "react-cool-onclickoutside";
+import {
+  closeLanguagesMenu,
+  toggleLanguagesMenu,
+  changeLanguage,
+} from "../../store/userLanguagesMenu";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../store/store";
+
 const LanguagesMenu = () => {
-  //const [userLanguagesMenu, setUserLanguagesMenu] = useState(false);
+  const languagesMenuOpen = useSelector(
+    (state: RootState) => state.userLanguagesMenu.open
+  );
+  const languagesMenuValue = useSelector(
+    (state: RootState) => state.userLanguagesMenu.value
+  );
+  const dispatch = useDispatch();
+  const userLanguagesMenuRef = useOnclickOutside(() => {
+    dispatch(closeLanguagesMenu());
+  });
+
   const userLanguagesMenuVariants: Variants = {
     open: {
       opacity: 1,
@@ -17,7 +33,7 @@ const LanguagesMenu = () => {
       },
     },
     closed: {
-      opacity: 0,
+      //opacity: 0,
       transition: {
         duration: 0.2,
         ease: "easeOut",
@@ -28,28 +44,66 @@ const LanguagesMenu = () => {
     },
   };
 
+  const flagsArr = [
+    {
+      value: "English",
+      iconName: "usaFlag",
+    },
+    {
+      value: "Spanish",
+      iconName: "spainFlag",
+    },
+    {
+      value: "Italian",
+      iconName: "italyFlag",
+    },
+    {
+      value: "German",
+      iconName: "germanyFlag",
+    },
+    {
+      value: "Russian",
+      iconName: "russiaFlag",
+    },
+  ];
+
+  const handleClick = (value: string) => {
+    dispatch(changeLanguage({language: value}));
+    dispatch(closeLanguagesMenu());
+  }
+
   return (
-    <div className={styles.languagesMenu}>
-      <button>
-      <Icon name="usaFlag"/>
+    <div className={styles.languagesMenu} ref={userLanguagesMenuRef}>
+      <button onClick={() => dispatch(toggleLanguagesMenu())}>
+        {languagesMenuValue === "English" ? (
+          <Icon name="usaFlag" />
+        ) : languagesMenuValue === "Spanish" ? (
+          <Icon name="spainFlag" />
+        ) : languagesMenuValue === "Italian" ? (
+          <Icon name="italyFlag" />
+        ) : languagesMenuValue === "German" ? (
+          <Icon name="germanyFlag" />
+        ) : languagesMenuValue === "Russian" ? (
+          <Icon name="russiaFlag" />
+        ) : null}
       </button>
       <motion.div
         initial={false}
         variants={userLanguagesMenuVariants}
-        //animate={userLanguagesMenu ? "open" : "closed"}
-        //className={styles.userLanguagesMenu}
+        animate={languagesMenuOpen ? "open" : "closed"}
       >
-        <motion.ul>
-          <motion.li>
-            <p>Online</p>
-          </motion.li>
-          <motion.li>
-            <p>Online</p>
-          </motion.li>
-          <motion.li>
-            <p>Online</p>
-          </motion.li>
-        </motion.ul>
+        {flagsArr.map((flag, idx) => {
+          return (
+            <motion.button
+              style={poppinsFont.style}
+              key={idx}
+              onClick={() => handleClick(flag.value)}
+            >
+              <Icon name={`${flag.iconName}`} />
+              <p>{flag.value}</p>
+            </motion.button>
+          );
+        })}
       </motion.div>
     </div>
   );
