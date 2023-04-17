@@ -1,11 +1,13 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 export interface userProfileStatusMenuState {
-  value: boolean;
+  value: string;
+  open: boolean;
 }
 
 const initialState: userProfileStatusMenuState = {
-  value: false,
+  value: "Online",
+  open: false,
 };
 
 export const userProfileStatusMenuSlice = createSlice({
@@ -13,15 +15,18 @@ export const userProfileStatusMenuSlice = createSlice({
   initialState,
   reducers: {
     closeProfileStatusMenu: (state) => {
-      state.value = false;
+      state.open = false;
     },
     toggleProfileStatusMenu: (state) => {
-      state.value = !state.value;
+      state.open = !state.open;
+    },
+    changeStatusValue: (state, action:PayloadAction<{value: string}>) => {
+      state.value = action.payload.value;
     },
   },
 });
 
-export const { closeProfileStatusMenu, toggleProfileStatusMenu } =
+export const { closeProfileStatusMenu, toggleProfileStatusMenu, changeStatusValue } =
   userProfileStatusMenuSlice.actions;
 
 export default userProfileStatusMenuSlice.reducer;

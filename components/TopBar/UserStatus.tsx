@@ -2,35 +2,30 @@ import styles from "./topBar.module.scss";
 import Icon from "../../utils/topBarUtils";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
-import { online, offline, away } from "../../store/userProfileStatus";
 import useOnclickOutside from "react-cool-onclickoutside";
 import { motion, Variants } from "framer-motion";
 import {
   toggleProfileStatusMenu,
   closeProfileStatusMenu,
+  changeStatusValue,
 } from "../../store/userProfileStatusMenu";
 import { poppinsFont } from "../../fonts";
 
 const UserStatus = () => {
-  const userStatus = useSelector(
-    (state: RootState) => state.userProfileStatus.value
-  );
-  const userStatusMenu = useSelector(
+  const statusMenuValue: string = useSelector(
     (state: RootState) => state.userProfileStatusMenu.value
   );
+  const statusMenuOpen: boolean = useSelector(
+    (state: RootState) => state.userProfileStatusMenu.open
+  );
+
   const dispatch = useDispatch();
   const userStatusMenuRef = useOnclickOutside(() => {
     dispatch(closeProfileStatusMenu());
   });
 
-  const handleClick = (status: String) => {
-    if (status.toLowerCase() === "online") {
-      dispatch(online());
-    } else if (status.toLowerCase() === "away") {
-      dispatch(away());
-    } else if (status.toLowerCase() === "offline") {
-      dispatch(offline());
-    }
+  const handleClick = (status: string) => {
+    dispatch(changeStatusValue({ value: status }));
     dispatch(closeProfileStatusMenu());
   };
 
@@ -79,40 +74,30 @@ const UserStatus = () => {
   return (
     <div className={styles.userStatus} ref={userStatusMenuRef}>
       <button
-        aria-expanded={userStatusMenu ? "true" : undefined}
+        aria-expanded={statusMenuOpen ? "true" : undefined}
         aria-haspopup="true"
         onClick={() => dispatch(toggleProfileStatusMenu())}
-        title={
-          userStatus === "online"
-            ? "Online"
-            : userStatus === "away"
-            ? "Away"
-            : userStatus === "offline"
-            ? "Offline"
-            : ""
-        }
+        title={statusMenuValue}
         style={poppinsFont.style}
       >
-        {userStatus === "online" ? (
+        {statusMenuValue === "Online" ? (
           <>
             <span className={styles.userStatusOnline} />
-            <p>Online</p>
           </>
-        ) : userStatus === "away" ? (
+        ) : statusMenuValue === "Away" ? (
           <>
             <span className={styles.userStatusAway} />
-            <p>Away</p>
           </>
-        ) : userStatus === "offline" ? (
+        ) : statusMenuValue === "Offline" ? (
           <>
             <span className={styles.userStatusOffline} />
-            <p>Offline</p>
           </>
         ) : null}
+        <p>{statusMenuValue}</p>
         <motion.div
           initial={false}
           variants={userStatusArrow}
-          animate={userStatusMenu ? "up" : "down"}
+          animate={statusMenuOpen ? "up" : "down"}
         >
           <Icon name="arrowDown" />
         </motion.div>
@@ -120,8 +105,9 @@ const UserStatus = () => {
       <motion.div
         initial={false}
         variants={userStatusMenuVariants}
-        animate={userStatusMenu ? "open" : "closed"}
+        animate={statusMenuOpen ? "open" : "closed"}
         className={styles.userStatusMenu}
+        title="User's Status"
       >
         <motion.ul>
           <motion.li onClick={() => handleClick("Online")} title="Online">

@@ -14,9 +14,10 @@ import {
 import { poppinsFont } from "../../fonts";
 
 const UserProfile = () => {
-  const userStatus = useSelector(
-    (state: RootState) => state.userProfileStatus.value
+  const userStatusValue = useSelector(
+    (state: RootState) => state.userProfileStatusMenu.value
   );
+
   const userProfileMenu = useSelector(
     (state: RootState) => state.userProfileMenu.value
   );
@@ -64,12 +65,12 @@ const UserProfile = () => {
             priority
             unoptimized
           />
-          {userStatus === "online" ? (
-            <span className={styles.userImageOnline} />
-          ) : userStatus === "away" ? (
-            <span className={styles.userImageAway} />
-          ) : userStatus === "offline" ? (
-            <span className={styles.userImageOffline} />
+          {userStatusValue === "Online" ? (
+            <span className={styles.userImageOnline} title={userStatusValue} />
+          ) : userStatusValue === "Away" ? (
+            <span className={styles.userImageAway} title={userStatusValue} />
+          ) : userStatusValue === "Offline" ? (
+            <span className={styles.userImageOffline} title={userStatusValue} />
           ) : null}
         </div>
         <h1 style={poppinsFont.style}>Ryan Keller</h1>
@@ -79,6 +80,7 @@ const UserProfile = () => {
         initial={false}
         variants={userProfileMenuVariants}
         animate={userProfileMenu ? "open" : "closed"}
+        title="User's Profile Menu"
       >
         <h2>Welcome back, Ryan!</h2>
         <UserStatus />

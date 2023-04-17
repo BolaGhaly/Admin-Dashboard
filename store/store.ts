@@ -1,7 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import darkModeSlice from "./darkMode";
 import openSideBarSlice from "./sideBar";
-import userProfileStatusSlice from "./userProfileStatus";
 import userProfileMenuSlice from "./userProfileMenu";
 import userProfileStatusMenuSlice from "./userProfileStatusMenu";
 import userNotificationsMenuSlice from "./userNotificationsMenu";
@@ -14,7 +13,6 @@ export const store = configureStore({
     userNotificationsMenu: userNotificationsMenuSlice,
     userProfileMenu: userProfileMenuSlice,
     userProfileStatusMenu: userProfileStatusMenuSlice,
-    userProfileStatus: userProfileStatusSlice,
     userLanguagesMenu: userLanguagesMenuSlice,
   },
 });
