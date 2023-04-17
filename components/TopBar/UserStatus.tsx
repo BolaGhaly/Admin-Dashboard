@@ -107,7 +107,7 @@ const UserStatus = () => {
         variants={userStatusMenuVariants}
         animate={statusMenuOpen ? "open" : "closed"}
         className={styles.userStatusMenu}
-        title="User's Status"
+        title="User's Status Menu"
       >
         <motion.ul>
           <motion.li onClick={() => handleClick("Online")} title="Online">

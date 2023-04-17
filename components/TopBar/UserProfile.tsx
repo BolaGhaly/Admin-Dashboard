@@ -14,11 +14,10 @@ import {
 import { poppinsFont } from "../../fonts";
 
 const UserProfile = () => {
-  const userStatusValue = useSelector(
+  const userStatusMenuValue: string = useSelector(
     (state: RootState) => state.userProfileStatusMenu.value
   );
-
-  const userProfileMenu = useSelector(
+  const userProfileMenuOpen: boolean = useSelector(
     (state: RootState) => state.userProfileMenu.value
   );
   const dispatch = useDispatch();
@@ -65,12 +64,21 @@ const UserProfile = () => {
             priority
             unoptimized
           />
-          {userStatusValue === "Online" ? (
-            <span className={styles.userImageOnline} title={userStatusValue} />
-          ) : userStatusValue === "Away" ? (
-            <span className={styles.userImageAway} title={userStatusValue} />
-          ) : userStatusValue === "Offline" ? (
-            <span className={styles.userImageOffline} title={userStatusValue} />
+          {userStatusMenuValue === "Online" ? (
+            <span
+              className={styles.userImageOnline}
+              title={userStatusMenuValue}
+            />
+          ) : userStatusMenuValue === "Away" ? (
+            <span
+              className={styles.userImageAway}
+              title={userStatusMenuValue}
+            />
+          ) : userStatusMenuValue === "Offline" ? (
+            <span
+              className={styles.userImageOffline}
+              title={userStatusMenuValue}
+            />
           ) : null}
         </div>
         <h1 style={poppinsFont.style}>Ryan Keller</h1>
@@ -79,7 +87,7 @@ const UserProfile = () => {
         className={styles.userMenu}
         initial={false}
         variants={userProfileMenuVariants}
-        animate={userProfileMenu ? "open" : "closed"}
+        animate={userProfileMenuOpen ? "open" : "closed"}
         title="User's Profile Menu"
       >
         <h2>Welcome back, Ryan!</h2>
