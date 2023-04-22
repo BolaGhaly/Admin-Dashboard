@@ -120,7 +120,7 @@ const LanguagesMenu = () => {
 
   return (
     <div className={styles.languagesMenu} ref={userLanguagesMenuRef}>
-      <button onClick={() => dispatch(toggleLanguagesMenu())}>
+      <button onClick={() => dispatch(toggleLanguagesMenu())} title="Language">
         {languagesMenuValue === "English" ? (
           <Icon name="usaFlag" />
         ) : languagesMenuValue === "Spanish" ? (
