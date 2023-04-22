@@ -6,7 +6,6 @@ import { RootState } from "../../store/store";
 import UserProfile from "./UserProfile";
 import NotificationsMenu from "./NotificationsMenu";
 import styles from "./topBar.module.scss";
-import { poppinsFont } from "../../fonts";
 import LanguagesMenu from "./LanguagesMenu";
 
 const Topbar = () => {
@@ -14,7 +13,7 @@ const Topbar = () => {
   const dispatch = useDispatch();
 
   return (
-    <nav className={styles.topNavBar} style={poppinsFont.style}>
+    <nav className={styles.topNavBar}>
       <button onClick={() => dispatch(openSideBarReverse())} title="Menu">
         <Icon name="menu" />
       </button>

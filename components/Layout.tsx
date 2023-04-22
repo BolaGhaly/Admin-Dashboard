@@ -3,6 +3,7 @@ import { RootState } from "../store/store";
 import { useSelector } from "react-redux";
 import Sidebar from "./Sidebar";
 import Topbar from "./TopBar/TopBar";
+import { poppinsFont } from "../fonts";
 // import Footer from "./Footer";
 
 const Layout = ({ children }) => {
@@ -16,7 +17,7 @@ const Layout = ({ children }) => {
   }, [darkMode]);
 
   return (
-    <main>
+    <main className={poppinsFont.className}>
       <Topbar />
       <Sidebar />
       <section>{children}</section>
