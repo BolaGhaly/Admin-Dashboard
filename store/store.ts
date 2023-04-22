@@ -5,28 +5,38 @@ import userProfileMenuSlice from "./slices/userProfileMenu";
 import userProfileStatusMenuSlice from "./slices/userProfileStatusMenu";
 import userNotificationsMenuSlice from "./slices/userNotificationsMenu";
 import userLanguagesMenuSlice from "./slices/userLanguagesMenu";
-import storage from "redux-persist/lib/storage";
 import { persistStore, persistReducer } from "redux-persist";
+import { getPersistConfig } from "redux-deep-persist";
+import storage from "./storage";
 
-const persistConfig = {
+const rootReducer = combineReducers({
+  openSideBar: openSideBarSlice,
+  darkMode: darkModeSlice,
+  userNotificationsMenu: userNotificationsMenuSlice,
+  userProfileMenu: userProfileMenuSlice,
+  userProfileStatusMenu: userProfileStatusMenuSlice,
+  userLanguagesMenu: userLanguagesMenuSlice,
+});
+
+const persistConfig = getPersistConfig({
   key: "root",
   storage,
-};
+  blacklist: [
+    "openSideBar",
+    "userNotificationsMenu",
+    "userProfileMenu",
+    "userLanguagesMenu.open",
+    "userProfileStatusMenu.open",
+  ],
+  rootReducer,
+});
 
-const persistedReducer = persistReducer(
-  persistConfig,
-  combineReducers({
-    openSideBar: openSideBarSlice,
-    darkMode: darkModeSlice,
-    userNotificationsMenu: userNotificationsMenuSlice,
-    userProfileMenu: userProfileMenuSlice,
-    userProfileStatusMenu: userProfileStatusMenuSlice,
-    userLanguagesMenu: userLanguagesMenuSlice,
-  })
-);
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
   reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({ serializableCheck: false }),
 });
 
 export const persistor = persistStore(store);
