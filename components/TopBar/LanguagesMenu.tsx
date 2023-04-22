@@ -140,14 +140,14 @@ const LanguagesMenu = () => {
       >
         {flagsArr.map((flag, idx) => {
           return (
-            <motion.button
+            <button
               style={poppinsFont.style}
               key={idx}
               onClick={() => handleClick(flag.value)}
             >
               <Icon name={`${flag.iconName}`} />
               <p>{flag.value}</p>
-            </motion.button>
+            </button>
           );
         })}
       </motion.div>
