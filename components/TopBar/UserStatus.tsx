@@ -109,20 +109,20 @@ const UserStatus = () => {
         className={styles.userStatusMenu}
         title="User's Status Menu"
       >
-        <motion.ul>
-          <motion.li onClick={() => handleClick("Online")} title="Online">
+        <ul>
+          <li onClick={() => handleClick("Online")} title="Online">
             <span className={styles.userStatusOnline} />
             <p>Online</p>
-          </motion.li>
-          <motion.li onClick={() => handleClick("Away")} title="Away">
+          </li>
+          <li onClick={() => handleClick("Away")} title="Away">
             <span className={styles.userStatusAway} />
             <p>Away</p>
-          </motion.li>
-          <motion.li onClick={() => handleClick("Offline")} title="Offline">
+          </li>
+          <li onClick={() => handleClick("Offline")} title="Offline">
             <span className={styles.userStatusOffline} />
             <p>Offline</p>
-          </motion.li>
-        </motion.ul>
+          </li>
+        </ul>
       </motion.div>
     </div>
   );
