@@ -10,7 +10,7 @@ import {
 } from "../../store/userLanguagesMenu";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
-import { useState, useLayoutEffect } from "react";
+import { useState, useEffect } from "react";
 
 const LanguagesMenu = () => {
   const languagesMenuOpen = useSelector(
@@ -32,7 +32,7 @@ const LanguagesMenu = () => {
     setWindowWidth(window.innerWidth);
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.addEventListener("resize", handleResize);
 
     return () => {
