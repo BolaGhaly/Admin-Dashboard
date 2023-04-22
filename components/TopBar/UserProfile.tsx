@@ -10,7 +10,7 @@ import useOnclickOutside from "react-cool-onclickoutside";
 import {
   closeProfileMenu,
   toggleProfileMenu,
-} from "../../store/userProfileMenu";
+} from "../../store/slices/userProfileMenu";
 import { poppinsFont } from "../../fonts";
 
 const UserProfile = () => {

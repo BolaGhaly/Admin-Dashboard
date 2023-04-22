@@ -335,7 +335,6 @@ const transactions = () => {
       </p>
     </div>
   );
-}
-
+};
 
 export default transactions;

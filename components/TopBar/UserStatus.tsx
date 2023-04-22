@@ -8,7 +8,7 @@ import {
   toggleProfileStatusMenu,
   closeProfileStatusMenu,
   changeStatusValue,
-} from "../../store/userProfileStatusMenu";
+} from "../../store/slices/userProfileStatusMenu";
 import { poppinsFont } from "../../fonts";
 
 const UserStatus = () => {

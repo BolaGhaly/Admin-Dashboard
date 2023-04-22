@@ -2,7 +2,7 @@ import Link from "next/link";
 import useOnclickOutside from "react-cool-onclickoutside";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
-import { openSideBarOff } from "../store/sideBar";
+import { openSideBarOff } from "../store/slices/sideBar";
 import Icon, { navData } from "../utils/sideBarUtils";
 import styles from "../styles/modules/sideBar.module.scss";
 

@@ -9,7 +9,7 @@ import { RootState } from "../../store/store";
 import {
   closeNotificationsMenu,
   toggleNotificationsMenu,
-} from "../../store/userNotificationsMenu";
+} from "../../store/slices/userNotificationsMenu";
 import useOnclickOutside from "react-cool-onclickoutside";
 import { motion, Variants } from "framer-motion";
 import { poppinsFont } from "../../fonts";
@@ -68,6 +68,7 @@ const NotificationsMenu = () => {
           <button
             onClick={() => dispatch(closeNotificationsMenu())}
             style={poppinsFont.style}
+            title="Clear All"
           >
             Clear All
           </button>
@@ -86,10 +87,7 @@ const NotificationsMenu = () => {
                 priority
                 unoptimized
               />
-              <span
-                className={styles.notificationUserOnline}
-                title="Online"
-              />
+              <span className={styles.notificationUserOnline} title="Online" />
             </div>
             <div>
               <p>
@@ -116,13 +114,16 @@ const NotificationsMenu = () => {
             </div>
             <div>
               <p>
-                <b>Jessica Brown</b> requests access to{" "}
-                <b>Design</b>
+                <b>Jessica Brown</b> requests access to <b>Design</b>
               </p>
               <small>2h ago &#8226; Design</small>
               <div className={styles.notificationBtnsContainer}>
-                <button style={poppinsFont.style}>Accept</button>
-                <button style={poppinsFont.style}>Decline</button>
+                <button style={poppinsFont.style} title="Accept">
+                  Accept
+                </button>
+                <button style={poppinsFont.style} title="Decline">
+                  Decline
+                </button>
               </div>
             </div>
           </div>
@@ -151,8 +152,7 @@ const NotificationsMenu = () => {
               </p>
               <small>1d ago &#8226; Engineering</small>
               <div className={styles.userTag}>
-                <span>&#64;Ryan</span> Version 1.2 is ready to
-                test!
+                <span>&#64;Ryan</span> Version 1.2 is ready to test!
               </div>
             </div>
           </div>

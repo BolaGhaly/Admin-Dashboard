@@ -1,5 +1,5 @@
-import { openSideBarReverse } from "../../store/sideBar";
-import { toggledarkMode } from "../../store/darkMode";
+import { openSideBarReverse } from "../../store/slices/sideBar";
+import { toggledarkMode } from "../../store/slices/darkMode";
 import Icon from "../../utils/topBarUtils";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
@@ -20,7 +20,11 @@ const Topbar = () => {
       <div>
         <LanguagesMenu />
         <NotificationsMenu />
-        <button onClick={() => dispatch(toggledarkMode())} title="Theme Mode" className={styles.darkModeBtn}>
+        <button
+          onClick={() => dispatch(toggledarkMode())}
+          title="Theme Mode"
+          className={styles.darkModeBtn}
+        >
           {darkMode ? <Icon name="darkModeOn" /> : <Icon name="darkModeOff" />}
         </button>
         <UserProfile />

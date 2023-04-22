@@ -7,7 +7,7 @@ import {
   closeLanguagesMenu,
   toggleLanguagesMenu,
   changeLanguage,
-} from "../../store/userLanguagesMenu";
+} from "../../store/slices/userLanguagesMenu";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import { useState, useEffect } from "react";
@@ -19,6 +19,7 @@ const LanguagesMenu = () => {
   const languagesMenuValue = useSelector(
     (state: RootState) => state.userLanguagesMenu.value
   );
+
   const dispatch = useDispatch();
   const userLanguagesMenuRef = useOnclickOutside(() => {
     dispatch(closeLanguagesMenu());
@@ -144,6 +145,7 @@ const LanguagesMenu = () => {
               style={poppinsFont.style}
               key={idx}
               onClick={() => handleClick(flag.value)}
+              title={flag.value}
             >
               <Icon name={`${flag.iconName}`} />
               <p>{flag.value}</p>
