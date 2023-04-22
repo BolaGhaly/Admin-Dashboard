@@ -63,21 +63,21 @@ const NotificationsMenu = () => {
         variants={userNotificationsMenuVariants}
         animate={userNotificationsMenu ? "open" : "closed"}
       >
-        <motion.div>
-          <motion.h1>Notifications</motion.h1>
-          <motion.button
+        <div>
+          <h1>Notifications</h1>
+          <button
             onClick={() => dispatch(closeNotificationsMenu())}
             style={poppinsFont.style}
           >
             Clear All
-          </motion.button>
-        </motion.div>
-        <motion.div>
-          <motion.div
+          </button>
+        </div>
+        <div>
+          <div
             title="Notification"
             onClick={() => dispatch(closeNotificationsMenu())}
           >
-            <motion.div className={styles.notificationImgContainer}>
+            <div className={styles.notificationImgContainer}>
               <Image
                 src={notificationUser1Image}
                 width={100}
@@ -86,24 +86,24 @@ const NotificationsMenu = () => {
                 priority
                 unoptimized
               />
-              <motion.span
+              <span
                 className={styles.notificationUserOnline}
                 title="Online"
               />
-            </motion.div>
-            <motion.div>
-              <motion.p>
-                <motion.b>Bradley Cruz</motion.b> assigned you to{" "}
-                <motion.b>Implement user endpoints</motion.b>
-              </motion.p>
-              <motion.small>10m ago &#8226; Engineering</motion.small>
-            </motion.div>
-          </motion.div>
-          <motion.div
+            </div>
+            <div>
+              <p>
+                <b>Bradley Cruz</b> assigned you to{" "}
+                <b>Implement user endpoints</b>
+              </p>
+              <small>10m ago &#8226; Engineering</small>
+            </div>
+          </div>
+          <div
             title="Notification"
             onClick={() => dispatch(closeNotificationsMenu())}
           >
-            <motion.div className={styles.notificationImgContainer}>
+            <div className={styles.notificationImgContainer}>
               <Image
                 src={notificationUser2Image}
                 width={100}
@@ -113,24 +113,24 @@ const NotificationsMenu = () => {
                 unoptimized
               />
               <span className={styles.notificationUserAway} title="Away" />
-            </motion.div>
-            <motion.div>
-              <motion.p>
-                <motion.b>Jessica Brown</motion.b> requests access to{" "}
-                <motion.b>Design</motion.b>
-              </motion.p>
-              <motion.small>2h ago &#8226; Design</motion.small>
-              <motion.div className={styles.notificationBtnsContainer}>
-                <motion.button style={poppinsFont.style}>Accept</motion.button>
-                <motion.button style={poppinsFont.style}>Decline</motion.button>
-              </motion.div>
-            </motion.div>
-          </motion.div>
-          <motion.div
+            </div>
+            <div>
+              <p>
+                <b>Jessica Brown</b> requests access to{" "}
+                <b>Design</b>
+              </p>
+              <small>2h ago &#8226; Design</small>
+              <div className={styles.notificationBtnsContainer}>
+                <button style={poppinsFont.style}>Accept</button>
+                <button style={poppinsFont.style}>Decline</button>
+              </div>
+            </div>
+          </div>
+          <div
             title="Notification"
             onClick={() => dispatch(closeNotificationsMenu())}
           >
-            <motion.div className={styles.notificationImgContainer}>
+            <div className={styles.notificationImgContainer}>
               <Image
                 src={notificationUser3Image}
                 width={100}
@@ -143,20 +143,20 @@ const NotificationsMenu = () => {
                 className={styles.notificationUserOffline}
                 title="Offline"
               />
-            </motion.div>
-            <motion.div>
-              <motion.p>
-                <motion.b>Alex Cooper</motion.b> mentioned you in{" "}
-                <motion.b>Add search to home page</motion.b>
-              </motion.p>
-              <motion.small>1d ago &#8226; Engineering</motion.small>
-              <motion.div className={styles.userTag}>
-                <motion.span>&#64;Ryan</motion.span> Version 1.2 is ready to
+            </div>
+            <div>
+              <p>
+                <b>Alex Cooper</b> mentioned you in{" "}
+                <b>Add search to home page</b>
+              </p>
+              <small>1d ago &#8226; Engineering</small>
+              <div className={styles.userTag}>
+                <span>&#64;Ryan</span> Version 1.2 is ready to
                 test!
-              </motion.div>
-            </motion.div>
-          </motion.div>
-        </motion.div>
+              </div>
+            </div>
+          </div>
+        </div>
       </motion.div>
     </div>
   );
