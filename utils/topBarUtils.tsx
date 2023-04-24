@@ -31,21 +31,15 @@ const iconTypes = {
 
 export const profileData = [
   {
-    id: 0,
     icon: "profileSettings",
-    text: "Settings",
     title: "Settings",
   },
   {
-    id: 1,
     icon: "support",
-    text: "Support",
     title: "Support",
   },
   {
-    id: 2,
     icon: "signOut",
-    text: "Sign Out",
     title: "Sign Out",
   },
 ];

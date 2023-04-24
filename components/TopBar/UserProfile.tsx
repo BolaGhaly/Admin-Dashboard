@@ -92,15 +92,16 @@ const UserProfile = () => {
       >
         <h2>Welcome back, Ryan!</h2>
         <UserStatus />
-        {profileData.map((item) => {
+        {profileData.map((item, idx) => {
           return (
             <button
               title={item.title}
-              key={item.id}
+              key={idx}
               onClick={() => dispatch(closeProfileMenu())}
             >
+              
               <Icon name={item.icon} aria-hidden="true" />
-              <p style={poppinsFont.style}>{item.text}</p>
+              <p style={poppinsFont.style}>{item.title}</p>
             </button>
           );
         })}
