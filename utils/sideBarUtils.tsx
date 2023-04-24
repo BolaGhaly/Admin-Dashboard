@@ -1,25 +1,15 @@
 import { AiOutlineHome } from "react-icons/ai";
-import { BiTransfer } from "react-icons/bi";
 
 const iconTypes = {
   dashboard: AiOutlineHome,
-  transactions: BiTransfer,
 };
 
-export const navData = [
-  {
-    id: 0,
-    icon: "dashboard",
-    text: "Dashboard",
-    link: "/",
-  },
-  {
-    id: 1,
-    icon: "transactions",
-    text: "Transactions",
-    link: "/transactions",
-  },
-];
+export const sideBarMenuData = ["dashboard"];
+//"projects"
+//"tasks"
+//"users"];
+
+export const sideBarTeams = ["Design", "Engineering", "QA Testing"];
 
 const IconComponent = ({ name, ...props }) => {
   let Icon = iconTypes[name];

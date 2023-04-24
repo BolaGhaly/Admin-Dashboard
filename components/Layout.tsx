@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { RootState } from "../store/store";
 import { useSelector } from "react-redux";
-import Sidebar from "./Sidebar";
+import Sidebar from "./SideBar/Sidebar";
 import Topbar from "./TopBar/TopBar";
 import { poppinsFont } from "../fonts";
 // import Footer from "./Footer";
