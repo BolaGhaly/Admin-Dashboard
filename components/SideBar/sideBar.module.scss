@@ -1,0 +1,39 @@
+.sideNavBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--nav-bg);
+  min-height: 100%;
+  display: none;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  > div:first-of-type {
+    flex-direction: row;
+    :hover {
+      background-color: var(--user);
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 12px 3px;
+      border-bottom: 1px solid #a3a3a3;
+      text-decoration: none;
+
+      p {
+        font-size: 1.25rem;
+        padding-left: 0.5rem;
+        color: var(--text);
+      }
+    }
+  }
+
+  @media (min-width: 320px) {
+    display: block;
+  }
+}
