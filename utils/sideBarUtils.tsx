@@ -1,10 +1,15 @@
-import { AiOutlineHome } from "react-icons/ai";
+import { MdDashboard } from "react-icons/md";
+import companyLogo from "../assets/sideBarIcons/companyLogo.svg";
 
 const iconTypes = {
-  dashboard: AiOutlineHome,
+  company: companyLogo,
+  dashboard: MdDashboard,
 };
 
-export const sideBarMenuData = ["dashboard"];
+export const sideBarMenuData = [
+  { icon: "dashboard", text: "Overview" },
+  { icon: "dashboard", text: "Overview" },
+];
 //"projects"
 //"tasks"
 //"users"];

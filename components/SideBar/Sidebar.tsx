@@ -2,7 +2,8 @@ import useOnclickOutside from "react-cool-onclickoutside";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import { openSideBarOff } from "../../store/slices/sideBar";
-import styles from "../../styles/modules/sideBar.module.scss";
+import styles from "./sideBar.module.scss";
+import CompanyLogo from "./CompanyLogo";
 import SideBarMenu from "./SideBarMenu";
 
 const Sidebar = () => {
@@ -17,6 +18,7 @@ const Sidebar = () => {
       className={`${styles.sideNavBar} ${openSideBar ? "w-52 shown" : "w-16"}`}
       ref={sideBarRef}
     >
+      <CompanyLogo />
       <SideBarMenu />
     </nav>
   );

@@ -18,14 +18,14 @@ const SideBarMenu = () => {
               <button
                 className={`text-2xl ${darkMode ? "text-white" : "text-black"}`}
               >
-                <Icon name={`${item}`} />
+                <Icon name={`${item.icon}`} />
               </button>
               <span
                 className={`pl-2 ${openSideBar ? null : "hidden"} ${
                   darkMode ? "text-white" : "text-black"
                 }`}
               >
-                {item.charAt(0).toUpperCase() + item.slice(1)}
+                {item.text}
               </span>
             </a>
           );
