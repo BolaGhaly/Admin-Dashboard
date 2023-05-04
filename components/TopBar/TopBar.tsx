@@ -1,4 +1,4 @@
-import { openSideBarReverse } from "../../store/slices/sideBar";
+import { toggleSideBar } from "../../store/slices/sideBar";
 import { toggledarkMode } from "../../store/slices/darkMode";
 import Icon from "../../utils/topBarUtils";
 import { useDispatch, useSelector } from "react-redux";
@@ -14,7 +14,7 @@ const Topbar = () => {
 
   return (
     <nav className={styles.topNavBar}>
-      <button onClick={() => dispatch(openSideBarReverse())} title="Menu">
+      <button onClick={() => dispatch(toggleSideBar())} title="Menu">
         <Icon name="menu" />
       </button>
       <div>

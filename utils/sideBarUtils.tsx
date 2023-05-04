@@ -1,8 +1,10 @@
 import { MdDashboard } from "react-icons/md";
-import companyLogo from "../assets/sideBarIcons/companyLogo.svg";
+import companyLogoLight from "../assets/sideBarIcons/companyLogoLight.svg";
+import companyLogoDark from "../assets/sideBarIcons/companyLogoDark.svg";
 
 const iconTypes = {
-  company: companyLogo,
+  companyLogoLight,
+  companyLogoDark,
   dashboard: MdDashboard,
 };
 

@@ -12,15 +12,15 @@ export const openSideBarSlice = createSlice({
   name: "openSideBar",
   initialState,
   reducers: {
-    openSideBarOff: (state) => {
+    closeSideBar: (state) => {
       state.value = false;
     },
-    openSideBarReverse: (state) => {
+    toggleSideBar: (state) => {
       state.value = !state.value;
     },
   },
 });
 
-export const { openSideBarOff, openSideBarReverse } = openSideBarSlice.actions;
+export const { closeSideBar, toggleSideBar } = openSideBarSlice.actions;
 
 export default openSideBarSlice.reducer;

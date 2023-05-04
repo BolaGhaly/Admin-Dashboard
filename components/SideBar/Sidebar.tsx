@@ -1,7 +1,7 @@
 import useOnclickOutside from "react-cool-onclickoutside";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
-import { openSideBarOff } from "../../store/slices/sideBar";
+import { closeSideBar } from "../../store/slices/sideBar";
 import styles from "./sideBar.module.scss";
 import CompanyLogo from "./CompanyLogo";
 import SideBarMenu from "./SideBarMenu";
@@ -11,7 +11,7 @@ const Sidebar = () => {
     (state: RootState) => state.openSideBar.value
   );
   const dispatch = useDispatch();
-  const sideBarRef = useOnclickOutside(() => dispatch(openSideBarOff()));
+  const sideBarRef = useOnclickOutside(() => dispatch(closeSideBar()));
 
   return (
     <nav
