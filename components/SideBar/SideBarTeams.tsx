@@ -4,7 +4,6 @@ import { RootState } from "../../store/store";
 //import styles from "../styles/modules/sideBar.module.scss";
 
 const SideBarTeams = () => {
-  const darkMode = useSelector((state: RootState) => state.darkMode.value);
   const openSideBar = useSelector(
     (state: RootState) => state.openSideBar.value
   );
@@ -15,12 +14,21 @@ const SideBarTeams = () => {
       {sideBarTeams.map((item, idx) => {
         return (
           <a href="#" key={idx}>
-            <span className={`${openSideBar ? null : "hidden"}`}>
-              {item}
-            </span>
+            <span className={`${openSideBar ? null : "hidden"}`}>{item}</span>
           </a>
         );
       })}
+
+      <div>
+        <a href="#">
+          <Icon name="profileSettings" />
+          <p className={`${openSideBar ? null : "hidden"}`}> Support</p>
+        </a>
+        <a href="#">
+          <Icon name="signOut" />
+          <p className={`${openSideBar ? null : "hidden"}`}> Sign Out</p>
+        </a>
+      </div>
     </div>
   );
 };

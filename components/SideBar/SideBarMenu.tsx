@@ -4,7 +4,6 @@ import { RootState } from "../../store/store";
 //import styles from "../styles/modules/sideBar.module.scss";
 
 const SideBarMenu = () => {
-  const darkMode = useSelector((state: RootState) => state.darkMode.value);
   const openSideBar = useSelector(
     (state: RootState) => state.openSideBar.value
   );
