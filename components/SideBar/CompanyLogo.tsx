@@ -14,30 +14,16 @@ const CompanyLogo = () => {
   const dispatch = useDispatch();
 
   return (
-    <>
-      {openSideBar ? (
-        <div>
-          <Link href="/" onClick={() => dispatch(closeSideBar())}>
-            {darkMode ? (
-              <Icon name="companyLogoDark" />
-            ) : (
-              <Icon name="companyLogoLight" />
-            )}
-            <p style={lobsterFont.style}>FinFiesta</p>
-          </Link>
-        </div>
-      ) : (
-        <div>
-          <Link href="/">
-            {darkMode ? (
-              <Icon name="companyLogoDark" />
-            ) : (
-              <Icon name="companyLogoLight" />
-            )}
-          </Link>
-        </div>
-      )}
-    </>
+    <div onClick={() => dispatch(closeSideBar())}>
+      <Link href="/">
+        {darkMode ? (
+          <Icon name="companyLogoDark" />
+        ) : (
+          <Icon name="companyLogoLight" />
+        )}
+      </Link>
+      {openSideBar ? <p style={lobsterFont.style}>FinFiesta</p> : null}
+    </div>
   );
 };
 

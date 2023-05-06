@@ -5,6 +5,8 @@ import { closeSideBar } from "../../store/slices/sideBar";
 import styles from "./sideBar.module.scss";
 import CompanyLogo from "./CompanyLogo";
 import SideBarMenu from "./SideBarMenu";
+import SideBarTeams from "./SideBarTeams";
+import { motion, Variants } from "framer-motion";
 
 const Sidebar = () => {
   const openSideBar = useSelector(
@@ -13,14 +15,36 @@ const Sidebar = () => {
   const dispatch = useDispatch();
   const sideBarRef = useOnclickOutside(() => dispatch(closeSideBar()));
 
+  const sideBarVariants: Variants = {
+    open: {
+      display: "block",
+      width: "13rem",
+      transition: {
+        duration: 0.2,
+        ease: "easeOut",
+      },
+    },
+    closed: {
+      width: "4rem",
+      transition: {
+        duration: 0.2,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <nav
-      className={`${styles.sideNavBar} ${openSideBar ? "w-52 shown" : "w-16"}`}
+    <motion.nav
+      className={`${styles.sideNavBar}`}
       ref={sideBarRef}
+      initial={false}
+      variants={sideBarVariants}
+      animate={openSideBar ? "open" : "closed"}
     >
       <CompanyLogo />
       <SideBarMenu />
-    </nav>
+      <SideBarTeams />
+    </motion.nav>
   );
 };
 

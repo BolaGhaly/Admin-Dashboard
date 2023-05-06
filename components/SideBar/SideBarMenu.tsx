@@ -10,27 +10,20 @@ const SideBarMenu = () => {
   );
 
   return (
-    <div className={`${openSideBar ? "pl-18" : "items-center"}`}>
-      <div className="flex flex-col">
-        {sideBarMenuData.map((item, idx) => {
-          return (
-            <a href="#" key={idx} className={`flex items-center`}>
-              <button
-                className={`text-2xl ${darkMode ? "text-white" : "text-black"}`}
-              >
-                <Icon name={`${item.icon}`} />
-              </button>
-              <span
-                className={`pl-2 ${openSideBar ? null : "hidden"} ${
-                  darkMode ? "text-white" : "text-black"
-                }`}
-              >
-                {item.text}
-              </span>
-            </a>
-          );
-        })}
-      </div>
+    <div>
+      <h2 className={`${openSideBar ? null : "hidden"}`}>Main Menu</h2>
+      {sideBarMenuData.map((item, idx) => {
+        return (
+          <a href="#" key={idx}>
+            <button>
+              <Icon name={`${item}`} />
+            </button>
+            <span className={`${openSideBar ? null : "hidden"}`}>
+              {item.charAt(0).toUpperCase() + item.slice(1)}
+            </span>
+          </a>
+        );
+      })}
     </div>
   );
 };

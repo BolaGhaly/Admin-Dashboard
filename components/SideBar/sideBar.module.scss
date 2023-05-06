@@ -13,23 +13,27 @@
 
   > div:first-of-type {
     flex-direction: row;
-    :hover {
+
+    &:hover {
       background-color: var(--user);
     }
 
     a {
       display: flex;
-      align-items: center;
-      width: 100%;
       padding: 13px 5px;
       border-bottom: 1px solid #a3a3a3;
       text-decoration: none;
+    }
 
-      p {
-        font-size: 1.5rem;
-        padding: 0 0.5rem 0 0.75rem;
-        color: var(--text);
-      }
+    p {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      font-size: 1.5rem;
+      padding: 0 0.75rem;
+      color: var(--text);
+      border-bottom: 1px solid #a3a3a3;
+      cursor: pointer;
     }
   }
 
