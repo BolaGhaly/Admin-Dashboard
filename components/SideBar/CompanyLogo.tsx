@@ -14,7 +14,7 @@ const CompanyLogo = () => {
   const dispatch = useDispatch();
 
   return (
-    <div onClick={() => dispatch(closeSideBar())}>
+    <div onClick={() => dispatch(closeSideBar())} title="FinFiesta">
       <Link href="/">
         {darkMode ? (
           <Icon name="companyLogoDark" />
