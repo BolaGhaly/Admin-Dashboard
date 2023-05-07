@@ -6,6 +6,7 @@ import styles from "./sideBar.module.scss";
 import CompanyLogo from "./CompanyLogo";
 import SideBarMenu from "./SideBarMenu";
 import SideBarTeams from "./SideBarTeams";
+import SideBarProfile from "./SideBarProfile";
 import { motion, Variants } from "framer-motion";
 
 const SideBar = () => {
@@ -45,6 +46,7 @@ const SideBar = () => {
       <CompanyLogo />
       <SideBarMenu />
       <SideBarTeams />
+      <SideBarProfile />
     </motion.nav>
   );
 };
