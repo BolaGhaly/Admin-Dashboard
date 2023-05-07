@@ -8,7 +8,7 @@ import NotificationsMenu from "./NotificationsMenu";
 import styles from "./topBar.module.scss";
 import LanguagesMenu from "./LanguagesMenu";
 
-const Topbar = () => {
+const TopBar = () => {
   const darkMode = useSelector((state: RootState) => state.darkMode.value);
   const dispatch = useDispatch();
 
@@ -33,4 +33,4 @@ const Topbar = () => {
   );
 };
 
-export default Topbar;
+export default TopBar;

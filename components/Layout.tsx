@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { RootState } from "../store/store";
 import { useSelector } from "react-redux";
-import Sidebar from "./SideBar/Sidebar";
-import Topbar from "./TopBar/TopBar";
+import SideBar from "./SideBar/SideBar";
+import TopBar from "./TopBar/TopBar";
 import { poppinsFont } from "../fonts";
 // import Footer from "./Footer";
 
@@ -18,8 +18,8 @@ const Layout = ({ children }) => {
 
   return (
     <main className={poppinsFont.className}>
-      <Topbar />
-      <Sidebar />
+      <TopBar />
+      <SideBar />
       <section>{children}</section>
       {/* <Footer /> */}
     </main>

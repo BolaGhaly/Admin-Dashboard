@@ -8,7 +8,7 @@ import SideBarMenu from "./SideBarMenu";
 import SideBarTeams from "./SideBarTeams";
 import { motion, Variants } from "framer-motion";
 
-const Sidebar = () => {
+const SideBar = () => {
   const openSideBar = useSelector(
     (state: RootState) => state.openSideBar.value
   );
@@ -49,4 +49,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SideBar;
