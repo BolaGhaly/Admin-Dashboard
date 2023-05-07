@@ -22,7 +22,11 @@ const CompanyLogo = () => {
           <Icon name="companyLogoLight" />
         )}
       </Link>
-      {openSideBar ? <p style={lobsterFont.style}>FinFiesta</p> : null}
+      {openSideBar ? (
+        <Link href="/" style={lobsterFont.style}>
+          FinFiesta
+        </Link>
+      ) : null}
     </div>
   );
 };
