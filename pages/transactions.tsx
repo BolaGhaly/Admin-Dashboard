@@ -1,6 +1,11 @@
+import Head from "next/head";
+
 const transactions = () => {
   return (
     <div>
+      <Head>
+        <title>FinFiesta | Transactions</title>
+      </Head>
       <h1>Transactions</h1>
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos sint
