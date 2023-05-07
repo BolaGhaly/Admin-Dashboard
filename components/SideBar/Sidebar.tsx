@@ -19,6 +19,7 @@ const Sidebar = () => {
     open: {
       display: "block",
       width: "13rem",
+      boxShadow: "0 2px 8px var(--boxShadow)",
       transition: {
         duration: 0.2,
         ease: "easeOut",
