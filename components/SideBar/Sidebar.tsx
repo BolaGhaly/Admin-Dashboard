@@ -19,7 +19,7 @@ const SideBar = () => {
   const sideBarVariants: Variants = {
     open: {
       display: "block",
-      width: "13rem",
+      width: "13.5rem",
       boxShadow: "0 2px 8px var(--boxShadow)",
       transition: {
         duration: 0.2,

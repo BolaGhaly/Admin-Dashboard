@@ -5,28 +5,46 @@ import { closeSideBar } from "../../store/slices/sideBar";
 import Icon from "../../utils/sideBarUtils";
 import { lobsterFont } from "../../fonts";
 import Link from "next/link";
+import styles from "./sideBar.module.scss";
+import { motion, Variants } from "framer-motion";
 
 const CompanyLogo = () => {
   const openSideBar = useSelector(
     (state: RootState) => state.openSideBar.value
   );
-  const darkMode = useSelector((state: RootState) => state.darkMode.value);
   const dispatch = useDispatch();
 
+  const closeSideBarBtnVariants: Variants = {
+    open: {
+      display: "block",
+    },
+    closed: {
+      display: "none",
+    },
+  };
+
   return (
-    <div onClick={() => dispatch(closeSideBar())} title="FinFiesta">
+    <div
+      className={styles.companyLogoDiv}
+      onClick={() => dispatch(closeSideBar())}
+      title="FinFiesta"
+    >
       <Link href="/">
-        {darkMode ? (
-          <Icon name="companyLogoDark" />
-        ) : (
-          <Icon name="companyLogoLight" />
-        )}
+        <Icon name="companyLogo" />
       </Link>
       {openSideBar ? (
         <Link href="/" style={lobsterFont.style}>
           FinFiesta
         </Link>
       ) : null}
+      <motion.span
+        initial={false}
+        variants={closeSideBarBtnVariants}
+        animate={openSideBar ? "open" : "closed"}
+      >
+        <Icon name="closeSideBar" />
+      </motion.span>
+      {/* {openSideBar ? <Icon name="closeSideBar" /> : null} */}
     </div>
   );
 };
