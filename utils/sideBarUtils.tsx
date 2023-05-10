@@ -2,13 +2,13 @@ import { MdDashboard } from "react-icons/md";
 import { IoBagHandle } from "react-icons/io5";
 import { HiUsers } from "react-icons/hi2";
 import { RiFileList3Fill } from "react-icons/ri";
-import companyLogoLight from "../assets/sideBarIcons/companyLogoLight.svg";
-import companyLogoDark from "../assets/sideBarIcons/companyLogoDark.svg";
 import { RiLogoutBoxRLine, RiUserSettingsLine } from "react-icons/ri";
+import closeButton from "../assets/sideBarIcons/closeButton.svg";
+import companyLogo from "../assets/sideBarIcons/companyLogo.svg";
 
 const iconTypes = {
-  companyLogoLight,
-  companyLogoDark,
+  companyLogo,
+  closeSideBar: closeButton,
   dashboard: MdDashboard,
   products: IoBagHandle,
   customers: HiUsers,
