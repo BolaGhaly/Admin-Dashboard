@@ -46,6 +46,7 @@ const SideBar = () => {
       animate={openSideBar ? "open" : "closed"}
     >
       <CompanyLogo />
+      <h2 className={`${openSideBar ? null : "invisible"}`}>Main Menu</h2>
       <SideBarMenu />
       <SideBarTeams />
       <SideBarProfile />
