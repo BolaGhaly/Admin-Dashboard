@@ -28,6 +28,7 @@ const SideBar = () => {
       },
     },
     closed: {
+      display: "none",
       width: "4rem",
       transition: {
         duration: 0.2,
