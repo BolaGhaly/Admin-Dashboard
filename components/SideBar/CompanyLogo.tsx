@@ -17,9 +17,18 @@ const CompanyLogo = () => {
   const closeSideBarBtnVariants: Variants = {
     open: {
       display: "block",
+      transition: {
+        ease: "easeOut",
+        duration: 0.2,
+        delay: 0.2
+      },
+      translateX: 0,
+      translateY: 0,
     },
     closed: {
       display: "none",
+      translateX: 6,
+      translateY: -6,
     },
   };
 
@@ -45,7 +54,6 @@ const CompanyLogo = () => {
       >
         <Icon name="closeSideBar" />
       </motion.span>
-      {/* {openSideBar ? <Icon name="closeSideBar" /> : null} */}
     </div>
   );
 };
