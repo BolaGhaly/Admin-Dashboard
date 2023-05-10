@@ -18,7 +18,8 @@ const SideBar = () => {
 
   const sideBarVariants: Variants = {
     open: {
-      display: "block",
+      display: "flex",
+      flexDirection: "column",
       width: "13.5rem",
       boxShadow: "0 2px 8px var(--boxShadow)",
       transition: {
