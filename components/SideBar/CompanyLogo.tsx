@@ -29,11 +29,11 @@ const CompanyLogo = () => {
       onClick={() => dispatch(closeSideBar())}
       title="FinFiesta"
     >
-      <Link href="/">
+      <Link href="/" title="FinFiesta">
         <Icon name="companyLogo" />
       </Link>
       {openSideBar ? (
-        <Link href="/" style={lobsterFont.style}>
+        <Link href="/" title="FinFiesta" style={lobsterFont.style}>
           FinFiesta
         </Link>
       ) : null}
@@ -41,6 +41,7 @@ const CompanyLogo = () => {
         initial={false}
         variants={closeSideBarBtnVariants}
         animate={openSideBar ? "open" : "closed"}
+        title="Close Sidebar"
       >
         <Icon name="closeSideBar" />
       </motion.span>
