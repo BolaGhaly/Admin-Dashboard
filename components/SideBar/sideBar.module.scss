@@ -58,8 +58,45 @@
 
   .sideBarMenu {
     div {
+      cursor: pointer;
       flex-direction: row;
-      align-items: center;
+      padding: 0.75rem 1.25rem;
+
+      a {
+        display: inline-flex;
+        color: var(--sc-text);
+
+        svg {
+          font-size: 1.5rem;
+          color: var(--sc-text);
+        }
+      }
+      span {
+        color: var(--sc-text);
+        padding-left: 0.5rem;
+      }
+
+      &:hover {
+        background-color: var(--user);
+        a {
+          svg {
+            color: var(--text);
+          }
+        }
+        span {
+          color: var(--text);
+        }
+      }
+
+      &:first-of-type {
+        background-color: var(--user);
+        a svg {
+          color: var(--text);
+        }
+        span {
+          color: var(--text);
+        }
+      }
     }
   }
 
