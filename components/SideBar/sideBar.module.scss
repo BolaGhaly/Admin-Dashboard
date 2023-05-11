@@ -57,32 +57,36 @@
   }
 
   .sideBarMenu {
-    div {
+    > a {
       cursor: pointer;
-      flex-direction: row;
+      display: inline-flex;
+      align-items: center;
       padding: 0.75rem 1.25rem;
+      text-decoration: none;
 
-      a {
+      button {
         display: inline-flex;
-        color: var(--sc-text);
-
-        svg {
-          font-size: 1.5rem;
-          color: var(--sc-text);
-        }
+        background-color: transparent;
       }
+
+      svg {
+        font-size: 1.5rem;
+        color: var(--sc-text);
+      }
+
       span {
         color: var(--sc-text);
         padding-left: 0.5rem;
+        height: 24px;
       }
 
       &:hover {
         background-color: var(--user);
-        a {
-          svg {
-            color: var(--text);
-          }
+
+        svg {
+          color: var(--text);
         }
+
         span {
           color: var(--text);
         }
@@ -90,7 +94,8 @@
 
       &:first-of-type {
         background-color: var(--user);
-        a svg {
+
+        svg {
           color: var(--text);
         }
         span {

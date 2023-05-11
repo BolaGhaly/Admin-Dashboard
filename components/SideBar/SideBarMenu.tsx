@@ -2,6 +2,7 @@ import Icon, { sideBarMenuData } from "../../utils/sideBarUtils";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import styles from "./sideBar.module.scss";
+import Link from "next/link";
 
 const SideBarMenu = () => {
   const openSideBar = useSelector(
@@ -12,14 +13,14 @@ const SideBarMenu = () => {
     <div className={styles.sideBarMenu}>
       {sideBarMenuData.map((item, idx) => {
         return (
-          <div key={idx}>
-            <a href="#">
+          <Link href="#" key={idx}>
+            <button>
               <Icon name={`${item}`} />
-            </a>
-            <span className={`${openSideBar ? null : "hidden"}`}>
+            </button>
+            <span className={`${openSideBar ? "" : "hidden"}`}>
               {item.charAt(0).toUpperCase() + item.slice(1)}
             </span>
-          </div>
+          </Link>
         );
       })}
     </div>
