@@ -1,10 +1,12 @@
-import { MdDashboard } from "react-icons/md";
+import { MdDashboard, MdDesignServices } from "react-icons/md";
 import { IoBagHandle } from "react-icons/io5";
-import { HiUsers } from "react-icons/hi2";
+import { HiUsers, HiCode } from "react-icons/hi";
 import { RiFileList3Fill } from "react-icons/ri";
 import { RiLogoutBoxRLine, RiUserSettingsLine } from "react-icons/ri";
 import closeButton from "../assets/sideBarIcons/closeButton.svg";
 import companyLogo from "../assets/sideBarIcons/companyLogo.svg";
+import marketing from "../assets/sideBarIcons/marketing.svg";
+import sales from "../assets/sideBarIcons/sales.svg";
 
 const iconTypes = {
   companyLogo,
@@ -15,6 +17,10 @@ const iconTypes = {
   transactions: RiFileList3Fill,
   profileSettings: RiUserSettingsLine,
   signOut: RiLogoutBoxRLine,
+  marketing,
+  sales,
+  design: MdDesignServices,
+  engineering: HiCode,
 };
 
 export const sideBarMenuData = [
@@ -24,7 +30,24 @@ export const sideBarMenuData = [
   "transactions",
 ];
 
-export const sideBarTeams = ["Design", "Engineering", "QA Testing"];
+export const sideBarTeams = [
+  {
+    title: "Marketing",
+    icon: "marketing",
+  },
+  {
+    title: "Sales",
+    icon: "sales",
+  },
+  {
+    title: "Design",
+    icon: "design",
+  },
+  {
+    title: "Engineering",
+    icon: "engineering",
+  },
+];
 
 const IconComponent = ({ name, ...props }) => {
   let Icon = iconTypes[name];

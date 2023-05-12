@@ -13,12 +13,16 @@
 
   h2 {
     text-transform: uppercase;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 600;
     color: var(--notification-timestamp);
-    padding: 1.5px 0 1px;
-    background-color: red;
-    margin-top: 1rem;
+    padding: 0.25rem 1.25rem;
+    //background-color: red;
+    margin-top: 0.75rem;
+  }
+
+  h2:nth-of-type(2) {
+    margin-top: 1.5rem;
   }
 
   .companyLogoDiv {
@@ -56,7 +60,8 @@
     }
   }
 
-  .sideBarMenu {
+  .sideBarMenu,
+  .sideBarTeams {
     > a {
       cursor: pointer;
       display: inline-flex;

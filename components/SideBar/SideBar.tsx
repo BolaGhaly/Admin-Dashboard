@@ -48,6 +48,7 @@ const SideBar = () => {
       <CompanyLogo />
       <h2 className={`${openSideBar ? null : "invisible"}`}>Menu</h2>
       <SideBarMenu />
+      <h2 className={`${openSideBar ? null : "invisible"}`}>Teams</h2>
       <SideBarTeams />
       <SideBarProfile />
     </motion.nav>
