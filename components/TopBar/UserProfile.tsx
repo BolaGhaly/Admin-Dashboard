@@ -99,7 +99,6 @@ const UserProfile = () => {
               key={idx}
               onClick={() => dispatch(closeProfileMenu())}
             >
-              
               <Icon name={item.icon} aria-hidden="true" />
               <p style={poppinsFont.style}>{item.title}</p>
             </button>
