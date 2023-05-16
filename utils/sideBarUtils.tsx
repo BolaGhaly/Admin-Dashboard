@@ -1,8 +1,8 @@
 import { MdDashboard, MdDesignServices } from "react-icons/md";
-import { IoBagHandle } from "react-icons/io5";
+import { IoBagHandle, IoLogOut } from "react-icons/io5";
 import { HiUsers, HiCode } from "react-icons/hi";
 import { RiFileList3Fill } from "react-icons/ri";
-import { RiLogoutBoxRLine, RiUserSettingsLine } from "react-icons/ri";
+import { RiUserSettingsFill } from "react-icons/ri";
 import closeButton from "../assets/sideBarIcons/closeButton.svg";
 import companyLogo from "../assets/sideBarIcons/companyLogo.svg";
 import marketing from "../assets/sideBarIcons/marketing.svg";
@@ -15,8 +15,8 @@ const iconTypes = {
   products: IoBagHandle,
   customers: HiUsers,
   transactions: RiFileList3Fill,
-  profileSettings: RiUserSettingsLine,
-  signOut: RiLogoutBoxRLine,
+  profileSettings: RiUserSettingsFill,
+  signOut: IoLogOut,
   marketing,
   sales,
   design: MdDesignServices,
