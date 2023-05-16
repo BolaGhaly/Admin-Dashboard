@@ -1,4 +1,4 @@
-import Icon from "../../utils/sideBarUtils";
+import Icon, { sideBarProfile } from "../../utils/sideBarUtils";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../store/store";
 import styles from "./sideBar.module.scss";
@@ -12,18 +12,16 @@ const SideBarProfile = () => {
 
   return (
     <div className={styles.sideBarProfile}>
-      <div onClick={() => dispatch(closeSideBar())}>
-        <button>
-          <Icon name="profileSettings" />
-        </button>
-        <span className={`${openSideBar ? null : "hidden"}`}>Support</span>
-      </div>
-      <div onClick={() => dispatch(closeSideBar())}>
-        <button>
-          <Icon name="signOut" />
-        </button>
-        <span className={`${openSideBar ? null : "hidden"}`}>Sign Out</span>
-      </div>
+      {sideBarProfile.map((item, idx) => (
+        <div key={idx} onClick={() => dispatch(closeSideBar())}>
+          <button>
+            <Icon name={item.icon} />
+          </button>
+          <span className={`${openSideBar ? null : "hidden"}`}>
+            {item.title}
+          </span>
+        </div>
+      ))}
     </div>
   );
 };

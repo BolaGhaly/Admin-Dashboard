@@ -49,6 +49,17 @@ export const sideBarTeams = [
   },
 ];
 
+export const sideBarProfile = [
+  {
+    title: "Settings",
+    icon: "profileSettings",
+  },
+  {
+    title: "Sign Out",
+    icon: "signOut",
+  },
+];
+
 const IconComponent = ({ name, ...props }) => {
   let Icon = iconTypes[name];
   return <Icon {...props} />;
