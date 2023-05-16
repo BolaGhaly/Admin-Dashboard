@@ -23,7 +23,7 @@ const iconTypes = {
   engineering: HiCode,
 };
 
-export const sideBarMenuData = [
+export const sideBarMenu = [
   "dashboard",
   "products",
   "customers",

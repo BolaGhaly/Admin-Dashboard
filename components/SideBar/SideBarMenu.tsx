@@ -1,4 +1,4 @@
-import Icon, { sideBarMenuData } from "../../utils/sideBarUtils";
+import Icon, { sideBarMenu } from "../../utils/sideBarUtils";
 import { useSelector, useDispatch } from "react-redux";
 import { closeSideBar } from "../../store/slices/sideBar";
 import { RootState } from "../../store/store";
@@ -10,7 +10,7 @@ const SideBarMenu = () => {
   const openSideBar = useSelector(
     (state: RootState) => state.openSideBar.value
   );
-  const [activeItem, setActiveItem] = useState(sideBarMenuData[0]);
+  const [activeItem, setActiveItem] = useState(sideBarMenu[0]);
   const dispatch = useDispatch();
 
   const handleClick = (item: string) => {
@@ -20,7 +20,7 @@ const SideBarMenu = () => {
 
   return (
     <div className={styles.sideBarMenu}>
-      {sideBarMenuData.map((item, idx) => {
+      {sideBarMenu.map((item, idx) => {
         return (
           <Link
             href="#"
