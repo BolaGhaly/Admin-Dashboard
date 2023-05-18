@@ -30,24 +30,7 @@ export const sideBarMenu = [
   "transactions",
 ];
 
-export const sideBarTeams = [
-  {
-    title: "Marketing",
-    icon: "marketing",
-  },
-  {
-    title: "Sales",
-    icon: "sales",
-  },
-  {
-    title: "Design",
-    icon: "design",
-  },
-  {
-    title: "Engineering",
-    icon: "engineering",
-  },
-];
+export const sideBarTeams = ["marketing", "sales", "design", "engineering"];
 
 export const sideBarProfile = [
   {

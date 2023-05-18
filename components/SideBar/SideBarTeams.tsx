@@ -10,16 +10,19 @@ const SideBarTeams = () => {
     (state: RootState) => state.openSideBar.value
   );
 
-
   return (
     <div className={styles.sideBarTeams}>
       {sideBarTeams.map((item, idx) => (
-        <div key={idx} onClick={() => dispatch(closeSideBar())}>
-          <button>
-            <Icon name={item.icon} />
+        <div
+          key={idx}
+          onClick={() => dispatch(closeSideBar())}
+          title={item.charAt(0).toUpperCase() + item.slice(1)}
+        >
+          <button title={item.charAt(0).toUpperCase() + item.slice(1)}>
+            <Icon name={item} />
           </button>
           <span className={`${openSideBar ? null : "hidden"}`}>
-            {item.title}
+            {item.charAt(0).toUpperCase() + item.slice(1)}
           </span>
         </div>
       ))}

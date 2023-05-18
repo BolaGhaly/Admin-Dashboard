@@ -13,8 +13,12 @@ const SideBarProfile = () => {
   return (
     <div className={styles.sideBarProfile}>
       {sideBarProfile.map((item, idx) => (
-        <div key={idx} onClick={() => dispatch(closeSideBar())}>
-          <button>
+        <div
+          key={idx}
+          onClick={() => dispatch(closeSideBar())}
+          title={item.title}
+        >
+          <button title={item.title}>
             <Icon name={item.icon} />
           </button>
           <span className={`${openSideBar ? null : "hidden"}`}>

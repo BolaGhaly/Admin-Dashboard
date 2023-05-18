@@ -23,12 +23,13 @@ const SideBarMenu = () => {
       {sideBarMenu.map((item, idx) => {
         return (
           <Link
+            title={item.charAt(0).toUpperCase() + item.slice(1)}
             href="#"
             key={idx}
             onClick={() => handleClick(item)}
             className={`${activeItem === item ? styles.active : null}`}
           >
-            <button>
+            <button title={item.charAt(0).toUpperCase() + item.slice(1)}>
               <Icon name={`${item}`} />
             </button>
             <span className={`${openSideBar ? null : "hidden"}`}>
