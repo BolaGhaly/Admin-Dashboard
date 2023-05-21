@@ -13,12 +13,10 @@ const SideBarMenu = () => {
   );
   const [activeItem, setActiveItem] = useState(sideBarMenu[0]);
   const dispatch = useDispatch();
-
   const handleClick = (item: string) => {
     setActiveItem(item);
     dispatch(closeSideBar());
   };
-
   const itemVariants: Variants = {
     open: (index: number) => ({
       display: "block",
@@ -29,8 +27,10 @@ const SideBarMenu = () => {
         delay: index,
         ease: "easeOut",
       },
+      translateX: 0,
     }),
     closed: {
+      translateX: -10,
       display: "none",
       opacity: 0,
       visibility: "hidden",
