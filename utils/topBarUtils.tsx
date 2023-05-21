@@ -1,4 +1,4 @@
-import { BiMoon, BiSun, BiSupport } from "react-icons/bi";
+import { BiSupport } from "react-icons/bi";
 import { MdClose, MdKeyboardArrowDown } from "react-icons/md";
 import { HiOutlineMenu } from "react-icons/hi";
 import {
@@ -11,11 +11,13 @@ import Spain_flag from "/assets/flags/Spain_flag.svg";
 import Italy_flag from "/assets/flags/Italy_flag.svg";
 import Germany_flag from "/assets/flags/Germany_flag.svg";
 import Russia_flag from "/assets/flags/Russia_flag.svg";
+import moon from "/assets/topBarIcons/moon.svg";
+import sun from "/assets/topBarIcons/sun.svg";
 
 const iconTypes = {
   menu: HiOutlineMenu,
-  darkModeOff: BiMoon,
-  darkModeOn: BiSun,
+  darkModeOff: moon,
+  darkModeOn: sun,
   notifications: RiNotification2Line,
   profileSettings: RiUserSettingsLine,
   support: BiSupport,
