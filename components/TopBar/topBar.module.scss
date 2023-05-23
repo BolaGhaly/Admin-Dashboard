@@ -1,11 +1,3 @@
-@mixin notificationUserStatus {
-  position: absolute;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  box-shadow: 0 0 0 2px var(--nav-bg);
-}
-
 @mixin userStatusCircle {
   width: 0.75rem;
   height: 0.75rem;
@@ -221,19 +213,16 @@
 }
 
 .userStatusOnline,
-.notificationUserOnline,
 .userImageOnline {
   background-color: #1abd5e;
 }
 
 .userStatusAway,
-.notificationUserAway,
 .userImageAway {
   background-color: #ffa010;
 }
 
 .userStatusOffline,
-.notificationUserOffline,
 .userImageOffline {
   background-color: #ff4c4c;
 }
@@ -245,150 +234,86 @@
   button {
     margin-left: 0 !important;
   }
-}
 
-.notificationsMenuItems {
-  position: fixed;
-  right: 0;
-  top: 4rem;
-  background-color: var(--nav-bg);
-  box-shadow: 0 2px 2px var(--boxShadow);
-  border-top: 1px solid #a3a3a3;
-  flex-direction: column;
+  .notificationsMenuItems {
+    position: fixed;
+    right: 0;
+    top: 4rem;
+    background-color: var(--nav-bg);
+    box-shadow: 0 2px 2px var(--boxShadow);
+    border-top: 1px solid #a3a3a3;
+    flex-direction: column;
 
-  @media (min-width: 320px) {
-    width: calc(100vw - 74px);
-    max-width: 18.875rem;
-    border-bottom-left-radius: 0.375rem;
-    box-shadow: -2px 2px 2px var(--boxShadow);
-  }
+    @media (min-width: 320px) {
+      width: calc(100vw - 74px);
+      max-width: 18.875rem;
+      border-bottom-left-radius: 0.375rem;
+      box-shadow: -2px 2px 2px var(--boxShadow);
+    }
 
-  @media (min-width: 580px) {
-    position: absolute;
-    top: 2.75rem;
-    border-bottom-right-radius: 0.375rem;
-    box-shadow: 2px 2px 2px var(--boxShadow), -2px 2px 2px var(--boxShadow);
-  }
-
-  > div:nth-child(1) {
-    border-bottom: 1px dashed var(--notifications-line);
-    padding: 0.75rem;
-    width: 100%;
-    justify-content: space-between;
+    @media (min-width: 580px) {
+      position: absolute;
+      top: 2.75rem;
+      border-bottom-right-radius: 0.375rem;
+      box-shadow: 2px 2px 2px var(--boxShadow), -2px 2px 2px var(--boxShadow);
+    }
 
     h1 {
       font-size: 1.125rem;
       font-weight: 500;
+      padding: 0.75rem;
+      width: 100%;
+      border-bottom: 1px dashed var(--notifications-line);
     }
-  }
 
-  > div:nth-child(2) {
-    border: 0;
-    padding: 0.75rem;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-
-    div {
-      margin: 0 0 0.75rem 0;
-      cursor: pointer;
-      padding: 0.5rem;
-      border: 1px solid var(--notifications-line);
-      border-radius: 0.25rem;
-      flex-direction: row;
+    > div:nth-child(2) {
+      border: 0;
+      padding: 0.75rem;
+      flex-direction: column;
       align-items: flex-start;
-
-      .notificationImgContainer {
-        margin: 0;
-        width: max-content;
-        position: relative;
-
-        img {
-          width: 2.75rem;
-          height: 2.75rem;
-          border-radius: 0.5rem;
-        }
-
-        .notificationUserOnline,
-        .notificationUserAway,
-        .notificationUserOffline {
-          @include notificationUserStatus;
-          right: -0.125rem;
-          bottom: -0.125rem;
-        }
-      }
+      width: 100%;
 
       div {
-        padding: 0;
-        margin-left: 0.625rem;
-        border: 0;
-        flex-direction: column;
+        margin: 0 0 0.75rem 0;
+        cursor: pointer;
+        padding: 0.5rem;
+        border: 1px solid var(--notifications-line);
+        border-radius: 0.25rem;
+        flex-direction: row;
         align-items: flex-start;
 
-        p,
-        small {
-          width: 100%;
-        }
+        div {
+          padding: 0;
+          margin-left: 0.625rem;
+          border: 0;
+          flex-direction: column;
+          align-items: flex-start;
 
-        p {
-          font-weight: 300;
-          font-size: 0.875rem;
-
-          b {
-            font-weight: 500;
+          p,
+          small {
+            width: 100%;
           }
-        }
 
-        small {
-          color: var(--notification-timestamp);
-          font-size: 0.75rem;
-          margin-top: 0.25rem;
-        }
-
-        .notificationBtnsContainer {
-          margin: 0.5rem 0 0 0;
-          gap: 0.75rem;
-          flex-direction: row;
-          width: 100%;
-          flex-wrap: wrap;
-
-          button {
+          p {
+            font-weight: 300;
             font-size: 0.875rem;
-            margin: 0;
-            padding: 0.375rem 0.563rem;
-            border-radius: 0.375rem;
-            justify-content: center;
-            flex-grow: 1;
 
-            &:nth-of-type(1) {
-              color: whitesmoke;
-              text-shadow: black 0px 0px 1px;
-              background-color: #3649ee;
+            b {
+              font-weight: 500;
             }
+          }
 
-            &:nth-of-type(2) {
-              border: 1px solid var(--notifications-line);
-            }
+          small {
+            color: var(--notification-timestamp);
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
           }
         }
       }
-    }
 
-    div:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-
-  .userTag {
-    margin: 0.5rem 0 0 0 !important;
-    font-size: 0.875rem;
-    padding: 0.5rem !important;
-    display: inline;
-    background-color: var(--notification-mentioned-box);
-    box-shadow: 0 0 2px var(--clearAll-text);
-
-    span {
-      color: var(--clearAll-text);
+      div:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 }
