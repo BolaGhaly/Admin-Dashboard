@@ -55,7 +55,6 @@ const NotificationsMenu = () => {
         onClick={() => dispatch(toggleNotificationsMenu())}
       >
         <Icon name="notifications" />
-        <span className={styles.notificationCircle} />
       </button>
       <motion.div
         className={styles.notificationsMenuItems}
@@ -65,13 +64,6 @@ const NotificationsMenu = () => {
       >
         <div>
           <h1>Notifications</h1>
-          <button
-            onClick={() => dispatch(closeNotificationsMenu())}
-            style={poppinsFont.style}
-            title="Clear All"
-          >
-            Clear All
-          </button>
         </div>
         <div>
           <div

@@ -1,5 +1,5 @@
 import { BiSupport } from "react-icons/bi";
-import { MdClose, MdKeyboardArrowDown } from "react-icons/md";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import { HiOutlineMenu } from "react-icons/hi";
 import {
   RiNotification2Line,
@@ -22,7 +22,6 @@ const iconTypes = {
   profileSettings: RiUserSettingsLine,
   support: BiSupport,
   signOut: RiLogoutBoxRLine,
-  closeMenu: MdClose,
   arrowDown: MdKeyboardArrowDown,
   usaFlag: USA_flag,
   spainFlag: Spain_flag,

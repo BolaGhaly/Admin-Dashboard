@@ -234,8 +234,7 @@
 
 .userStatusOffline,
 .notificationUserOffline,
-.userImageOffline,
-.notificationCircle {
+.userImageOffline {
   background-color: #ff4c4c;
 }
 
@@ -245,12 +244,6 @@
 
   button {
     margin-left: 0 !important;
-  }
-
-  .notificationCircle {
-    @include notificationUserStatus;
-    right: 0;
-    top: 0.125rem;
   }
 }
 
@@ -286,13 +279,6 @@
     h1 {
       font-size: 1.125rem;
       font-weight: 500;
-    }
-
-    button {
-      color: var(--clearAll-text);
-      margin: 0;
-      font-size: 0.875rem;
-      justify-content: flex-end;
     }
   }
 
