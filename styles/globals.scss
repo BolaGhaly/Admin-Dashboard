@@ -7,11 +7,9 @@
   --nav-bg: #{$light-navBar};
   --user: #{$light-user};
   --userMenu-hover: #{$light-userMenu-hover};
-  --clearAll-text: #{$light-clearAll-text};
   --notifications-line: #{$light-notifications-line};
   --notification-timestamp: #{$light-notification-timestamp};
   --boxShadow: #{$light-boxShadow};
-  --notification-mentioned-box: #{$light-notification-mentioned-box};
 }
 
 :root[data-theme="dark"] {
@@ -21,11 +19,9 @@
   --nav-bg: #{$dark-navBar};
   --user: #{$dark-user};
   --userMenu-hover: #{$dark-userMenu-hover};
-  --clearAll-text: #{$dark-clearAll-text};
   --notifications-line: #{$dark-notifications-line};
   --notification-timestamp: #{$dark-notification-timestamp};
   --boxShadow: #{$dark-boxShadow};
-  --notification-mentioned-box: #{$dark-notification-mentioned-box};
 }
 
 *,

@@ -60,41 +60,7 @@ const NotificationsMenu = () => {
       >
         <h1>Notifications</h1>
         <div>
-          <div
-            title="Notification"
-            onClick={() => dispatch(closeNotificationsMenu())}
-          >
-            <div>
-              <p>
-                <b>Bradley Cruz</b> assigned you to{" "}
-                <b>Implement user endpoints</b>
-              </p>
-              <small>10m ago &#8226; Engineering</small>
-            </div>
-          </div>
-          <div
-            title="Notification"
-            onClick={() => dispatch(closeNotificationsMenu())}
-          >
-            <div>
-              <p>
-                <b>Jessica Brown</b> requests access to <b>Design</b>
-              </p>
-              <small>2h ago &#8226; Design</small>
-            </div>
-          </div>
-          <div
-            title="Notification"
-            onClick={() => dispatch(closeNotificationsMenu())}
-          >
-            <div>
-              <p>
-                <b>Alex Cooper</b> mentioned you in{" "}
-                <b>Add search to home page</b>
-              </p>
-              <small>1d ago &#8226; Engineering</small>
-            </div>
-          </div>
+          
         </div>
       </motion.div>
     </div>
