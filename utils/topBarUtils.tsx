@@ -13,6 +13,8 @@ import Germany_flag from "/assets/flags/Germany_flag.svg";
 import Russia_flag from "/assets/flags/Russia_flag.svg";
 import moon from "/assets/topBarIcons/moon.svg";
 import sun from "/assets/topBarIcons/sun.svg";
+import emptyNotificationsLight from "/assets/topBarIcons/emptyNotificationsLight.svg";
+import emptyNotificationsDark from "/assets/topBarIcons/emptyNotificationsDark.svg";
 
 const iconTypes = {
   menu: HiOutlineMenu,
@@ -28,6 +30,8 @@ const iconTypes = {
   italyFlag: Italy_flag,
   germanyFlag: Germany_flag,
   russiaFlag: Russia_flag,
+  emptyNotificationsLight,
+  emptyNotificationsDark,
 };
 
 export const profileData = [

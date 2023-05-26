@@ -8,9 +8,9 @@ import {
 } from "../../store/slices/userNotificationsMenu";
 import useOnclickOutside from "react-cool-onclickoutside";
 import { motion, Variants } from "framer-motion";
-// import { poppinsFont } from "../../fonts";
 
 const NotificationsMenu = () => {
+  const darkMode = useSelector((state: RootState) => state.darkMode.value);
   const userNotificationsMenu = useSelector(
     (state: RootState) => state.userNotificationsMenu.value
   );
@@ -60,7 +60,13 @@ const NotificationsMenu = () => {
       >
         <h1>Notifications</h1>
         <div>
-          
+          {darkMode ? (
+            <Icon name="emptyNotificationsDark" />
+          ) : (
+            <Icon name="emptyNotificationsLight" />
+          )}
+          <h2>No notifications</h2>
+          <p>We'll notify you when something arrives.</p>
         </div>
       </motion.div>
     </div>

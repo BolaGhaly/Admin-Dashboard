@@ -243,15 +243,16 @@
     box-shadow: 0 2px 2px var(--boxShadow);
     border-top: 1px solid #a3a3a3;
     flex-direction: column;
+    width: 100%;
 
     @media (min-width: 320px) {
       width: calc(100vw - 74px);
-      max-width: 18.875rem;
+      max-width: 19rem;
       border-bottom-left-radius: 0.375rem;
       box-shadow: -2px 2px 2px var(--boxShadow);
     }
 
-    @media (min-width: 580px) {
+    @media (min-width: 584px) {
       position: absolute;
       top: 2.75rem;
       border-bottom-right-radius: 0.375rem;
@@ -266,7 +267,22 @@
       border-bottom: 1px dashed var(--notifications-line);
     }
 
-    > div:nth-child(2) {
+    div {
+      padding: 1.5rem 0.75rem;
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-top: 1rem;
+      }
+
+      p {
+        font-size: 0.875rem;
+        color: var(--notification-timestamp);
+        text-align: center;
+      }
     }
   }
 }
