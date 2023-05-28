@@ -10,6 +10,7 @@
   --notifications-line: #{$light-notifications-line};
   --notification-timestamp: #{$light-notification-timestamp};
   --boxShadow: #{$light-boxShadow};
+  --dashboard-bg: #{$light-dashboard-bg};
 }
 
 :root[data-theme="dark"] {
@@ -22,6 +23,7 @@
   --notifications-line: #{$dark-notifications-line};
   --notification-timestamp: #{$dark-notification-timestamp};
   --boxShadow: #{$dark-boxShadow};
+  --dashboard-bg: #{$dark-dashboard-bg};
 }
 
 *,

@@ -7,6 +7,7 @@ $light-userMenu-hover: #d8d8d8;
 $light-notifications-line: #c9c9c9;
 $light-notification-timestamp: #4e4e4e;
 $light-boxShadow: rgba(0, 0, 0, 0.3);
+$light-dashboard-bg: #ffffff;
 
 $dark-bg: #212327;
 $dark-text: #f5f5f5;
@@ -17,6 +18,7 @@ $dark-userMenu-hover: #2e2e2e;
 $dark-notifications-line: #4a4a4a;
 $dark-notification-timestamp: #c1c1c1;
 $dark-boxShadow: rgba(245, 245, 245, 0.3);
+$dark-dashboard-bg: #1e232a;
 
 :export {
   light-bg: $light-bg;
@@ -28,6 +30,7 @@ $dark-boxShadow: rgba(245, 245, 245, 0.3);
   light-notifications-line: $light-notifications-line;
   light-notification-timestamp: $light-notification-timestamp;
   light-boxShadow: $light-boxShadow;
+  light-dashboard-bg: $light-dashboard-bg;
   dark-bg: $dark-bg;
   dark-text: $dark-text;
   dark-sc-text: $dark-sc-text;
@@ -37,4 +40,5 @@ $dark-boxShadow: rgba(245, 245, 245, 0.3);
   dark-notifications-line: $dark-notifications-line;
   dark-notification-timestamp: $dark-notification-timestamp;
   dark-boxShadow: $dark-boxShadow;
+  dark-dashboard-bg: $dark-dashboard-bg;
 }

@@ -1,0 +1,69 @@
+.dashboardMain {
+  > h1 {
+    font-weight: 600;
+  }
+
+  .totalDataContainer {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(16rem, 1fr));
+    gap: 1.5rem;
+
+    > div {
+      padding: 1.25rem 0.75rem;
+      background-color: var(--dashboard-bg);
+      box-shadow: 0 0 1px var(--notification-timestamp);
+      border-radius: 0.25rem;
+
+      h2 {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+
+        > p {
+          font-size: 1.75rem;
+          font-weight: 500;
+          letter-spacing: 1px;
+        }
+
+        .arrowUp {
+          svg,
+          p {
+            color: #1bbe35;
+          }
+        }
+
+        .arrowDown {
+          svg,
+          p {
+            color: #ff2222;
+          }
+        }
+
+        > div {
+          display: flex;
+          flex-direction: column;
+
+          div {
+            display: flex;
+            align-items: center;
+
+            p {
+              margin-left: 0.25rem;
+            }
+          }
+          small {
+            font-size: 0.875rem;
+            color: var(--sc-text);
+          }
+        }
+      }
+    }
+  }
+}
