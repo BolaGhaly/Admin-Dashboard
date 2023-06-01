@@ -1,16 +1,25 @@
 .dashboardMain {
   > h1 {
     font-weight: 600;
+    font-size: 1.75rem;
   }
 
   .totalDataContainer {
     margin-top: 1.5rem;
     display: grid;
-    grid-template-columns: repeat(4, minmax(16rem, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    gap: 1rem;
+
+    @media (min-width: 560px) {
+      grid-template-columns: repeat(2, minmax(14rem, 1fr));
+    }
+
+    @media (min-width: 1040px) {
+      grid-template-columns: repeat(4, minmax(14rem, 1fr));
+    }
 
     > div {
-      padding: 1.25rem 0.75rem;
+      padding: 1rem;
       background-color: var(--dashboard-bg);
       box-shadow: 0 0 1px var(--notification-timestamp);
       border-radius: 0.25rem;
@@ -22,14 +31,14 @@
 
       > div {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
+        flex-direction: column;
+        gap: 0.75rem;
 
         > p {
-          font-size: 1.75rem;
+          font-size: 1.5rem;
           font-weight: 500;
           letter-spacing: 1px;
+          margin-top: 0.5rem;
         }
 
         .arrowUp {
@@ -55,9 +64,10 @@
             align-items: center;
 
             p {
-              margin-left: 0.25rem;
+              margin-left: 0.5rem;
             }
           }
+
           small {
             font-size: 0.875rem;
             color: var(--sc-text);
