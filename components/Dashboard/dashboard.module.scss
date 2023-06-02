@@ -42,16 +42,28 @@
         }
 
         .arrowUp {
-          svg,
+          svg {
+            color: #00b500;
+          }
+
           p {
-            color: #1bbe35;
+            background: linear-gradient(#00b500, #00b500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
           }
         }
 
         .arrowDown {
-          svg,
-          p {
+          svg {
             color: #ff2222;
+          }
+
+          p {
+            background: linear-gradient(#ff2222, #ff2222);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
           }
         }
 
