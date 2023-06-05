@@ -1,5 +1,3 @@
-import { useSelector } from "react-redux";
-import { RootState } from "../../store/store";
 import Head from "next/head";
 import styles from "./dashboard.module.scss";
 import TotalData from "./TotalData";
@@ -15,7 +13,7 @@ import {
 } from "recharts";
 
 const Dashboard = () => {
-  const darkMode = useSelector((state: RootState) => state.darkMode.value);
+
   const data = [
     {
       name: "Mon",
@@ -70,20 +68,20 @@ const Dashboard = () => {
                 <CartesianGrid
                   strokeDasharray="5 15"
                   verticalPoints={[0]}
-                  stroke={darkMode ? "#4a4a4a" : "#c9c9c9"}
+                  stroke="var(--notifications-line)"
                 />
                 <XAxis
                   dataKey="name"
                   fontSize="0.875rem"
                   interval={1}
-                  tick={{ fill: darkMode ? "#f5f5f5" : "#000000" }}
-                  stroke={darkMode ? "#f5f5f5" : "#000000"}
+                  tick={{ fill: "var(--text)" }}
+                  stroke="var(--text)"
                   tickMargin={5}
                 />
                 <YAxis
                   fontSize="0.875rem"
-                  tick={{ fill: darkMode ? "#f5f5f5" : "#000000" }}
-                  stroke={darkMode ? "#f5f5f5" : "#000000"}
+                  tick={{ fill: "var(--text)" }}
+                  stroke="var(--text)"
                   tickMargin={5}
                 />
                 <Tooltip />
