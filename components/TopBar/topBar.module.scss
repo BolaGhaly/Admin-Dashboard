@@ -26,6 +26,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 999;
 
   button {
     display: flex;
@@ -246,13 +247,13 @@
     width: 100%;
 
     @media (min-width: 320px) {
-      width: calc(100vw - 74px);
+      width: calc(100vw - 80px);
       max-width: 19rem;
       border-bottom-left-radius: 0.375rem;
       box-shadow: -2px 2px 2px var(--boxShadow);
     }
 
-    @media (min-width: 584px) {
+    @media (min-width: 590px) {
       position: absolute;
       top: 2.75rem;
       border-bottom-right-radius: 0.375rem;
