@@ -11,46 +11,24 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import { useState, useEffect } from "react";
+import RevenueGrowthTooltip from "./RevenueGrowthTooltip";
+import { RevenueGrowthData } from "../../utils/dashboardUtils";
 
 const Dashboard = () => {
+  const [windowWidth, setWindowWidth] = useState<number>(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
 
-  const data = [
-    {
-      name: "Mon",
-      uv: 4000,
-      pv: 2400,
-    },
-    {
-      name: "Tue",
-      uv: 3000,
-      pv: 1398,
-    },
-    {
-      name: "Wed",
-      uv: 2000,
-      pv: 9800,
-    },
-    {
-      name: "Thu",
-      uv: 2780,
-      pv: 3908,
-    },
-    {
-      name: "Fri",
-      uv: 1890,
-      pv: 4800,
-    },
-    {
-      name: "Sat",
-      uv: 2390,
-      pv: 3800,
-    },
-    {
-      name: "Sun",
-      uv: 3490,
-      pv: 4300,
-    },
-  ];
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>
@@ -64,16 +42,18 @@ const Dashboard = () => {
           <div className={styles.revenueGrowthChart}>
             <h2>Revenue Growth</h2>
             <ResponsiveContainer>
-              <LineChart data={data} margin={{ right: 20, top: 10 }}>
+              <LineChart
+                data={RevenueGrowthData}
+                margin={{ right: 20, top: 10 }}
+              >
                 <CartesianGrid
                   strokeDasharray="5 15"
-                  verticalPoints={[0]}
                   stroke="var(--notifications-line)"
                 />
                 <XAxis
-                  dataKey="name"
+                  dataKey="day"
                   fontSize="0.875rem"
-                  interval={1}
+                  interval={windowWidth >= 375 ? 0 : 1}
                   tick={{ fill: "var(--text)" }}
                   stroke="var(--text)"
                   tickMargin={5}
@@ -84,23 +64,35 @@ const Dashboard = () => {
                   stroke="var(--text)"
                   tickMargin={5}
                 />
-                <Tooltip />
+                <Tooltip
+                  content={<RevenueGrowthTooltip />}
+                  isAnimationActive={false}
+                  cursor={{ stroke: "var(--text)", strokeDasharray: "6 4" }}
+                />
                 <Legend />
                 <Line
                   type="monotone"
-                  dataKey="pv"
+                  dataKey="This Week"
                   stroke="#22A9EB"
                   dot={{ r: 0 }}
-                  activeDot={{ r: 6 }}
+                  activeDot={{
+                    r: 6,
+                    strokeWidth: 2,
+                    stroke: "var(--dashboard-bg)",
+                  }}
                   strokeWidth={2}
                   animationEasing="ease-out"
                 />
                 <Line
                   type="monotone"
-                  dataKey="uv"
+                  dataKey="Last Week"
                   stroke="#E03EF6"
                   dot={{ r: 0 }}
-                  activeDot={{ r: 6 }}
+                  activeDot={{
+                    r: 6,
+                    strokeWidth: 2,
+                    stroke: "var(--dashboard-bg)",
+                  }}
                   strokeWidth={2}
                   animationEasing="ease-out"
                 />
