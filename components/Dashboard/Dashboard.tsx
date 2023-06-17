@@ -8,11 +8,11 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
 import { useState, useEffect } from "react";
 import RevenueGrowthTooltip from "./RevenueGrowthTooltip";
+import RevenueGrowthLegend from "./RevenueGrowthLegend";
 import { RevenueGrowthData } from "../../utils/dashboardUtils";
 
 const Dashboard = () => {
@@ -41,13 +41,14 @@ const Dashboard = () => {
         <div className={styles.revenueCharts}>
           <div className={styles.revenueGrowthChart}>
             <h2>Revenue Growth</h2>
+            <RevenueGrowthLegend />
             <ResponsiveContainer>
               <LineChart
                 data={RevenueGrowthData}
                 margin={{ right: 20, top: 10 }}
               >
                 <CartesianGrid
-                  strokeDasharray="5 15"
+                  strokeDasharray="5 25"
                   stroke="var(--notifications-line)"
                 />
                 <XAxis
@@ -69,11 +70,10 @@ const Dashboard = () => {
                   isAnimationActive={false}
                   cursor={{ stroke: "var(--text)", strokeDasharray: "6 4" }}
                 />
-                <Legend />
                 <Line
                   type="monotone"
                   dataKey="This Week"
-                  stroke="#22A9EB"
+                  stroke="var(--revenueGrowthLine1)"
                   dot={{ r: 0 }}
                   activeDot={{
                     r: 6,
@@ -86,7 +86,7 @@ const Dashboard = () => {
                 <Line
                   type="monotone"
                   dataKey="Last Week"
-                  stroke="#E03EF6"
+                  stroke="var(--revenueGrowthLine2)"
                   dot={{ r: 0 }}
                   activeDot={{
                     r: 6,

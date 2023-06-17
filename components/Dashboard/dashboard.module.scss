@@ -97,6 +97,7 @@
       border-radius: 0.25rem;
       position: relative;
       z-index: 1;
+      padding-bottom: 1rem;
 
       > h2 {
         font-size: 1.125rem;
@@ -104,9 +105,53 @@
         padding: 1rem;
       }
 
-      > div {
+      > div:last-of-type {
         width: 100%;
         min-height: 400px;
+      }
+
+      .customLegend {
+        margin: 0 1rem 1rem;
+        padding: 1rem;
+        background-color: var(--bg);
+        border-radius: 0.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+
+        @media (min-width: 490px) {
+          justify-content: space-evenly;
+          flex-direction: row;
+        }
+
+        > div {
+          padding: 0 0.5rem;
+
+          h2 {
+            font-size: 1rem;
+            font-weight: 400;
+          }
+
+          div {
+            display: flex;
+            align-items: center;
+
+            span {
+              width: 0.75rem;
+              height: 0.75rem;
+              border-radius: 50%;
+            }
+
+            p {
+              font-size: 1.625rem;
+              font-weight: 500;
+              margin-left: 0.75rem;
+            }
+          }
+        }
       }
 
       .customTooltip {
