@@ -37,6 +37,7 @@ const SideBar = () => {
 
   const sideBarVariants: Variants = {
     open: {
+      zIndex: 999999,
       display: "flex",
       flexDirection: "column",
       width: "13.75rem",
@@ -47,6 +48,7 @@ const SideBar = () => {
       },
     },
     closed: {
+      zIndex: 999999,
       display: "none",
       width: "4rem",
       transition: {
