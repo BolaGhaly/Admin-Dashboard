@@ -1,5 +1,10 @@
 @import "@Styles/palette.scss";
 
+:root {
+  --revenueGrowthLine1: #22a9eb;
+  --revenueGrowthLine2: #E03EF6;
+}
+
 :root[data-theme="light"] {
   --bg: #{$light-bg};
   --text: #{$light-text};
