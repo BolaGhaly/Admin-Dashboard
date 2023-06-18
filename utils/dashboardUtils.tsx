@@ -9,7 +9,7 @@ const iconTypes = {
 interface totalDataInterface {
   title: string;
   value: string | number;
-  percentage: string | number;
+  percentage: number;
   arrowUp: boolean;
 }
 
@@ -17,25 +17,25 @@ export const totalData: totalDataInterface[] = [
   {
     title: "Total Revenue",
     value: "$64,212.71",
-    percentage: "+2.8",
+    percentage: 1.5,
     arrowUp: true,
   },
   {
     title: "Total Customers",
     value: 37214,
-    percentage: "+1.5",
-    arrowUp: true,
-  },
-  {
-    title: "Total Orders",
-    value: 6305,
     percentage: -0.4,
     arrowUp: false,
   },
   {
+    title: "Total Orders",
+    value: 6305,
+    percentage: 2.8,
+    arrowUp: true,
+  },
+  {
     title: "Total Refunds",
     value: 809,
-    percentage: -0.6,
+    percentage: -6.3,
     arrowUp: true,
   },
 ];
@@ -49,38 +49,38 @@ interface RevenueGrowthDataInterface {
 export const RevenueGrowthData: RevenueGrowthDataInterface[] = [
   {
     day: "Mon",
-    "This Week": 546.58,
-    "Last Week": 806.72,
+    "This Week": 349.76,
+    "Last Week": 223.75,
   },
   {
     day: "Tue",
-    "This Week": 709.1,
-    "Last Week": 681,
+    "This Week": 562.12,
+    "Last Week": 415.17,
   },
   {
     day: "Wed",
-    "This Week": 952,
-    "Last Week": 767.78,
+    "This Week": 778.43,
+    "Last Week": 656.99,
   },
   {
     day: "Thu",
-    "This Week": 546,
-    "Last Week": 803,
+    "This Week": 681.5,
+    "Last Week": 834.23,
   },
   {
     day: "Fri",
-    "This Week": 546,
-    "Last Week": 803,
+    "This Week": 915.11,
+    "Last Week": 943.11,
   },
   {
     day: "Sat",
-    "This Week": 546,
-    "Last Week": 803,
+    "This Week": 1124,
+    "Last Week": 607,
   },
   {
     day: "Sun",
-    "This Week": 546,
-    "Last Week": 803,
+    "This Week": 982.76,
+    "Last Week": 903.57,
   },
 ];
 

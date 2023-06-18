@@ -15,12 +15,17 @@ const TotalData = () => {
               }`}
             >
               <div>
-                {item.arrowUp ? (
+                {item.percentage > 0 ? (
                   <Icon name="arrowUp" />
                 ) : (
                   <Icon name="arrowDown" />
                 )}
-                <p>{item.percentage}%</p>
+                <p>
+                  {item.percentage > 0
+                    ? "+" + item.percentage
+                    : item.percentage}
+                  %
+                </p>
               </div>
               <small>vs last month</small>
             </div>
