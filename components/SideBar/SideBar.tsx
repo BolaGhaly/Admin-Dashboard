@@ -40,7 +40,7 @@ const SideBar = () => {
       zIndex: 999999,
       display: "flex",
       flexDirection: "column",
-      width: "13.75rem",
+      width: "13.25rem",
       boxShadow: "0 2px 8px var(--boxShadow)",
       transition: {
         duration: 0.2,
