@@ -49,38 +49,38 @@ interface RevenueGrowthDataInterface {
 export const RevenueGrowthData: RevenueGrowthDataInterface[] = [
   {
     day: "Mon",
-    "This Week": 349.76,
-    "Last Week": 223.75,
+    "This Week": 249.76,
+    "Last Week": 383.75,
   },
   {
     day: "Tue",
     "This Week": 562.12,
-    "Last Week": 415.17,
+    "Last Week": 445.17,
   },
   {
     day: "Wed",
-    "This Week": 778.43,
-    "Last Week": 656.99,
+    "This Week": 738.43,
+    "Last Week": 816.99,
   },
   {
     day: "Thu",
-    "This Week": 681.5,
+    "This Week": 981.5,
     "Last Week": 834.23,
   },
   {
     day: "Fri",
-    "This Week": 915.11,
+    "This Week": 1050.94,
     "Last Week": 943.11,
   },
   {
     day: "Sat",
-    "This Week": 1124,
-    "Last Week": 607,
+    "This Week": 994.53,
+    "Last Week": 1124,
   },
   {
     day: "Sun",
-    "This Week": 982.76,
-    "Last Week": 903.57,
+    "This Week": 1165.73,
+    "Last Week": 1010.52,
   },
 ];
 
