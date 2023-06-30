@@ -131,8 +131,8 @@ export const markers: revenueByLocationMarkers[] = [
     name: "Russia",
   },
   {
-    latLng: [26.96, 30.40],
-    name: "Egypt"
+    latLng: [8.65, 7.06],
+    name: "Nigeria",
   },
   {
     latLng: [-31.28, 23.24],
