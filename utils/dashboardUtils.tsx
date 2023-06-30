@@ -84,6 +84,62 @@ export const RevenueGrowthData: RevenueGrowthDataInterface[] = [
   },
 ];
 
+interface revenueByLocationMarkers {
+  latLng: [number, number];
+  name: string;
+}
+
+export const markers: revenueByLocationMarkers[] = [
+  {
+    latLng: [38.78, -98.38],
+    name: "United States of America",
+  },
+  {
+    latLng: [59.35, -107.43],
+    name: "Canada",
+  },
+  {
+    latLng: [53.23, -1.43],
+    name: "United Kingdom",
+  },
+  {
+    latLng: [-26.07, 134.28],
+    name: "Australia",
+  },
+  {
+    latLng: [22.23, -101.11],
+    name: "Mexico",
+  },
+  {
+    latLng: [-1.64, -78.52],
+    name: "Ecuador",
+  },
+  {
+    latLng: [39.56, -2.77],
+    name: "Spain",
+  },
+  {
+    latLng: [42.97, 12.48],
+    name: "Italy",
+  },
+  {
+    latLng: [51.41, 11.52],
+    name: "Germany",
+  },
+  {
+    latLng: [61.46, 93.62],
+    name: "Russia",
+  },
+  {
+    latLng: [26.96, 30.40],
+    name: "Egypt"
+  },
+  {
+    latLng: [-31.28, 23.24],
+    name: "South Africa",
+  },
+];
+
 const IconComponent = ({ name, ...props }) => {
   let Icon = iconTypes[name];
   return <Icon {...props} />;
