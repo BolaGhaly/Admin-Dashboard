@@ -6,15 +6,17 @@ import {
   RiLogoutBoxRLine,
   RiUserSettingsLine,
 } from "react-icons/ri";
-import USA_flag from "/assets/flags/USA_flag.svg";
-import Spain_flag from "/assets/flags/Spain_flag.svg";
-import Italy_flag from "/assets/flags/Italy_flag.svg";
-import Germany_flag from "/assets/flags/Germany_flag.svg";
-import Russia_flag from "/assets/flags/Russia_flag.svg";
 import moon from "/assets/topBarIcons/moon.svg";
 import sun from "/assets/topBarIcons/sun.svg";
 import emptyNotificationsLight from "/assets/topBarIcons/emptyNotificationsLight.svg";
 import emptyNotificationsDark from "/assets/topBarIcons/emptyNotificationsDark.svg";
+import {
+  USA_flag,
+  Spain_flag,
+  Italy_flag,
+  Germany_flag,
+  Russia_flag,
+} from "../assets/flags";
 
 const iconTypes = {
   menu: HiOutlineMenu,
