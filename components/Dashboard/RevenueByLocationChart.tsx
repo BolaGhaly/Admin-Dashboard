@@ -19,25 +19,8 @@ const CustomerGrowthChart = () => {
           map={worldMill}
           backgroundColor={"transparent"}
           zoomOnScroll={false}
-          //zoomButtons={false}
-
+          zoomAnimate={false}
           markers={markers}
-          markerStyle={{
-            initial: {
-              fill: "var(--revenueGrowthLine1)",
-            },
-            hover: {
-              //stroke: "blue",
-            },
-          }}
-          regionStyle={{
-            initial: {
-              fill: "#DFDFDF",
-            },
-            hover: {
-              fill: "#ff0000",
-            },
-          }}
           //onRegionTipShow={(event, label) => onTipShow(event, label)}
           //onMarkerTipShow={(event, label) => onTipShow(event, label)}
         />

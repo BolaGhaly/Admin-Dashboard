@@ -80,6 +80,43 @@ section {
 
 .jvectormap-marker {
   r: 4;
+  fill: var(--revenueGrowthLine1);
   stroke: var(--dashboard-bg);
   stroke-width: 1;
+}
+
+.jvectormap-region {
+  fill: #dfdfdf;
+
+  &:hover {
+    fill: #ff0000;
+  }
+}
+
+.jvectormap-zoomin,
+.jvectormap-zoomout {
+  box-sizing: border-box !important;
+  top: unset !important;
+  left: 0.25rem !important;
+  padding: 0 !important;
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  border-radius: 0.25rem !important;
+  color: var(--text) !important;
+  background: var(--bg) !important;
+  filter: drop-shadow(0 0 0.5px var(--notification-timestamp));
+  font-size: 1.125rem;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.jvectormap-zoomin {
+  bottom: 2rem;
+}
+
+.jvectormap-zoomout {
+  bottom: 0.25rem;
 }
