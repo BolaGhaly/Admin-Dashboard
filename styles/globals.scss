@@ -2,7 +2,7 @@
 
 :root {
   --revenueGrowthLine1: #22a9eb;
-  --revenueGrowthLine2: #E03EF6;
+  --revenueGrowthLine2: #ec60ff;
 }
 
 :root[data-theme="light"] {
@@ -65,4 +65,21 @@ section {
 
 .recharts-cartesian-grid-vertical {
   display: none;
+}
+
+.jvectormap-tip {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  border: none !important;
+  border-radius: 0.25rem !important;
+  padding: 0.25rem 0.5rem !important;
+  font-size: small !important;
+  z-index: 999999;
+  box-shadow: 0 0 1px var(--notification-timestamp);
+}
+
+.jvectormap-marker {
+  r: 4;
+  stroke: var(--dashboard-bg);
+  stroke-width: 1;
 }
