@@ -2,6 +2,13 @@ import Head from "next/head";
 import styles from "./dashboard.module.scss";
 import TotalData from "./TotalData";
 import RevenueGrowthChart from "./RevenueGrowthChart";
+import dynamic from "next/dynamic";
+const RevenueByLocationChart = dynamic(
+  () => import("./RevenueByLocationChart"),
+  {
+    ssr: false,
+  }
+);
 
 const Dashboard = () => {
   return (
@@ -14,6 +21,7 @@ const Dashboard = () => {
         <TotalData />
         <div className={styles.revenueCharts}>
           <RevenueGrowthChart />
+          <RevenueByLocationChart />
         </div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
