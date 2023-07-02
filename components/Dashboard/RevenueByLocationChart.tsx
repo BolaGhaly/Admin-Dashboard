@@ -4,6 +4,12 @@ import { worldMill } from "./RevenueByLocationMap/index";
 import { poppinsFont } from "../../fonts";
 import { useEffect } from "react";
 import { markers } from "../../utils/dashboardUtils";
+import { useDispatch } from "react-redux";
+import { closeLanguagesMenu } from "../../store/slices/userLanguagesMenu";
+import { closeNotificationsMenu } from "../../store/slices/userNotificationsMenu";
+import { closeProfileStatusMenu } from "../../store/slices/userProfileStatusMenu";
+import { closeProfileMenu } from "../../store/slices/userProfileMenu";
+import { closeSideBar } from "../../store/slices/sideBar";
 
 const CustomerGrowthChart = () => {
   useEffect(() => {
@@ -16,10 +22,19 @@ const CustomerGrowthChart = () => {
     mapLegendV.parentNode.removeChild(mapLegendV);
   }, []);
 
+  const dispatch = useDispatch();
+  const closeAllOpenMenus = () => {
+    dispatch(closeLanguagesMenu());
+    dispatch(closeNotificationsMenu());
+    dispatch(closeProfileStatusMenu());
+    dispatch(closeProfileMenu());
+    dispatch(closeSideBar());
+  };
+
   return (
     <div className={styles.revenueByLocChartContainer}>
       <h2>Revenue By Location</h2>
-      <div className={styles.revenueByLocChart}>
+      <div className={styles.revenueByLocChart} onClick={closeAllOpenMenus}>
         <VectorMap
           map={worldMill}
           backgroundColor={"transparent"}
