@@ -8,7 +8,12 @@ import { markers } from "../../utils/dashboardUtils";
 const CustomerGrowthChart = () => {
   useEffect(() => {
     const mapTipShow: any = document.querySelector(".jvectormap-tip");
-    mapTipShow!.style.fontFamily = poppinsFont.style.fontFamily;
+    mapTipShow.style.fontFamily = poppinsFont.style.fontFamily;
+
+    const mapLegendH: any = document.querySelector(".jvectormap-legend-cnt-h");
+    const mapLegendV: any = document.querySelector(".jvectormap-legend-cnt-v");
+    mapLegendH.parentNode.removeChild(mapLegendH);
+    mapLegendV.parentNode.removeChild(mapLegendV);
   }, []);
 
   return (
@@ -20,6 +25,7 @@ const CustomerGrowthChart = () => {
           backgroundColor={"transparent"}
           zoomOnScroll={false}
           zoomAnimate={false}
+          zoomStep={1.7}
           markers={markers}
           //onRegionTipShow={(event, label) => onTipShow(event, label)}
           //onMarkerTipShow={(event, label) => onTipShow(event, label)}
