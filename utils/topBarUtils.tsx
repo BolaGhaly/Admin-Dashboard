@@ -10,13 +10,7 @@ import moon from "/assets/topBarIcons/moon.svg";
 import sun from "/assets/topBarIcons/sun.svg";
 import emptyNotificationsLight from "/assets/topBarIcons/emptyNotificationsLight.svg";
 import emptyNotificationsDark from "/assets/topBarIcons/emptyNotificationsDark.svg";
-import {
-  USA_flag,
-  Spain_flag,
-  Italy_flag,
-  Germany_flag,
-  Russia_flag,
-} from "../assets/flags";
+import { USA, Spain, Italy, Germany, Russia } from "../assets/flags";
 
 const iconTypes = {
   menu: HiOutlineMenu,
@@ -27,11 +21,11 @@ const iconTypes = {
   support: BiSupport,
   signOut: RiLogoutBoxRLine,
   arrowDown: MdKeyboardArrowDown,
-  usaFlag: USA_flag,
-  spainFlag: Spain_flag,
-  italyFlag: Italy_flag,
-  germanyFlag: Germany_flag,
-  russiaFlag: Russia_flag,
+  usaFlag: USA,
+  spainFlag: Spain,
+  italyFlag: Italy,
+  germanyFlag: Germany,
+  russiaFlag: Russia,
   emptyNotificationsLight,
   emptyNotificationsDark,
 };

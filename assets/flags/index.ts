@@ -1,15 +1,8 @@
-import USA_flag from "./USA_flag.svg";
-import Spain_flag from "./Spain_flag.svg";
-import Italy_flag from "./Italy_flag.svg";
-import Germany_flag from "./Germany_flag.svg";
-import Russia_flag from "./Russia_flag.svg";
-import Egypt_flag from "./Egypt_flag.svg";
+import USA from "./USA.svg";
+import Spain from "./Spain.svg";
+import Italy from "./Italy.svg";
+import Germany from "./Germany.svg";
+import Russia from "./Russia.svg";
+import Egypt from "./Egypt.svg";
 
-export {
-  USA_flag,
-  Spain_flag,
-  Italy_flag,
-  Germany_flag,
-  Russia_flag,
-  Egypt_flag,
-};
+export { USA, Spain, Italy, Germany, Russia, Egypt };

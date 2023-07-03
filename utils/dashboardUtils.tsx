@@ -1,9 +1,15 @@
 import arrowUp from "/assets/dashboardIcons/arrowUp.svg";
 import arrowDown from "/assets/dashboardIcons/arrowDown.svg";
+import { USA, Spain, Italy, Germany, Russia } from "../assets/flags";
 
 const iconTypes = {
   arrowUp,
   arrowDown,
+  usaFlag: USA,
+  spainFlag: Spain,
+  italyFlag: Italy,
+  germanyFlag: Germany,
+  russiaFlag: Russia,
 };
 
 interface totalDataInterface {
@@ -84,12 +90,12 @@ export const RevenueGrowthData: RevenueGrowthDataInterface[] = [
   },
 ];
 
-interface revenueByLocationMarkers {
+interface revenueByLocMarkersInterface {
   latLng: [number, number];
   name: string;
 }
 
-export const markers: revenueByLocationMarkers[] = [
+export const markers: revenueByLocMarkersInterface[] = [
   {
     latLng: [38.78, -98.38],
     name: "United States of America",
