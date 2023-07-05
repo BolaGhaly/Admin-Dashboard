@@ -338,6 +338,8 @@
 
       svg {
         filter: drop-shadow(0 0 1px var(--notification-timestamp));
+        width: 24px;
+        height: 24px;
       }
 
       p {
