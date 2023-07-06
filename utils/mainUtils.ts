@@ -14,7 +14,31 @@ export const numFormatter = (num, digits) => {
     .find(function (item) {
       return num >= item.value;
     });
-  return item
-    ? (num / item.value).toFixed(digits) + item.symbol
-    : "0";
+  return item ? (num / item.value).toFixed(digits) + item.symbol : "0";
+};
+
+export const sortArrOfObjsByKeyValue = (
+  array: any[],
+  key: string,
+  descending: boolean = false
+): any[] => {
+  return array.sort((a, b) => {
+    if (descending) {
+      if (a[key] > b[key]) {
+        return -1;
+      } else if (a[key] < b[key]) {
+        return 1;
+      } else {
+        return 0;
+      }
+    } else {
+      if (a[key] < b[key]) {
+        return -1;
+      } else if (a[key] > b[key]) {
+        return 1;
+      } else {
+        return 0;
+      }
+    }
+  });
 };
