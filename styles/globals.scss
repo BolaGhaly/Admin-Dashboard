@@ -16,6 +16,8 @@
   --notification-timestamp: #{$light-notification-timestamp};
   --boxShadow: #{$light-boxShadow};
   --dashboard-bg: #{$light-dashboard-bg};
+  --mapRegions: #{$light-mapRegions};
+  --mapRegions-hover: #{$light-mapRegions-hover};
 }
 
 :root[data-theme="dark"] {
@@ -29,6 +31,8 @@
   --notification-timestamp: #{$dark-notification-timestamp};
   --boxShadow: #{$dark-boxShadow};
   --dashboard-bg: #{$dark-dashboard-bg};
+  --mapRegions: #{$dark-mapRegions};
+  --mapRegions-hover: #{$dark-mapRegions-hover};
 }
 
 *,
@@ -79,17 +83,22 @@ section {
 }
 
 .jvectormap-marker {
-  r: 4;
+  r: 4.5;
   fill: var(--revenueGrowthLine1);
-  stroke: var(--dashboard-bg);
-  stroke-width: 1;
+  stroke: #a4e1ff;
+  stroke-width: 2.5px;
+
+  &:hover {
+    stroke: #b5e6ff;
+    stroke-width: 1px;
+  }
 }
 
 .jvectormap-region {
-  fill: #dfdfdf;
+  fill: var(--mapRegions);
 
   &:hover {
-    fill: #ff0000;
+    fill: var(--mapRegions-hover);
   }
 }
 
