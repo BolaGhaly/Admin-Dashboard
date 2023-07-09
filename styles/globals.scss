@@ -2,7 +2,7 @@
 
 :root {
   --revenueGrowthLine1: #22a9eb;
-  --revenueGrowthLine2: #ec60ff;
+  --revenueGrowthLine2: #ee70ff;
 }
 
 :root[data-theme="light"] {
@@ -83,14 +83,14 @@ section {
 }
 
 .jvectormap-marker {
-  r: 4.5;
+  r: 4;
   fill: var(--revenueGrowthLine1);
-  stroke: #a4e1ff;
-  stroke-width: 2.5px;
+  stroke: #a2e0ff;
+  stroke-width: 2px;
 
   &:hover {
-    stroke: #b5e6ff;
-    stroke-width: 1px;
+    fill: var(--revenueGrowthLine2);
+    stroke: #faceff;
   }
 }
 
@@ -99,6 +99,7 @@ section {
 
   &:hover {
     fill: var(--mapRegions-hover);
+    fill-opacity: 1 !important;
   }
 }
 
