@@ -18,6 +18,7 @@
   --dashboard-bg: #{$light-dashboard-bg};
   --mapRegions: #{$light-mapRegions};
   --mapRegions-hover: #{$light-mapRegions-hover};
+  --sc-percentage: #{$light-sc-percentage};
 }
 
 :root[data-theme="dark"] {
@@ -33,6 +34,7 @@
   --dashboard-bg: #{$dark-dashboard-bg};
   --mapRegions: #{$dark-mapRegions};
   --mapRegions-hover: #{$dark-mapRegions-hover};
+  --sc-percentage: #{$dark-sc-percentage};
 }
 
 *,

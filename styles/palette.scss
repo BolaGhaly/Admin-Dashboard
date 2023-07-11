@@ -10,6 +10,7 @@ $light-boxShadow: rgba(0, 0, 0, 0.3);
 $light-dashboard-bg: #ffffff;
 $light-mapRegions: #e0e0e0;
 $light-mapRegions-hover: #c2c2c2;
+$light-sc-percentage: #eaeaea;
 
 $dark-bg: #212327;
 $dark-text: #f5f5f5;
@@ -23,6 +24,7 @@ $dark-boxShadow: rgba(245, 245, 245, 0.3);
 $dark-dashboard-bg: #212831;
 $dark-mapRegions: #959595;
 $dark-mapRegions-hover: #c7c7c7;
+$dark-sc-percentage: #30363e;
 
 :export {
   light-bg: $light-bg;
@@ -37,6 +39,7 @@ $dark-mapRegions-hover: #c7c7c7;
   light-dashboard-bg: $light-dashboard-bg;
   light-mapRegions: $light-mapRegions;
   light-mapRegions-hover: $light-mapRegions-hover;
+  light-sc-percentage: $light-sc-percentage;
   dark-bg: $dark-bg;
   dark-text: $dark-text;
   dark-sc-text: $dark-sc-text;
@@ -49,4 +52,5 @@ $dark-mapRegions-hover: #c7c7c7;
   dark-dashboard-bg: $dark-dashboard-bg;
   dark-mapRegions: $dark-mapRegions;
   dark-mapRegions-hover: $dark-mapRegions-hover;
+  dark-sc-percentage: $dark-sc-percentage;
 }
