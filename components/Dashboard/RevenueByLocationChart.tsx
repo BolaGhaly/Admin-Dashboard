@@ -10,6 +10,7 @@ import { closeNotificationsMenu } from "../../store/slices/userNotificationsMenu
 import { closeProfileStatusMenu } from "../../store/slices/userProfileStatusMenu";
 import { closeProfileMenu } from "../../store/slices/userProfileMenu";
 import { closeSideBar } from "../../store/slices/sideBar";
+import CountriesPercentages from "./CountriesPercentages";
 
 const CustomerGrowthChart = () => {
   useEffect(() => {
@@ -18,8 +19,8 @@ const CustomerGrowthChart = () => {
 
     const mapLegendH: any = document.querySelector(".jvectormap-legend-cnt-h");
     const mapLegendV: any = document.querySelector(".jvectormap-legend-cnt-v");
-    mapLegendH.parentNode.removeChild(mapLegendH);
-    mapLegendV.parentNode.removeChild(mapLegendV);
+    mapLegendH?.parentNode.removeChild(mapLegendH);
+    mapLegendV?.parentNode.removeChild(mapLegendV);
   }, []);
 
   const dispatch = useDispatch();
@@ -42,10 +43,9 @@ const CustomerGrowthChart = () => {
           zoomAnimate={false}
           zoomStep={1.7}
           markers={markers}
-          //onRegionTipShow={(event, label) => onTipShow(event, label)}
-          //onMarkerTipShow={(event, label) => onTipShow(event, label)}
         />
       </div>
+      <CountriesPercentages />
     </div>
   );
 };

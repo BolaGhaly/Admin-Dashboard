@@ -1,6 +1,19 @@
 import arrowUp from "/assets/dashboardIcons/arrowUp.svg";
 import arrowDown from "/assets/dashboardIcons/arrowDown.svg";
-import { USA, Spain, Italy, Germany, Russia } from "../assets/flags";
+import {
+  USA,
+  Spain,
+  Italy,
+  Germany,
+  Russia,
+  Ecuador,
+  Mexico,
+  Egypt,
+  Puerto_Rico,
+  UK,
+  South_Africa,
+  Japan,
+} from "../assets/flags";
 
 const iconTypes = {
   arrowUp,
@@ -10,6 +23,13 @@ const iconTypes = {
   italyFlag: Italy,
   germanyFlag: Germany,
   russiaFlag: Russia,
+  ecuadorFlag: Ecuador,
+  mexicoFlag: Mexico,
+  egyptFlag: Egypt,
+  puertoRicoFlag: Puerto_Rico,
+  ukFlag: UK,
+  southAfricaFlag: South_Africa,
+  japanFlag: Japan,
 };
 
 interface totalDataInterface {
@@ -101,20 +121,16 @@ export const markers: revenueByLocMarkersInterface[] = [
     name: "United States of America",
   },
   {
-    latLng: [59.35, -107.43],
-    name: "Canada",
-  },
-  {
     latLng: [53.23, -1.43],
     name: "United Kingdom",
   },
   {
-    latLng: [-26.07, 134.28],
-    name: "Australia",
-  },
-  {
     latLng: [22.23, -101.11],
     name: "Mexico",
+  },
+  {
+    latLng: [18.22, -66.49],
+    name: "Puerto Rico",
   },
   {
     latLng: [-1.64, -78.52],
@@ -137,12 +153,85 @@ export const markers: revenueByLocMarkersInterface[] = [
     name: "Russia",
   },
   {
-    latLng: [8.65, 7.06],
-    name: "Nigeria",
+    latLng: [36.24, 138.95],
+    name: "Japan",
+  },
+  {
+    latLng: [26.96, 30.4],
+    name: "Egypt",
   },
   {
     latLng: [-31.28, 23.24],
     name: "South Africa",
+  },
+];
+
+interface revenueByLocPercentagesInterface {
+  flag: string;
+  country: string;
+  percentage: number;
+}
+
+export const countriesPercentages: revenueByLocPercentagesInterface[] = [
+  {
+    flag: "usaFlag",
+    country: "United States of America",
+    percentage: 28.74,
+  },
+  {
+    flag: "mexicoFlag",
+    country: "Mexico",
+    percentage: 8.41,
+  },
+  {
+    flag: "puertoRicoFlag",
+    country: "Puerto Rico",
+    percentage: 4.83,
+  },
+  {
+    flag: "ecuadorFlag",
+    country: "Ecuador",
+    percentage: 3.64,
+  },
+  {
+    flag: "spainFlag",
+    country: "Spain",
+    percentage: 6.95,
+  },
+  {
+    flag: "ukFlag",
+    country: "United Kingdom",
+    percentage: 14.06,
+  },
+  {
+    flag: "germanyFlag",
+    country: "Germany",
+    percentage: 10.39,
+  },
+  {
+    flag: "italyFlag",
+    country: "Italy",
+    percentage: 2.51,
+  },
+  {
+    flag: "russiaFlag",
+    country: "Russia",
+    percentage: 4.92,
+  },
+  {
+    flag: "egyptFlag",
+    country: "Egypt",
+    percentage: 1.89,
+  },
+  {
+    flag: "southAfricaFlag",
+    country: "South Africa",
+    percentage: 1.14,
+  },
+  {
+    flag: "japanFlag",
+    country: "Japan",
+    percentage: 12.52,
   },
 ];
 
