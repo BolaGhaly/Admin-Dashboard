@@ -1,5 +1,4 @@
 import styles from "./dashboard.module.scss";
-import { VectorMap } from "@react-jvectormap/core";
 import { worldMill } from "./RevenueByLocationMap/index";
 import { poppinsFont } from "../../fonts";
 import { useEffect } from "react";
@@ -11,12 +10,17 @@ import { closeProfileStatusMenu } from "../../store/slices/userProfileStatusMenu
 import { closeProfileMenu } from "../../store/slices/userProfileMenu";
 import { closeSideBar } from "../../store/slices/sideBar";
 import CountriesPercentages from "./CountriesPercentages";
+import dynamic from "next/dynamic";
+const VectorMap = dynamic(
+  () => import("@react-jvectormap/core").then((m) => m.VectorMap),
+  {
+    loading: () => <p>Loading...</p>,
+    ssr: false,
+  }
+);
 
-const CustomerGrowthChart = () => {
+const RevenueByLocationChart = () => {
   useEffect(() => {
-    const mapTipShow: any = document.querySelector(".jvectormap-tip");
-    mapTipShow.style.fontFamily = poppinsFont.style.fontFamily;
-
     const mapLegendH: any = document.querySelector(".jvectormap-legend-cnt-h");
     const mapLegendV: any = document.querySelector(".jvectormap-legend-cnt-v");
     mapLegendH?.parentNode.removeChild(mapLegendH);
@@ -43,6 +47,14 @@ const CustomerGrowthChart = () => {
           zoomAnimate={false}
           zoomStep={1.7}
           markers={markers}
+          onMarkerTipShow={() => {
+            const mapTipShow: any = document.querySelector(".jvectormap-tip");
+            mapTipShow.style.fontFamily = poppinsFont.style.fontFamily;
+          }}
+          onRegionTipShow={() => {
+            const mapTipShow: any = document.querySelector(".jvectormap-tip");
+            mapTipShow.style.fontFamily = poppinsFont.style.fontFamily;
+          }}
         />
       </div>
       <CountriesPercentages />
@@ -50,4 +62,4 @@ const CustomerGrowthChart = () => {
   );
 };
 
-export default CustomerGrowthChart;
+export default RevenueByLocationChart;
