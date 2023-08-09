@@ -11,10 +11,11 @@ import { closeProfileMenu } from "../../store/slices/userProfileMenu";
 import { closeSideBar } from "../../store/slices/sideBar";
 import CountriesPercentages from "./CountriesPercentages";
 import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
+
 const VectorMap = dynamic(
   () => import("@react-jvectormap/core").then((m) => m.VectorMap),
   {
-    loading: () => <p>Loading...</p>,
     ssr: false,
   }
 );
@@ -39,7 +40,16 @@ const RevenueByLocationChart = () => {
   return (
     <div className={styles.revenueByLocChartContainer}>
       <h2>Revenue By Location</h2>
-      <div className={styles.revenueByLocChart} onClick={closeAllOpenMenus}>
+      <motion.div
+        className={styles.revenueByLocChart}
+        onClick={closeAllOpenMenus}
+        initial={{ opacity: 0, visibility: "hidden" }}
+        animate={{ opacity: 1, visibility: "visible" }}
+        transition={{
+          duration: 0.2,
+          ease: "easeOut",
+        }}
+      >
         <VectorMap
           map={worldMill}
           backgroundColor={"transparent"}
@@ -56,7 +66,7 @@ const RevenueByLocationChart = () => {
             mapTipShow.style.fontFamily = poppinsFont.style.fontFamily;
           }}
         />
-      </div>
+      </motion.div>
       <CountriesPercentages />
     </div>
   );
