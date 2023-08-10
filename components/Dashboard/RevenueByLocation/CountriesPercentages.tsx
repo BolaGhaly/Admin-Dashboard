@@ -16,6 +16,7 @@ const CountriesPercentages = () => {
               duration: 0.2,
               ease: "easeOut",
             }}
+            title={country.country}
           >
             <Icon name={country.flag} />
             <div>

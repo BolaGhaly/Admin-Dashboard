@@ -259,9 +259,15 @@
         max-height: 18.125rem;
         overflow-y: scroll;
 
+        .activeCountryPercentage {
+          background-color: var(--percentages-hover);
+        }
+
         > div {
           display: flex;
-          margin-bottom: 1.375rem;
+          margin-bottom: 1rem;
+          padding: 0.625rem 0.5rem;
+          border-radius: 0.25rem;
 
           &:last-of-type {
             margin-bottom: 0;

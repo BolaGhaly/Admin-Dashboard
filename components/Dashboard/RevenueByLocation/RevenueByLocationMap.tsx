@@ -20,6 +20,7 @@ const RevenueByLocationMap = () => {
     dispatch(closeProfileMenu());
     dispatch(closeSideBar());
   };
+  let countryPercentageDiv: HTMLDivElement | null;
 
   return (
     <motion.div
@@ -48,6 +49,18 @@ const RevenueByLocationMap = () => {
           const mapTipShow: any = document.querySelector(".jvectormap-tip");
           mapTipShow.style.fontFamily = poppinsFont.style.fontFamily;
           // mapTipShow.style.zIndex = "1";
+        }}
+        onMarkerOver={(el, code) => {
+          const country: string = markers[code].name;
+          countryPercentageDiv = document.querySelector(
+            `.${styles.revenueByLocPercentages}>div[title='${country}']`
+          );
+          countryPercentageDiv?.classList.add(styles.activeCountryPercentage);
+        }}
+        onMarkerOut={() => {
+          countryPercentageDiv?.classList.remove(
+            styles.activeCountryPercentage
+          );
         }}
       />
     </motion.div>
