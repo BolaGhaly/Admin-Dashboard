@@ -1,6 +1,6 @@
-import styles from "./dashboard.module.scss";
-import { numFormatter } from "../../utils/mainUtils";
-import { RevenueGrowthData } from "../../utils/dashboardUtils";
+import styles from "../dashboard.module.scss";
+import { numFormatter } from "../../../utils/mainUtils";
+import { RevenueGrowthData } from "../../../utils/dashboardUtils";
 
 const RevenueGrowthLegend = () => {
   return (

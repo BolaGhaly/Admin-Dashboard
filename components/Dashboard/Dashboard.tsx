@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "./dashboard.module.scss";
 import TotalData from "./TotalData";
-import RevenueGrowthChart from "./RevenueGrowthChart";
+import RevenueGrowth from "./RevenueGrowth/RevenueGrowth";
 import RevenueByLocationChart from "./RevenueByLocation/RevenueByLocation";
 
 const Dashboard = () => {
@@ -14,7 +14,7 @@ const Dashboard = () => {
         <h1>Dashboard</h1>
         <TotalData />
         <div className={styles.revenueCharts}>
-          <RevenueGrowthChart />
+          <RevenueGrowth />
           <RevenueByLocationChart />
         </div>
         <p>

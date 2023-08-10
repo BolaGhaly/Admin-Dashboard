@@ -1,10 +1,10 @@
+import styles from "../dashboard.module.scss";
 import { TooltipProps } from "recharts";
 import {
   ValueType,
   NameType,
 } from "recharts/types/component/DefaultTooltipContent";
-import styles from "./dashboard.module.scss";
-import { numFormatter } from "../../utils/mainUtils";
+import { numFormatter } from "../../../utils/mainUtils";
 
 const RevenueGrowthTooltip = ({
   active,
