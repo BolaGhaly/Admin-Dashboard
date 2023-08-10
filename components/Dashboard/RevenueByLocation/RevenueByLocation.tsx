@@ -1,4 +1,4 @@
-import styles from "./dashboard.module.scss";
+import styles from "../dashboard.module.scss";
 import { useEffect } from "react";
 import dynamic from "next/dynamic";
 const RevenueByLocationChart = dynamic(

@@ -1,15 +1,15 @@
-import styles from "./dashboard.module.scss";
-import { poppinsFont } from "../../fonts";
+import styles from "../dashboard.module.scss";
+import { poppinsFont } from "../../../fonts";
 import { worldMill } from "./RevenueByLocationMap/index";
 import { VectorMap } from "@react-jvectormap/core";
-import { markers } from "../../utils/dashboardUtils";
+import { markers } from "../../../utils/dashboardUtils";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
-import { closeLanguagesMenu } from "../../store/slices/userLanguagesMenu";
-import { closeNotificationsMenu } from "../../store/slices/userNotificationsMenu";
-import { closeProfileStatusMenu } from "../../store/slices/userProfileStatusMenu";
-import { closeProfileMenu } from "../../store/slices/userProfileMenu";
-import { closeSideBar } from "../../store/slices/sideBar";
+import { closeLanguagesMenu } from "../../../store/slices/userLanguagesMenu";
+import { closeNotificationsMenu } from "../../../store/slices/userNotificationsMenu";
+import { closeProfileStatusMenu } from "../../../store/slices/userProfileStatusMenu";
+import { closeProfileMenu } from "../../../store/slices/userProfileMenu";
+import { closeSideBar } from "../../../store/slices/sideBar";
 
 const RevenueByLocationMap = () => {
   const dispatch = useDispatch();
@@ -42,10 +42,12 @@ const RevenueByLocationMap = () => {
         onMarkerTipShow={() => {
           const mapTipShow: any = document.querySelector(".jvectormap-tip");
           mapTipShow.style.fontFamily = poppinsFont.style.fontFamily;
+          // mapTipShow.style.zIndex = "1";
         }}
         onRegionTipShow={() => {
           const mapTipShow: any = document.querySelector(".jvectormap-tip");
           mapTipShow.style.fontFamily = poppinsFont.style.fontFamily;
+          // mapTipShow.style.zIndex = "1";
         }}
       />
     </motion.div>

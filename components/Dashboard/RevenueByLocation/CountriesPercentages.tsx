@@ -1,6 +1,6 @@
-import styles from "./dashboard.module.scss";
-import { sortArrOfObjsByKeyValue } from "../../utils/mainUtils";
-import Icon, { countriesPercentages } from "../../utils/dashboardUtils";
+import styles from "../dashboard.module.scss";
+import { sortArrOfObjsByKeyValue } from "../../../utils/mainUtils";
+import Icon, { countriesPercentages } from "../../../utils/dashboardUtils";
 import { motion } from "framer-motion";
 
 const CountriesPercentages = () => {

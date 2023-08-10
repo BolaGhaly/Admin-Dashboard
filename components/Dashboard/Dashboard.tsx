@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "./dashboard.module.scss";
 import TotalData from "./TotalData";
 import RevenueGrowthChart from "./RevenueGrowthChart";
-import RevenueByLocationChart from "./RevenueByLocationChart";
+import RevenueByLocationChart from "./RevenueByLocation/RevenueByLocation";
 
 const Dashboard = () => {
   return (
