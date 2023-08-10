@@ -71,7 +71,6 @@ const RevenueGrowthChart = () => {
             }}
             strokeWidth={2}
             animationEasing="ease-out"
-            animationDuration={2000}
           />
           <Line
             type="monotone"
@@ -85,7 +84,6 @@ const RevenueGrowthChart = () => {
             }}
             strokeWidth={2}
             animationEasing="ease-out"
-            animationDuration={2000}
           />
         </LineChart>
       </ResponsiveContainer>
