@@ -19,6 +19,7 @@
   --mapRegions: #{$light-mapRegions};
   --mapRegions-hover: #{$light-mapRegions-hover};
   --sc-percentage: #{$light-sc-percentage};
+  --percentages-hover: #{$light-percentages-hover};
 }
 
 :root[data-theme="dark"] {
@@ -35,6 +36,7 @@
   --mapRegions: #{$dark-mapRegions};
   --mapRegions-hover: #{$dark-mapRegions-hover};
   --sc-percentage: #{$dark-sc-percentage};
+  --percentages-hover: #{$dark-percentages-hover};
 }
 
 *,
