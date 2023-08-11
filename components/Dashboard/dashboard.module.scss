@@ -249,15 +249,23 @@
       .revenueByLocChart {
         height: 220px;
         width: calc(100% - 2rem);
-        margin: 0 1rem 0.5rem 1rem;
+        margin: 0 1rem;
         cursor: pointer;
       }
 
       .revenueByLocPercentages {
-        padding: 0.5rem 0 0.5rem 0.5rem;
-        margin: 0 1rem 0.5rem 0.5rem;
+        padding: 0.625rem 0 0.5rem;
+        margin: 0.5rem 1rem 0.5rem;
         max-height: 18.125rem;
         overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: var(--dashboard-bg);
+        }
 
         .activeCountryPercentage {
           background-color: var(--percentages-hover);
