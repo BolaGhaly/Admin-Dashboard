@@ -9,7 +9,7 @@ const Document = () => {
         <NextScript />
         <noscript
           dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3HLQCMV"
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDDW3LH9"
 height="0" width="0" style="display:none;visibility:hidden" />`,
           }}
         />
