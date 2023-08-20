@@ -43,12 +43,10 @@ const RevenueByLocationMap = () => {
         onMarkerTipShow={() => {
           const mapTipShow: any = document.querySelector(".jvectormap-tip");
           mapTipShow.style.fontFamily = poppinsFont.style.fontFamily;
-          // mapTipShow.style.zIndex = "1";
         }}
         onRegionTipShow={() => {
           const mapTipShow: any = document.querySelector(".jvectormap-tip");
           mapTipShow.style.fontFamily = poppinsFont.style.fontFamily;
-          // mapTipShow.style.zIndex = "1";
         }}
         onMarkerOver={(el, code) => {
           const country: string = markers[code].name;
