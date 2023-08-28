@@ -20,6 +20,8 @@
   --mapRegions-hover: #{$light-mapRegions-hover};
   --sc-percentage: #{$light-sc-percentage};
   --percentages-hover: #{$light-percentages-hover};
+  --ip-bg: #{$light-ip-bg};
+  --ip-text: #{$light-ip-text};
 }
 
 :root[data-theme="dark"] {
@@ -37,6 +39,8 @@
   --mapRegions-hover: #{$dark-mapRegions-hover};
   --sc-percentage: #{$dark-sc-percentage};
   --percentages-hover: #{$dark-percentages-hover};
+  --ip-bg: #{$dark-ip-bg};
+  --ip-text: #{$dark-ip-text};
 }
 
 *,
