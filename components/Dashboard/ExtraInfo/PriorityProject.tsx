@@ -14,12 +14,10 @@ const PriorityProject = () => {
       </div>
       <div>
         <h3>Project Name</h3>
+        <p>Performance Optimization</p>
         <div>
-          <p>Performance Optimization</p>
-          <div>
-            <Icon name="clock" />
-            <p>In Progress</p>
-          </div>
+          <Icon name="clock" />
+          <p>In Progress</p>
         </div>
         <span />
       </div>
