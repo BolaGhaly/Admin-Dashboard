@@ -15,8 +15,8 @@ import {
   Japan,
 } from "../assets/flags";
 import { BsAlarmFill } from "react-icons/bs";
-//import { IoChevronForwardOutline } from "react-icons/io5";
-import { AiFillClockCircle } from "react-icons/ai";
+import { IoChevronForwardOutline } from "react-icons/io5";
+import { AiFillClockCircle, AiFillSchedule } from "react-icons/ai";
 import { FaCalendarAlt } from "react-icons/fa";
 
 const iconTypes = {
@@ -35,9 +35,10 @@ const iconTypes = {
   southAfricaFlag: South_Africa,
   japanFlag: Japan,
   alarm: BsAlarmFill,
-  //arrowRight: IoChevronForwardOutline,
+  arrowRight: IoChevronForwardOutline,
   clock: AiFillClockCircle,
   calendar: FaCalendarAlt,
+  schedule: AiFillSchedule,
 };
 
 interface totalDataInterface {
@@ -240,6 +241,34 @@ export const countriesPercentages: revenueByLocPercentagesInterface[] = [
     flag: "japanFlag",
     country: "Japan",
     percentage: 12.52,
+  },
+];
+
+interface upcomingScheduleDataInterface {
+  date: string;
+  time: string;
+  title: string;
+  attendance: string[];
+}
+
+export const upcomingScheduleData: upcomingScheduleDataInterface[] = [
+  {
+    date: "Wed, 13 Sep",
+    time: "10:00 AM",
+    title: "Daily standup meeting",
+    attendance: ["xyz"],
+  },
+  {
+    date: "Fri, 15 Sep",
+    time: "01:00 PM",
+    title: "Office event",
+    attendance: ["xyz"],
+  },
+  {
+    date: "Mon, 18 Sep",
+    time: "12:30 PM",
+    title: "Design team meeting",
+    attendance: ["xyz"],
   },
 ];
 

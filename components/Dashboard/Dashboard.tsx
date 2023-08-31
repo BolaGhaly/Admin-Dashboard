@@ -4,6 +4,7 @@ import TotalData from "./TotalData";
 import RevenueGrowth from "./RevenueGrowth/RevenueGrowth";
 import RevenueByLocationChart from "./RevenueByLocation/RevenueByLocation";
 import PriorityProject from "./ExtraInfo/PriorityProject";
+import UpcomingSchedule from "./ExtraInfo/UpcomingSchedule";
 
 const Dashboard = () => {
   return (
@@ -20,6 +21,7 @@ const Dashboard = () => {
         </div>
         <div className={styles.extraInfo}>
           <PriorityProject />
+          <UpcomingSchedule />
         </div>
 
         <p>
