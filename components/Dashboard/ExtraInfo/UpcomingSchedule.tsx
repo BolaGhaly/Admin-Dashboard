@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Icon, { upcomingScheduleData } from "../../../utils/dashboardUtils";
 import styles from "../dashboard.module.scss";
 
@@ -18,7 +19,22 @@ const UpcomingSchedule = () => {
               </div>
               <div>
                 <p>{el.time}</p>
-                <p>Attendance: {el.attendance}</p>
+                <p>Attendance:</p>
+                <div>
+                  {el.attendance.map((teamMember, idx) => (
+                    <Image
+                      key={idx}
+                      src={teamMember}
+                      width={100}
+                      height={100}
+                      alt=""
+                      unoptimized
+                    />
+                  ))}
+                  {el.moreAttendance > 0 ? (
+                    <p>+ {el.moreAttendance} people</p>
+                  ) : null}
+                </div>
               </div>
             </div>
             <Icon name="arrowRight" />

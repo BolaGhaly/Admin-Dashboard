@@ -18,6 +18,15 @@ import { BsAlarmFill } from "react-icons/bs";
 import { IoChevronForwardOutline } from "react-icons/io5";
 import { AiFillClockCircle, AiFillSchedule } from "react-icons/ai";
 import { FaCalendarAlt } from "react-icons/fa";
+import profileImg from "/assets/userProfile/profileImg.webp";
+import teamMember1 from "/assets/teamProfiles/teamMember1.webp";
+import teamMember2 from "/assets/teamProfiles/teamMember2.webp";
+import teamMember3 from "/assets/teamProfiles/teamMember3.webp";
+import teamMember4 from "/assets/teamProfiles/teamMember4.webp";
+import teamMember5 from "/assets/teamProfiles/teamMember5.webp";
+import teamMember6 from "/assets/teamProfiles/teamMember6.webp";
+import teamMember7 from "/assets/teamProfiles/teamMember7.webp";
+import { StaticImageData } from "next/image";
 
 const iconTypes = {
   arrowUp,
@@ -248,7 +257,8 @@ interface upcomingScheduleDataInterface {
   date: string;
   time: string;
   title: string;
-  attendance: string[];
+  attendance: StaticImageData[];
+  moreAttendance: number;
 }
 
 export const upcomingScheduleData: upcomingScheduleDataInterface[] = [
@@ -256,19 +266,22 @@ export const upcomingScheduleData: upcomingScheduleDataInterface[] = [
     date: "Wed, 13 Sep",
     time: "10:00 AM",
     title: "Daily standup meeting",
-    attendance: ["xyz"],
+    attendance: [profileImg, teamMember1, teamMember2, teamMember3],
+    moreAttendance: 6,
   },
   {
     date: "Fri, 15 Sep",
     time: "01:00 PM",
     title: "Office event",
-    attendance: ["xyz"],
+    attendance: [profileImg, teamMember1, teamMember2, teamMember3],
+    moreAttendance: 22,
   },
   {
     date: "Mon, 18 Sep",
     time: "12:30 PM",
     title: "Design team meeting",
-    attendance: ["xyz"],
+    attendance: [teamMember3, teamMember4, teamMember5],
+    moreAttendance: 0,
   },
 ];
 
