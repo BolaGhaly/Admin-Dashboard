@@ -31,10 +31,10 @@ const UpcomingSchedule = () => {
                       unoptimized
                     />
                   ))}
-                  {el.moreAttendance > 0 ? (
-                    <p>+ {el.moreAttendance} people</p>
-                  ) : null}
                 </div>
+                {el.moreAttendance > 0 ? (
+                  <p>+ {el.moreAttendance} people</p>
+                ) : null}
               </div>
             </div>
             <Icon name="arrowRight" />
