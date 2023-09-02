@@ -24,8 +24,7 @@ import teamMember2 from "/assets/teamProfiles/teamMember2.webp";
 import teamMember3 from "/assets/teamProfiles/teamMember3.webp";
 import teamMember4 from "/assets/teamProfiles/teamMember4.webp";
 import teamMember5 from "/assets/teamProfiles/teamMember5.webp";
-import teamMember6 from "/assets/teamProfiles/teamMember6.webp";
-import teamMember7 from "/assets/teamProfiles/teamMember7.webp";
+
 import { StaticImageData } from "next/image";
 
 const iconTypes = {
@@ -266,7 +265,7 @@ export const upcomingScheduleData: upcomingScheduleDataInterface[] = [
     date: "Wed, 13 Sep",
     time: "10:00 AM",
     title: "Daily standup meeting",
-    attendance: [profileImg, teamMember1, teamMember2, teamMember3],
+    attendance: [profileImg, teamMember2, teamMember3, teamMember4],
     moreAttendance: 6,
   },
   {
