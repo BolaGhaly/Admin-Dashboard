@@ -1,11 +1,8 @@
 import { BiSupport } from "react-icons/bi";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { HiOutlineMenu } from "react-icons/hi";
-import {
-  RiNotification2Line,
-  RiLogoutBoxRLine,
-  RiUserSettingsLine,
-} from "react-icons/ri";
+import { RiLogoutBoxRLine, RiUserSettingsLine } from "react-icons/ri";
+import { TbBellFilled } from "react-icons/tb";
 import moon from "/assets/topBarIcons/moon.svg";
 import sun from "/assets/topBarIcons/sun.svg";
 import emptyNotificationsLight from "/assets/topBarIcons/emptyNotificationsLight.svg";
@@ -16,7 +13,7 @@ const iconTypes = {
   menu: HiOutlineMenu,
   darkModeOff: moon,
   darkModeOn: sun,
-  notifications: RiNotification2Line,
+  notifications: TbBellFilled,
   profileSettings: RiUserSettingsLine,
   support: BiSupport,
   signOut: RiLogoutBoxRLine,
