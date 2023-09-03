@@ -6,12 +6,7 @@ import teamMember6 from "/assets/teamProfiles/teamMember6.webp";
 const PriorityProject = () => {
   return (
     <div className={styles.priorityProject}>
-      <div>
-        <div>
-          <Icon name="alarm" />
-          <h2>Priority Project</h2>
-        </div>
-      </div>
+      <h2>Priority Project</h2>
       <div>
         <h3>Project Name</h3>
         <p>Performance Optimization</p>

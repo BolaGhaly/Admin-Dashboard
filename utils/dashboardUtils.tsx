@@ -14,7 +14,6 @@ import {
   South_Africa,
   Japan,
 } from "../assets/flags";
-import { BsAlarmFill } from "react-icons/bs";
 import { IoChevronForwardOutline } from "react-icons/io5";
 import { AiFillClockCircle, AiFillSchedule } from "react-icons/ai";
 import { FaCalendarAlt } from "react-icons/fa";
@@ -42,7 +41,6 @@ const iconTypes = {
   ukFlag: UK,
   southAfricaFlag: South_Africa,
   japanFlag: Japan,
-  alarm: BsAlarmFill,
   arrowRight: IoChevronForwardOutline,
   clock: AiFillClockCircle,
   calendar: FaCalendarAlt,
