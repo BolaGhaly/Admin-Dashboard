@@ -5,10 +5,7 @@ import styles from "../dashboard.module.scss";
 const UpcomingSchedule = () => {
   return (
     <div className={styles.upcomingSchedule}>
-      <div>
-        <Icon name="schedule" />
-        <h2>Upcoming Schedule</h2>
-      </div>
+      <h2>Upcoming Schedule</h2>
       <div>
         {upcomingScheduleData.map((el, idx) => (
           <div key={idx}>

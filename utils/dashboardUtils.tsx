@@ -15,7 +15,7 @@ import {
   Japan,
 } from "../assets/flags";
 import { IoChevronForwardOutline } from "react-icons/io5";
-import { AiFillClockCircle, AiFillSchedule } from "react-icons/ai";
+import { AiFillClockCircle } from "react-icons/ai";
 import { FaCalendarAlt } from "react-icons/fa";
 import profileImg from "/assets/userProfile/profileImg.webp";
 import teamMember1 from "/assets/teamProfiles/teamMember1.webp";
@@ -44,7 +44,6 @@ const iconTypes = {
   arrowRight: IoChevronForwardOutline,
   clock: AiFillClockCircle,
   calendar: FaCalendarAlt,
-  schedule: AiFillSchedule,
 };
 
 interface totalDataInterface {
