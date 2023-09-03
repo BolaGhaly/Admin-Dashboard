@@ -7,6 +7,20 @@
   background-color: var(--sc-percentage);
 }
 
+@mixin noScrollBar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--dashboard-bg);
+  }
+}
+
 .dashboardMain {
   > h1 {
     font-weight: 600;
@@ -255,16 +269,7 @@
         padding: 0.5rem 0;
         max-height: 18.125rem;
         overflow-y: scroll;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-
-        &::-webkit-scrollbar {
-          width: 0;
-        }
-
-        &::-webkit-scrollbar-track {
-          background: var(--dashboard-bg);
-        }
+        @include noScrollBar();
 
         .activeCountryPercentage {
           background-color: var(--percentages-hover);
@@ -508,6 +513,8 @@
         row-gap: 11px;
         //background-color: blue;
         padding: 0.5rem;
+        overflow-x: scroll;
+        @include noScrollBar();
 
         > div {
           cursor: pointer;
@@ -518,6 +525,7 @@
           padding: 0.5rem;
           border-radius: 0.25rem;
           column-gap: 2rem;
+          min-width: 26.875rem;
 
           &:hover {
             background-color: var(--percentages-hover);
