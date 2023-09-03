@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Icon from "../../../utils/dashboardUtils";
 import styles from "../dashboard.module.scss";
-import teamMember1 from "/assets/teamProfiles/teamMember1.webp";
+import teamMember6 from "/assets/teamProfiles/teamMember6.webp";
 
 const PriorityProject = () => {
   return (
@@ -25,13 +25,13 @@ const PriorityProject = () => {
         <h3>Lead</h3>
         <div>
           <Image
-            src={teamMember1}
+            src={teamMember6}
             width={100}
             height={100}
-            alt="Mia's Profile Image"
+            alt="John's Profile Image"
             unoptimized
           />
-          <p>Mia Johnson</p>
+          <p>John Smith</p>
         </div>
         <span />
       </div>
