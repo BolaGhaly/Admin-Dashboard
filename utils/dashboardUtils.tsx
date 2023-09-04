@@ -270,7 +270,7 @@ export const upcomingScheduleData: upcomingScheduleDataInterface[] = [
     time: "01:00 PM",
     title: "Office event",
     attendance: [profileImg, teamMember1, teamMember2, teamMember3],
-    moreAttendance: 22,
+    moreAttendance: 28,
   },
   {
     date: "Mon, 18 Sep",
