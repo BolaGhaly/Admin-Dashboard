@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import SideBar from "./SideBar/SideBar";
 import TopBar from "./TopBar/TopBar";
 import { poppinsFont } from "../fonts";
-// import Footer from "./Footer";
+import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   const darkMode = useSelector((state: RootState) => state.darkMode.value);
@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
       <TopBar />
       <SideBar />
       <section>{children}</section>
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 };
