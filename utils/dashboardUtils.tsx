@@ -23,7 +23,6 @@ import teamMember2 from "/assets/teamProfiles/teamMember2.webp";
 import teamMember3 from "/assets/teamProfiles/teamMember3.webp";
 import teamMember4 from "/assets/teamProfiles/teamMember4.webp";
 import teamMember5 from "/assets/teamProfiles/teamMember5.webp";
-
 import { StaticImageData } from "next/image";
 
 const iconTypes = {
