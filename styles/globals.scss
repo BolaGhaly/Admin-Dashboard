@@ -15,6 +15,9 @@
   --notifications-line: #{$light-notifications-line};
   --notification-timestamp: #{$light-notification-timestamp};
   --boxShadow: #{$light-boxShadow};
+  --userStatus-green: #{$light-userStatus-green};
+  --userStatus-orange: #{$light-userStatus-orange};
+  --userStatus-red: #{$light-userStatus-red};
   --dashboard-bg: #{$light-dashboard-bg};
   --mapRegions: #{$light-mapRegions};
   --mapRegions-hover: #{$light-mapRegions-hover};
@@ -36,6 +39,9 @@
   --notifications-line: #{$dark-notifications-line};
   --notification-timestamp: #{$dark-notification-timestamp};
   --boxShadow: #{$dark-boxShadow};
+  --userStatus-green: #{$dark-userStatus-green};
+  --userStatus-orange: #{$dark-userStatus-orange};
+  --userStatus-red: #{$dark-userStatus-red};
   --dashboard-bg: #{$dark-dashboard-bg};
   --mapRegions: #{$dark-mapRegions};
   --mapRegions-hover: #{$dark-mapRegions-hover};

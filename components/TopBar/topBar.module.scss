@@ -215,17 +215,17 @@
 
 .userStatusOnline,
 .userImageOnline {
-  background-color: #00c200;
+  background-color: var(--userStatus-green);
 }
 
 .userStatusAway,
 .userImageAway {
-  background-color: #ffa010;
+  background-color: var(--userStatus-orange);
 }
 
 .userStatusOffline,
 .userImageOffline {
-  background-color: #ff4c4c;
+  background-color: var(--userStatus-red);
 }
 
 .notificationsMenu {
