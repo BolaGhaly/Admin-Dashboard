@@ -121,6 +121,10 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
+    @media (min-width: 1040px) {
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+
     .revenueGrowthChart {
       background-color: var(--dashboard-bg);
       box-shadow: 0 0 1px var(--notification-timestamp);
@@ -132,6 +136,10 @@
 
       @media (min-width: 780px) {
         grid-column: span 2 / span 2;
+      }
+
+      @media (min-width: 1040px) {
+        grid-column: span 5 / span 5;
       }
 
       > h2 {
@@ -248,6 +256,10 @@
 
       @media (min-width: 780px) {
         grid-column: span 2 / span 2;
+      }
+
+      @media (min-width: 1040px) {
+        grid-column: span 3 / span 3;
       }
 
       > h2 {
