@@ -63,29 +63,22 @@
           margin-top: 0.5rem;
         }
 
-        .arrowUp {
-          svg {
-            color: #00c200;
-          }
+        svg {
+          width: 1.125rem;
+          height: 1.125rem;
+        }
 
+        .arrowUp {
+          svg,
           p {
-            background: linear-gradient(#00c200, #00c200);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--totalData-green);
           }
         }
 
         .arrowDown {
-          svg {
-            color: #ff4b4b;
-          }
-
+          svg,
           p {
-            background: linear-gradient(#ff4b4b, #ff4b4b);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--totalData-red);
           }
         }
 

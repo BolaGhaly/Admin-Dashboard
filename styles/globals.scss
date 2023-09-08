@@ -22,6 +22,8 @@
   --percentages-hover: #{$light-percentages-hover};
   --ip-bg: #{$light-ip-bg};
   --ip-text: #{$light-ip-text};
+  --totalData-green: #{$light-totalData-green};
+  --totalData-red: #{$light-totalData-red};
 }
 
 :root[data-theme="dark"] {
@@ -41,6 +43,8 @@
   --percentages-hover: #{$dark-percentages-hover};
   --ip-bg: #{$dark-ip-bg};
   --ip-text: #{$dark-ip-text};
+  --totalData-green: #{$dark-totalData-green};
+  --totalData-red: #{$dark-totalData-red};
 }
 
 *,
