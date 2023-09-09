@@ -30,7 +30,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <Head>
         <meta
           name="description"
-          content="A responsive and visually appealing admin dashboard UI for the fictional financial company, FinFiesta, utilizing Figma, Next.js, SASS/SCSS, Redux, and Recharts."
+          content="A responsive and visually appealing admin dashboard UI for the fictional financial company, FinFiesta, utilizing Figma, Next.js, SASS/SCSS, Redux, and Recharts. Created by Bola Ghaly."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
