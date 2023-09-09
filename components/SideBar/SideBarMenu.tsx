@@ -42,7 +42,7 @@ const SideBarMenu = () => {
       {sideBarMenu.map((item, idx) => (
         <Link
           title={item.charAt(0).toUpperCase() + item.slice(1)}
-          href="#"
+          href="/"
           key={idx}
           onClick={() => handleClick(item)}
           className={`${activeItem === item ? styles.active : null}`}
