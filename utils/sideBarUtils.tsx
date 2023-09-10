@@ -30,6 +30,13 @@ export const sideBarMenu = [
   "transactions",
 ];
 
+export const sideBarMenuLinks = [
+  "/",
+  "/products",
+  "/customers",
+  "/transactions",
+];
+
 export const sideBarTeams = ["marketing", "sales", "design", "engineering"];
 
 export const sideBarProfile = [

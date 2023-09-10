@@ -1,22 +1,25 @@
-import Icon, { sideBarMenu } from "../../utils/sideBarUtils";
+import Icon, { sideBarMenu, sideBarMenuLinks } from "../../utils/sideBarUtils";
 import { useSelector, useDispatch } from "react-redux";
 import { closeSideBar } from "../../store/slices/sideBar";
+import { changeActiveItem } from "../../store/slices/sideBarMenuActive";
 import { RootState } from "../../store/store";
 import styles from "./sideBar.module.scss";
 import Link from "next/link";
-import { useState } from "react";
 import { motion, Variants } from "framer-motion";
 
 const SideBarMenu = () => {
   const openSideBar = useSelector(
     (state: RootState) => state.openSideBar.value
   );
-  const [activeItem, setActiveItem] = useState(sideBarMenu[0]);
+  const activeItem = useSelector(
+    (state: RootState) => state.sideBarMenuActiveItem.activeItem
+  );
   const dispatch = useDispatch();
   const handleClick = (item: string) => {
-    setActiveItem(item);
+    dispatch(changeActiveItem({ activeItem: item }));
     dispatch(closeSideBar());
   };
+
   const itemVariants: Variants = {
     open: (index: number) => ({
       display: "block",
@@ -42,7 +45,7 @@ const SideBarMenu = () => {
       {sideBarMenu.map((item, idx) => (
         <Link
           title={item.charAt(0).toUpperCase() + item.slice(1)}
-          href="/"
+          href={sideBarMenuLinks[idx]}
           key={idx}
           onClick={() => handleClick(item)}
           className={`${activeItem === item ? styles.active : null}`}
