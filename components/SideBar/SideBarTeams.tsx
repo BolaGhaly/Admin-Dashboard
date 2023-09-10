@@ -1,13 +1,13 @@
 import { RootState } from "../../store/store";
 import styles from "./sideBar.module.scss";
 import Icon, { sideBarTeams, sideBarTeamsLinks } from "../../utils/sideBarUtils";
-import { useSelector, useDispatch } from "react-redux";
-import { closeSideBar } from "../../store/slices/sideBar";
+import { useSelector } from "react-redux";
+//import { closeSideBar } from "../../store/slices/sideBar";
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 
 const SideBarTeams = () => {
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
   const openSideBar = useSelector(
     (state: RootState) => state.openSideBar.value
   );
