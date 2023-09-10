@@ -5,8 +5,24 @@ import RevenueGrowth from "./RevenueGrowth/RevenueGrowth";
 import RevenueByLocationChart from "./RevenueByLocation/RevenueByLocation";
 import PriorityProject from "./ExtraInfo/PriorityProject";
 import UpcomingSchedule from "./ExtraInfo/UpcomingSchedule";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+import {
+  changeActiveItem,
+  initialState,
+} from "../../store/slices/sideBarMenuActive";
 
 const Dashboard = () => {
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const currURLEndpoint = router.asPath.slice(1);
+
+  useEffect(() => {
+    if (currURLEndpoint === "")
+      dispatch(changeActiveItem({ activeItem: initialState.activeItem }));
+  }, [currURLEndpoint, dispatch]);
+
   return (
     <>
       <Head>
