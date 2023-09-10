@@ -177,16 +177,13 @@ section {
     font-size: 0.875rem;
   }
 
-  button {
+  a {
     padding: 0.25rem 0.875rem;
-    background-color: transparent;
-    border-radius: 0.5rem;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.875rem;
     border: 1px solid var(--notifications-line);
-
-    a {
-      text-decoration: none;
-      color: var(--text);
-      font-size: 0.875rem;
-    }
+    border-radius: 0.5rem;
+    background-color: transparent;
   }
 }
