@@ -15,20 +15,13 @@ const Custom404 = () => {
   useEffect(() => {
     dispatch(changeActiveItem({ activeItem: currURLEndpoint }));
   }, [currURLEndpoint, dispatch, router]);
-  
+
   return (
     <div className="custom404">
       <h1>404</h1>
       <span />
       <p>This page could not be found.</p>
-      <Link
-        href="/"
-        onClick={() =>
-          dispatch(changeActiveItem({ activeItem: initialState.activeItem }))
-        }
-      >
-        Go Back
-      </Link>
+      <Link href="/dashboard">Go Back</Link>
     </div>
   );
 };
