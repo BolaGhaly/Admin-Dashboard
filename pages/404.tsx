@@ -1,8 +1,5 @@
 import Link from "next/link";
-import {
-  changeActiveItem,
-  initialState,
-} from "../store/slices/sideBarMenuActive";
+import { changeActiveItem } from "../store/slices/sideBarMenuActive";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
