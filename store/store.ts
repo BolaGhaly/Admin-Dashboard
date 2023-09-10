@@ -25,6 +25,7 @@ const persistConfig = getPersistConfig({
   storage,
   blacklist: [
     "openSideBar",
+    "sideBarMenuActiveItem",
     "userNotificationsMenu",
     "userProfileMenu",
     "userLanguagesMenu.open",
