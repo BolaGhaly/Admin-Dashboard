@@ -29,7 +29,6 @@ export const sideBarMenu = [
   "customers",
   "transactions",
 ];
-
 export const sideBarMenuLinks = [
   "/",
   "/products",
@@ -38,6 +37,12 @@ export const sideBarMenuLinks = [
 ];
 
 export const sideBarTeams = ["marketing", "sales", "design", "engineering"];
+export const sideBarTeamsLinks = [
+  "/teams/marketing",
+  "/teams/sales",
+  "/teams/design",
+  "/teams/engineering",
+];
 
 export const sideBarProfile = [
   {

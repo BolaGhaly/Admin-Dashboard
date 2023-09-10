@@ -1,9 +1,10 @@
 import { RootState } from "../../store/store";
 import styles from "./sideBar.module.scss";
-import Icon, { sideBarTeams } from "../../utils/sideBarUtils";
+import Icon, { sideBarTeams, sideBarTeamsLinks } from "../../utils/sideBarUtils";
 import { useSelector, useDispatch } from "react-redux";
 import { closeSideBar } from "../../store/slices/sideBar";
 import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 
 const SideBarTeams = () => {
   const dispatch = useDispatch();
@@ -33,10 +34,11 @@ const SideBarTeams = () => {
   return (
     <div className={styles.sideBarTeams}>
       {sideBarTeams.map((item, idx) => (
-        <div
+        <Link
           key={idx}
-          onClick={() => dispatch(closeSideBar())}
+          href={sideBarTeamsLinks[idx]}
           title={item.charAt(0).toUpperCase() + item.slice(1)}
+          //onClick={() => dispatch(closeSideBar())}
         >
           <button title={item.charAt(0).toUpperCase() + item.slice(1)}>
             <Icon name={item} />
@@ -59,7 +61,7 @@ const SideBarTeams = () => {
           >
             {item.charAt(0).toUpperCase() + item.slice(1)}
           </motion.span>
-        </div>
+        </Link>
       ))}
     </div>
   );
