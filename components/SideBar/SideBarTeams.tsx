@@ -1,13 +1,24 @@
 import { RootState } from "../../store/store";
 import styles from "./sideBar.module.scss";
-import Icon, { sideBarTeams, sideBarTeamsLinks } from "../../utils/sideBarUtils";
+import Icon, {
+  sideBarTeams,
+  sideBarTeamsLinks,
+} from "../../utils/sideBarUtils";
 import { useSelector, useDispatch } from "react-redux";
 import { closeSideBar } from "../../store/slices/sideBar";
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const SideBarTeams = () => {
   const dispatch = useDispatch();
+  const router = useRouter();
+  const currURLEndpoint = router.asPath.slice(7);
+  
+  const closeSideBarIfItemEqualsURL = (item: string) => {
+    if (currURLEndpoint === item) dispatch(closeSideBar());
+  };
+
   const openSideBar = useSelector(
     (state: RootState) => state.openSideBar.value
   );
@@ -38,7 +49,7 @@ const SideBarTeams = () => {
           key={idx}
           href={sideBarTeamsLinks[idx]}
           title={item.charAt(0).toUpperCase() + item.slice(1)}
-          onClick={() => dispatch(closeSideBar())}
+          onClick={() => closeSideBarIfItemEqualsURL(item)}
         >
           <button title={item.charAt(0).toUpperCase() + item.slice(1)}>
             <Icon name={item} />
