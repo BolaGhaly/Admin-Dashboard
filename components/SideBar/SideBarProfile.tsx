@@ -29,6 +29,13 @@ const SideBarProfile = () => {
 
   return (
     <div className={styles.sideBarProfile}>
+      <motion.h2
+        initial={false}
+        variants={sideBarH2Variants}
+        animate={openSideBar ? "open" : "closed"}
+      >
+        Account
+      </motion.h2>
       {sideBarProfile.map((item, idx) => (
         <div
           key={idx}

@@ -7,6 +7,26 @@ import closeButton from "../assets/sideBarIcons/closeButton.svg";
 import companyLogo from "../assets/sideBarIcons/companyLogo.svg";
 import marketing from "../assets/sideBarIcons/marketing.svg";
 import sales from "../assets/sideBarIcons/sales.svg";
+import { Variants } from "framer-motion";
+
+export const sideBarH2Variants: Variants = {
+  open: {
+    opacity: 1,
+    visibility: "visible",
+    transition: {
+      duration: 0.2,
+      ease: "easeOut",
+    },
+  },
+  closed: {
+    opacity: 0,
+    visibility: "hidden",
+    transition: {
+      duration: 0.2,
+      ease: "easeOut",
+    },
+  },
+};
 
 const iconTypes = {
   companyLogo,

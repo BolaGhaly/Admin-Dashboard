@@ -44,6 +44,13 @@ const SideBarTeams = () => {
 
   return (
     <div className={styles.sideBarTeams}>
+      <motion.h2
+        initial={false}
+        variants={sideBarH2Variants}
+        animate={openSideBar ? "open" : "closed"}
+      >
+        Teams
+      </motion.h2>
       {sideBarTeams.map((item, idx) => (
         <Link
           key={idx}

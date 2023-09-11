@@ -42,6 +42,13 @@ const SideBarMenu = () => {
 
   return (
     <div className={styles.sideBarMenu}>
+      <motion.h2
+        initial={false}
+        variants={sideBarH2Variants}
+        animate={openSideBar ? "open" : "closed"}
+      >
+        Menu
+      </motion.h2>
       {sideBarMenu.map((item, idx) => (
         <Link
           key={idx}

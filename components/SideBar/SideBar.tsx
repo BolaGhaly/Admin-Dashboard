@@ -16,24 +16,7 @@ const SideBar = () => {
   const dispatch = useDispatch();
   const sideBarRef = useOnclickOutside(() => dispatch(closeSideBar()));
 
-  const sideBarH2Variants: Variants = {
-    open: {
-      opacity: 1,
-      visibility: "visible",
-      transition: {
-        duration: 0.2,
-        ease: "easeOut",
-      },
-    },
-    closed: {
-      opacity: 0,
-      visibility: "hidden",
-      transition: {
-        duration: 0.2,
-        ease: "easeOut",
-      },
-    },
-  };
+
 
   const sideBarVariants: Variants = {
     open: {
@@ -67,21 +50,7 @@ const SideBar = () => {
       animate={openSideBar ? "open" : "closed"}
     >
       <CompanyLogo />
-      <motion.h2
-        initial={false}
-        variants={sideBarH2Variants}
-        animate={openSideBar ? "open" : "closed"}
-      >
-        Menu
-      </motion.h2>
       <SideBarMenu />
-      <motion.h2
-        initial={false}
-        variants={sideBarH2Variants}
-        animate={openSideBar ? "open" : "closed"}
-      >
-        Teams
-      </motion.h2>
       <SideBarTeams />
       <SideBarProfile />
     </motion.nav>
