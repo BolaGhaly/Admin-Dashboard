@@ -28,6 +28,26 @@ export const sideBarH2Variants: Variants = {
   },
 };
 
+export const sideBarItemVariants: Variants = {
+  open: (index: number) => ({
+    display: "block",
+    opacity: 1,
+    visibility: "visible",
+    transition: {
+      duration: 0.1,
+      delay: index,
+      ease: "easeOut",
+    },
+    translateX: 0,
+  }),
+  closed: {
+    translateX: -10,
+    display: "none",
+    opacity: 0,
+    visibility: "hidden",
+  },
+};
+
 const iconTypes = {
   companyLogo,
   closeSideBar: closeButton,

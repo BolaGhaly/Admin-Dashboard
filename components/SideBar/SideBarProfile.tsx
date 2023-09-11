@@ -1,31 +1,20 @@
-import Icon, { sideBarProfile } from "../../utils/sideBarUtils";
+import Icon, {
+  sideBarProfile,
+  sideBarProfileLinks,
+  sideBarH2Variants,
+  sideBarItemVariants,
+} from "../../utils/sideBarUtils";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../store/store";
 import styles from "./sideBar.module.scss";
 import { closeSideBar } from "../../store/slices/sideBar";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 const SideBarProfile = () => {
   const openSideBar = useSelector(
     (state: RootState) => state.openSideBar.value
   );
   const dispatch = useDispatch();
-  const itemVariants: Variants = {
-    open: {
-      display: "block",
-      opacity: 1,
-      visibility: "visible",
-      transition: {
-        duration: 0.2,
-        ease: "easeOut",
-      },
-    },
-    closed: {
-      display: "none",
-      opacity: 0,
-      visibility: "hidden",
-    },
-  };
 
   return (
     <div className={styles.sideBarProfile}>
@@ -47,8 +36,9 @@ const SideBarProfile = () => {
           </button>
           <motion.span
             initial={false}
-            variants={itemVariants}
+            variants={sideBarItemVariants}
             animate={openSideBar ? "open" : "closed"}
+            custom={idx === 0 ? 0.1 : idx === 1 ? 0.2 : null}
           >
             {item.title}
           </motion.span>

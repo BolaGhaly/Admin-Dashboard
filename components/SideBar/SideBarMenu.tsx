@@ -1,4 +1,9 @@
-import Icon, { sideBarMenu, sideBarMenuLinks } from "../../utils/sideBarUtils";
+import Icon, {
+  sideBarMenu,
+  sideBarMenuLinks,
+  sideBarH2Variants,
+  sideBarItemVariants,
+} from "../../utils/sideBarUtils";
 import { useSelector, useDispatch } from "react-redux";
 import { closeSideBar } from "../../store/slices/sideBar";
 import { changeActiveItem } from "../../store/slices/sideBarMenuActive";
@@ -20,24 +25,6 @@ const SideBarMenu = () => {
     dispatch(closeSideBar());
   };
 
-  const itemVariants: Variants = {
-    open: (index: number) => ({
-      display: "block",
-      opacity: 1,
-      visibility: "visible",
-      transition: {
-        duration: 0.1,
-        delay: index,
-        ease: "easeOut",
-      },
-      translateX: 0,
-    }),
-    closed: {
-      translateX: -10,
-      display: "none",
-      opacity: 0,
-      visibility: "hidden",
-    },
   };
 
   return (
@@ -62,7 +49,7 @@ const SideBarMenu = () => {
           </button>
           <motion.span
             initial={false}
-            variants={itemVariants}
+            variants={sideBarItemVariants}
             animate={openSideBar ? "open" : "closed"}
             custom={
               idx === 0
