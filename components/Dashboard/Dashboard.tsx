@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import {
   changeActiveItem,
   initialState,
-} from "../../store/slices/sideBarMenuActive";
+} from "../../store/slices/sideBarActiveItem";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
