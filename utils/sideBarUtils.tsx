@@ -55,7 +55,7 @@ const iconTypes = {
   products: IoBagHandle,
   customers: HiUsers,
   transactions: RiFileList3Fill,
-  profileSettings: RiUserSettingsFill,
+  settings: RiUserSettingsFill,
   signOut: IoLogOut,
   marketing,
   sales,
@@ -87,13 +87,14 @@ export const sideBarTeamsLinks = [
 export const sideBarProfile = [
   {
     title: "Settings",
-    icon: "profileSettings",
+    icon: "settings",
   },
   {
     title: "Sign Out",
     icon: "signOut",
   },
 ];
+export const sideBarProfileLinks = ["/account/settings", "/account/signOut"];
 
 const IconComponent = ({ name, ...props }) => {
   let Icon = iconTypes[name];

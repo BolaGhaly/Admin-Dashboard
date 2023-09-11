@@ -9,11 +9,16 @@ import { RootState } from "../../store/store";
 import styles from "./sideBar.module.scss";
 import { closeSideBar } from "../../store/slices/sideBar";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const SideBarProfile = () => {
   const openSideBar = useSelector(
     (state: RootState) => state.openSideBar.value
   );
+  const activeItem = useSelector(
+    (state: RootState) => state.sideBarActiveItem.activeItem
+  );
+
   const dispatch = useDispatch();
 
   return (
@@ -26,10 +31,11 @@ const SideBarProfile = () => {
         Account
       </motion.h2>
       {sideBarProfile.map((item, idx) => (
-        <div
+        <Link
           key={idx}
-          onClick={() => dispatch(closeSideBar())}
+          href={sideBarProfileLinks[idx]}
           title={item.title}
+          className={`${activeItem === item.icon ? styles.active : null}`}
         >
           <button title={item.title}>
             <Icon name={item.icon} />
@@ -42,7 +48,7 @@ const SideBarProfile = () => {
           >
             {item.title}
           </motion.span>
-        </div>
+        </Link>
       ))}
     </div>
   );
