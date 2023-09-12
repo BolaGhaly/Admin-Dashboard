@@ -10,6 +10,7 @@ import styles from "./sideBar.module.scss";
 import { closeSideBar } from "../../store/slices/sideBar";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const SideBarProfile = () => {
   const openSideBar = useSelector(
@@ -20,6 +21,14 @@ const SideBarProfile = () => {
   );
 
   const dispatch = useDispatch();
+  const { asPath } = useRouter();
+  const currURLEndpoint = asPath;
+
+  const handleClick = (item: string) => {
+    if (currURLEndpoint === item) {
+      dispatch(closeSideBar());
+    }
+  };
 
   return (
     <div className={styles.sideBarProfile}>
@@ -35,7 +44,10 @@ const SideBarProfile = () => {
           key={idx}
           href={sideBarProfileLinks[idx]}
           title={item.title}
-          className={`${activeItem === item.icon ? styles.active : null}`}
+          onClick={() => handleClick(sideBarProfileLinks[idx])}
+          className={`${
+            activeItem === sideBarProfileLinks[idx] ? styles.active : ""
+          }`}
         >
           <button title={item.title}>
             <Icon name={item.icon} />
@@ -44,7 +56,6 @@ const SideBarProfile = () => {
             initial={false}
             variants={sideBarItemVariants}
             animate={openSideBar ? "open" : "closed"}
-            custom={idx === 0 ? 0.1 : idx === 1 ? 0.2 : null}
           >
             {item.title}
           </motion.span>

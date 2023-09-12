@@ -13,17 +13,21 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 const SideBarTeams = () => {
-  const dispatch = useDispatch();
-  const router = useRouter();
-  const currURLEndpoint = router.asPath.slice(7);
-  
-  const closeSideBarIfItemEqualsURL = (item: string) => {
-    if (currURLEndpoint === item) dispatch(closeSideBar());
-  };
-
   const openSideBar = useSelector(
     (state: RootState) => state.openSideBar.value
   );
+  const activeItem = useSelector(
+    (state: RootState) => state.sideBarActiveItem.activeItem
+  );
+
+  const dispatch = useDispatch();
+  const { asPath } = useRouter();
+  const currURLEndpoint = asPath;
+
+  const handleClick = (item: string) => {
+    if (currURLEndpoint === item) {
+      dispatch(closeSideBar());
+    }
   };
 
   return (
@@ -40,7 +44,10 @@ const SideBarTeams = () => {
           key={idx}
           href={sideBarTeamsLinks[idx]}
           title={item.charAt(0).toUpperCase() + item.slice(1)}
-          onClick={() => closeSideBarIfItemEqualsURL(item)}
+          onClick={() => handleClick(sideBarTeamsLinks[idx])}
+          className={`${
+            activeItem === sideBarTeamsLinks[idx] ? styles.active : ""
+          }`}
         >
           <button title={item.charAt(0).toUpperCase() + item.slice(1)}>
             <Icon name={item} />
@@ -49,17 +56,6 @@ const SideBarTeams = () => {
             initial={false}
             variants={sideBarItemVariants}
             animate={openSideBar ? "open" : "closed"}
-            custom={
-              idx === 0
-                ? 0.1
-                : idx === 1
-                ? 0.2
-                : idx === 2
-                ? 0.3
-                : idx === 3
-                ? 0.4
-                : null
-            }
           >
             {item.charAt(0).toUpperCase() + item.slice(1)}
           </motion.span>

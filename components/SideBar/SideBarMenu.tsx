@@ -6,25 +6,28 @@ import Icon, {
 } from "../../utils/sideBarUtils";
 import { useSelector, useDispatch } from "react-redux";
 import { closeSideBar } from "../../store/slices/sideBar";
-import { changeActiveItem } from "../../store/slices/sideBarMenuActive";
 import { RootState } from "../../store/store";
 import styles from "./sideBar.module.scss";
 import Link from "next/link";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 const SideBarMenu = () => {
   const openSideBar = useSelector(
     (state: RootState) => state.openSideBar.value
   );
   const activeItem = useSelector(
-    (state: RootState) => state.sideBarMenuActiveItem.activeItem
+    (state: RootState) => state.sideBarActiveItem.activeItem
   );
-  const dispatch = useDispatch();
-  const handleClick = (item: string) => {
-    dispatch(changeActiveItem({ activeItem: item }));
-    dispatch(closeSideBar());
-  };
 
+  const dispatch = useDispatch();
+  const { asPath } = useRouter();
+  const currURLEndpoint = asPath;
+
+  const handleClick = (item: string) => {
+    if (currURLEndpoint === item) {
+      dispatch(closeSideBar());
+    }
   };
 
   return (
@@ -41,8 +44,10 @@ const SideBarMenu = () => {
           key={idx}
           href={sideBarMenuLinks[idx]}
           title={item.charAt(0).toUpperCase() + item.slice(1)}
-          onClick={() => handleClick(item)}
-          className={`${activeItem === item ? styles.active : null}`}
+          onClick={() => handleClick(sideBarMenuLinks[idx])}
+          className={`${
+            activeItem === sideBarMenuLinks[idx] ? styles.active : ""
+          }`}
         >
           <button title={item.charAt(0).toUpperCase() + item.slice(1)}>
             <Icon name={`${item}`} />
@@ -51,17 +56,6 @@ const SideBarMenu = () => {
             initial={false}
             variants={sideBarItemVariants}
             animate={openSideBar ? "open" : "closed"}
-            custom={
-              idx === 0
-                ? 0.1
-                : idx === 1
-                ? 0.2
-                : idx === 2
-                ? 0.3
-                : idx === 3
-                ? 0.4
-                : null
-            }
           >
             {item.charAt(0).toUpperCase() + item.slice(1)}
           </motion.span>
