@@ -1,12 +1,12 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { sideBarMenu } from "../../utils/sideBarUtils";
+import { sideBarMenuLinks } from "../../utils/sideBarUtils";
 
 export interface sideBarActiveItemState {
   activeItem: string;
 }
 
 export const initialState: sideBarActiveItemState = {
-  activeItem: sideBarMenu[0],
+  activeItem: sideBarMenuLinks[0],
 };
 
 export const sideBarActiveItemSlice = createSlice({
