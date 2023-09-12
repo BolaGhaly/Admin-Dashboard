@@ -1,17 +1,17 @@
 import Link from "next/link";
-import { changeActiveItem } from "../store/slices/sideBarMenuActive";
+import { changeActiveItem } from "../store/slices/sideBarActiveItem";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 const Custom404 = () => {
   const dispatch = useDispatch();
-  const router = useRouter();
-  const currURLEndpoint = router.asPath.slice(1);
+  const { asPath } = useRouter();
+  const currURLEndpoint = asPath;
 
   useEffect(() => {
     dispatch(changeActiveItem({ activeItem: currURLEndpoint }));
-  }, [currURLEndpoint, dispatch, router]);
+  }, [currURLEndpoint, dispatch, asPath]);
 
   return (
     <div className="custom404">
