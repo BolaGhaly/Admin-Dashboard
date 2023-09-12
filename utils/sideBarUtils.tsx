@@ -69,7 +69,7 @@ export const sideBarMenu = [
   "transactions",
 ];
 export const sideBarMenuLinks = [
-  "/",
+  "/dashboard",
   "/products",
   "/customers",
   "/transactions",
