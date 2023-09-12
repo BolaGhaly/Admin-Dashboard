@@ -15,11 +15,11 @@ import {
 
 const Dashboard = () => {
   const dispatch = useDispatch();
-  const router = useRouter();
-  const currURLEndpoint = router.asPath.slice(1);
+  const { asPath } = useRouter();
+  const currURLEndpoint = asPath;
 
   useEffect(() => {
-    if (currURLEndpoint === "")
+    if (currURLEndpoint === "/")
       dispatch(changeActiveItem({ activeItem: initialState.activeItem }));
   }, [currURLEndpoint, dispatch]);
 
