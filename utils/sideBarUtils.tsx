@@ -29,19 +29,18 @@ export const sideBarH2Variants: Variants = {
 };
 
 export const sideBarItemVariants: Variants = {
-  open: (index: number) => ({
+  open: {
     display: "block",
     opacity: 1,
     visibility: "visible",
     transition: {
-      duration: 0.1,
-      delay: index,
+      duration: 0.2,
       ease: "easeOut",
     },
     translateX: 0,
-  }),
+  },
   closed: {
-    translateX: -10,
+    translateX: -8,
     display: "none",
     opacity: 0,
     visibility: "hidden",
