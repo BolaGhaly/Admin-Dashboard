@@ -16,8 +16,6 @@ const SideBar = () => {
   const dispatch = useDispatch();
   const sideBarRef = useOnclickOutside(() => dispatch(closeSideBar()));
 
-
-
   const sideBarVariants: Variants = {
     open: {
       zIndex: 999999,
