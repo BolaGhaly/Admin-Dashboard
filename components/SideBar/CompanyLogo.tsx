@@ -33,16 +33,12 @@ const CompanyLogo = () => {
   };
 
   return (
-    <div
-      className={styles.companyLogoDiv}
-      onClick={() => dispatch(closeSideBar())}
-      title="FinFiesta"
-    >
+    <div className={styles.companyLogoDiv} title="FinFiesta">
       <Link href="/" title="FinFiesta">
         <Icon name="companyLogo" />
       </Link>
       {openSideBar ? (
-        <Link href="/" title="FinFiesta" style={lobsterFont.style}>
+        <Link href="/dashboard" title="FinFiesta" style={lobsterFont.style}>
           FinFiesta
         </Link>
       ) : null}
@@ -51,6 +47,7 @@ const CompanyLogo = () => {
         variants={closeSideBarBtnVariants}
         animate={openSideBar ? "open" : "closed"}
         title="Close Sidebar"
+        onClick={() => dispatch(closeSideBar())}
       >
         <Icon name="closeSideBar" />
       </motion.span>
