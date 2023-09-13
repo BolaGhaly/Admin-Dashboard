@@ -22,7 +22,7 @@ export const sideBarH2Variants: Variants = {
     opacity: 0,
     visibility: "hidden",
     transition: {
-      duration: 0.2,
+      duration: 0.1,
       ease: "easeOut",
     },
   },
@@ -33,17 +33,21 @@ export const sideBarItemVariants: Variants = {
     display: "block",
     opacity: 1,
     visibility: "visible",
+    translateX: 0,
     transition: {
       duration: 0.2,
       ease: "easeOut",
     },
-    translateX: 0,
   },
   closed: {
-    translateX: -8,
     display: "none",
     opacity: 0,
     visibility: "hidden",
+    translateX: -8,
+    transition: {
+      duration: 0.1,
+      ease: "easeOut",
+    },
   },
 };
 
