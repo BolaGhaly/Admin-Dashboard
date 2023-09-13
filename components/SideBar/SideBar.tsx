@@ -32,6 +32,7 @@ const SideBar = () => {
       zIndex: 999999,
       display: "none",
       width: "4rem",
+      boxShadow: "none",
       transition: {
         duration: 0.1,
         ease: "easeOut",
