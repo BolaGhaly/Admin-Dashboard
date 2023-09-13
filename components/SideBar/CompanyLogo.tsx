@@ -34,7 +34,7 @@ const CompanyLogo = () => {
 
   return (
     <div className={styles.companyLogoDiv} title="FinFiesta">
-      <Link href="/" title="FinFiesta">
+      <Link href="/dashboard" title="FinFiesta">
         <Icon name="companyLogo" />
       </Link>
       {openSideBar ? (
