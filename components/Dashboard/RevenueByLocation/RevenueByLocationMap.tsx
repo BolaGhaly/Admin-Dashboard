@@ -3,7 +3,7 @@ import { poppinsFont } from "../../../fonts";
 import { worldMill } from "./RevenueByLocationMap/index";
 import { VectorMap } from "@react-jvectormap/core";
 import { markers } from "../../../utils/dashboardUtils";
-import { motion } from "framer-motion";
+//import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { closeLanguagesMenu } from "../../../store/slices/userLanguagesMenu";
 import { closeNotificationsMenu } from "../../../store/slices/userNotificationsMenu";
@@ -23,15 +23,15 @@ const RevenueByLocationMap = () => {
   let countryPercentageDiv: HTMLDivElement | null;
 
   return (
-    <motion.div
+    <div
       className={styles.revenueByLocChart}
       onClick={closeAllOpenMenus}
-      initial={{ opacity: 0, visibility: "hidden" }}
-      animate={{ opacity: 1, visibility: "visible" }}
-      transition={{
-        duration: 0.2,
-        ease: "easeOut",
-      }}
+      // initial={{ opacity: 0, visibility: "hidden" }}
+      // animate={{ opacity: 1, visibility: "visible" }}
+      // transition={{
+      //   duration: 0.1,
+      //   ease: "easeOut",
+      // }}
     >
       <VectorMap
         map={worldMill}
@@ -61,7 +61,7 @@ const RevenueByLocationMap = () => {
           );
         }}
       />
-    </motion.div>
+    </div>
   );
 };
 

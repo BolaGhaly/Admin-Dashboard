@@ -12,10 +12,10 @@ import { RevenueGrowthData } from "../../../utils/dashboardUtils";
 import { useState, useEffect } from "react";
 
 const RevenueGrowthChart = () => {
+  const lineAnimationDuration: number = 1000;
   const [windowWidth, setWindowWidth] = useState<number>(
     typeof window !== "undefined" ? window.innerWidth : 0
   );
-
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
   };
@@ -65,7 +65,9 @@ const RevenueGrowthChart = () => {
             stroke: "var(--dashboard-bg)",
           }}
           strokeWidth={2}
+          isAnimationActive={false}
           animationEasing="ease-out"
+          animationDuration={lineAnimationDuration}
         />
         <Line
           type="monotone"
@@ -79,6 +81,8 @@ const RevenueGrowthChart = () => {
           }}
           strokeWidth={2}
           animationEasing="ease-out"
+          isAnimationActive={false}
+          animationDuration={lineAnimationDuration}
         />
       </LineChart>
     </ResponsiveContainer>
