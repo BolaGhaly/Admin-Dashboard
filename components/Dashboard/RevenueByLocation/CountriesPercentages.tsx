@@ -1,23 +1,13 @@
 import styles from "../dashboard.module.scss";
 import { sortArrOfObjsByKeyValue } from "../../../utils/mainUtils";
 import Icon, { countriesPercentages } from "../../../utils/dashboardUtils";
-//import { motion } from "framer-motion";
 
 const CountriesPercentages = () => {
   return (
     <div className={styles.revenueByLocPercentages}>
       {sortArrOfObjsByKeyValue(countriesPercentages, "percentage", true).map(
         (country, idx) => (
-          <div
-            key={idx}
-            title={country.country}
-            // initial={{ opacity: 0, visibility: "hidden" }}
-            // animate={{ opacity: 1, visibility: "visible" }}
-            // transition={{
-            //   duration: 0.1,
-            //   ease: "easeOut",
-            // }}
-          >
+          <div key={idx} title={country.country}>
             <div>
               <Icon name={country.flag} />
             </div>

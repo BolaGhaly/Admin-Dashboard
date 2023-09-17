@@ -7,6 +7,7 @@ const RevenueByLocationChart = dynamic(
     ssr: false,
   }
 );
+import { motion } from "framer-motion";
 
 const RevenueByLocation = () => {
   useEffect(() => {
@@ -19,7 +20,16 @@ const RevenueByLocation = () => {
   return (
     <div className={styles.revenueByLocChartContainer}>
       <h2>Revenue By Location</h2>
-      <RevenueByLocationChart />
+      <motion.div
+        initial={{ opacity: 0, visibility: "hidden" }}
+        animate={{ opacity: 1, visibility: "visible" }}
+        transition={{
+          duration: 0.2,
+          ease: "easeOut",
+        }}
+      >
+        <RevenueByLocationChart />
+      </motion.div>
     </div>
   );
 };
