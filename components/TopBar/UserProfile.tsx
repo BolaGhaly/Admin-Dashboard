@@ -59,8 +59,8 @@ const UserProfile = () => {
           <Image
             src={userProfileImage}
             alt="Ryan's Profile Image"
-            priority
-            unoptimized
+            priority={true}
+            unoptimized={false}
           />
           {userStatusMenuValue === "Online" ? (
             <span
