@@ -58,8 +58,6 @@ const UserProfile = () => {
         <div>
           <Image
             src={userProfileImage}
-            width={100}
-            height={100}
             alt="Ryan's Profile Image"
             priority
             unoptimized
