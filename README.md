@@ -5,10 +5,6 @@ A responsive and visually appealing admin dashboard user interface (UI) for the 
 
 <a href="https://admin-dashboard-bolaghaly.vercel.app/"> <img src="https://img.shields.io/website-up-down-blue-red/http/monip.org.svg" alt="Website: Up" height="24" /> </a>
 
-## Table of Contents
-  - [Implementation (Technologies Used)](#implementation-technologies-used)
-  - [License](#license)
-
 ## Implementation (Technologies Used)
 <kbd> <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" /> </kbd>
 <kbd> <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" /> </kbd>
