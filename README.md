@@ -1,4 +1,4 @@
-![Admin-dashboard-banner-BolaGhaly](https://github.com/BolaGhaly/Admin-Dashboard/assets/59656591/2e8bc443-9dae-4683-bf3b-21c919f469e8)
+![Admin-dashboard-banner-BolaGhaly](https://github.com/BolaGhaly/Admin-Dashboard/assets/59656591/e34c6518-4be3-40e2-87a8-123f2fb7f54c)
 
 # FinFiesta
 A responsive and visually appealing admin dashboard user interface (UI) for the fictional financial company, FinFiesta, utilizing TypeScript, Next.js, Redux, SASS/SCSS, and Framer Motion.
