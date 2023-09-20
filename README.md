@@ -3,7 +3,7 @@
 # FinFiesta
 A responsive and visually appealing admin dashboard user interface (UI) for the fictional financial company, FinFiesta, utilizing TypeScript, Next.js, Redux, SASS/SCSS, and Framer Motion.
 
-[![Website](https://img.shields.io/website-up-down-blue-red/http/monip.org.svg)](https://admin-dashboard-bolaghaly.vercel.app/)
+<a href="https://admin-dashboard-bolaghaly.vercel.app/"> <img src="https://img.shields.io/website-up-down-blue-red/http/monip.org.svg" alt="Website: Up" height="24" /> </a>
 
 ## Table of Contents
   - [Implementation (Technologies Used)](#implementation-technologies-used)
@@ -19,4 +19,7 @@ A responsive and visually appealing admin dashboard user interface (UI) for the 
 <kbd> <img src="https://img.shields.io/badge/Vercel-black.svg?style=for-the-badge&logo=vercel&logoColor=white" /> </kbd>
 
 ## License
-<a href="https://github.com/BolaGhaly/Admin-Dashboard/blob/main/LICENSE"> <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3" width="115" height="24" /> </a>
+<a href="https://github.com/BolaGhaly/Admin-Dashboard/blob/main/LICENSE"> <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3" height="24" /> </a>
+
+## Contact
+You can connect with me on [LinkedIn](https://www.linkedin.com/in/bolaghaly/) and send me a message! 😀
